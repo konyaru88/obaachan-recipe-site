@@ -7,6 +7,8 @@ import renderList from './pages/list.js';
 import renderDetail from './pages/detail.js';
 import renderRegion from './pages/region.js';
 import renderSearch from './pages/search.js';
+import renderArticles from './pages/articles.js';
+import renderArticleDetail from './pages/article-detail.js';
 import renderHeader from './components/header.js';
 import renderFooter from './components/footer.js';
 
@@ -21,6 +23,8 @@ router.add('/recipe/:id', (ctx) => renderDetail(ctx, router));
 router.add('/regions', (ctx) => renderRegion(ctx, router));
 router.add('/region/:code', (ctx) => renderRegion(ctx, router));
 router.add('/search', (ctx) => renderSearch(ctx, router));
+router.add('/articles', (ctx) => renderArticles(ctx));
+router.add('/article/:id', (ctx) => renderArticleDetail(ctx, router));
 
 /**
  * ページのHTMLをヘッダー・フッターと共にセットする

@@ -25,6 +25,7 @@ export default function renderHeader(router) {
       <a href="#/" class="${navClass('#/')}">ホーム</a>
       <a href="#/recipes" class="${navClass('#/recipes')}">レシピ一覧</a>
       <a href="#/regions" class="${navClass('#/regions')}">地域で探す</a>
+      <a href="#/articles" class="${navClass('#/articles')}">読み物</a>
     </nav>
 
     <form class="site-header__search" id="search-form" role="search" aria-label="レシピ検索">
