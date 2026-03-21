@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>おばあちゃんのレシピ</title>
+
+  <!-- ファビコン（絵文字） -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍱</text></svg>" />
+
+  <!-- OGP メタタグ -->
+  <meta property="og:title" content="おばあちゃんのレシピ" />
+  <meta property="og:description" content="全国のおばあちゃんの味を、次の世代へ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="description" content="全国のおばあちゃんの味を、次の世代へ。" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="おばあちゃんのレシピ" />
+  <meta name="twitter:description" content="全国のおばあちゃんの味を、次の世代へ。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Kaisei+Tokumin:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ローディング表示 -->
+  <div id="loading">
+    <div class="loading__icon">🍱</div>
+    <p>おばあちゃんの台所から、届けます。</p>
+  </div>
+
+  <!-- SPAマウントポイント -->
+  <div id="app"></div>
+
+  <!-- アプリケーション -->
+  <script type="module" src="app.js"></script>
+
+</body>
+</html>

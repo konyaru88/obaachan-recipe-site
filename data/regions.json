@@ -1,0 +1,123 @@
+{
+  "areas": [
+    {
+      "code": "hokkaido",
+      "name": "北海道",
+      "tagline": "大地と海の恵みを丸ごと生かす開拓の食文化",
+      "description": "広大な農地と豊かな漁場に恵まれた北海道は、明治時代の開拓民が各地から持ち込んだ食文化とアイヌの食文化が融合した独自の食の世界を築いた。鮭・昆布・じゃがいもを中心とした料理は素材の力強さが際立ち、厳しい冬を乗り越えるための保存食の知恵が今も生きている。",
+      "color": "#1A6B9A",
+      "prefectures": [
+        { "code": "01", "name": "北海道", "romaji": "Hokkaido" }
+      ]
+    },
+    {
+      "code": "tohoku",
+      "name": "東北",
+      "tagline": "雪深い里に根付いた山の幸・海の幸の発酵文化",
+      "description": "本州最北部を占める東北地方は、日本有数の豪雪地帯でもあり、長い冬を乗り越えるための保存・発酵食品の文化が特に発達した。山形の芋煮・青森のけの汁・岩手のひっつみなど、各県ごとに個性豊かな郷土料理が根付いており、農山漁村の暮らしに密着した素朴で力強い味わいが特徴だ。",
+      "color": "#5B8C5A",
+      "prefectures": [
+        { "code": "02", "name": "青森県", "romaji": "Aomori" },
+        { "code": "03", "name": "岩手県", "romaji": "Iwate" },
+        { "code": "04", "name": "宮城県", "romaji": "Miyagi" },
+        { "code": "05", "name": "秋田県", "romaji": "Akita" },
+        { "code": "06", "name": "山形県", "romaji": "Yamagata" },
+        { "code": "07", "name": "福島県", "romaji": "Fukushima" }
+      ]
+    },
+    {
+      "code": "kanto",
+      "name": "関東",
+      "tagline": "江戸の粋と農村の知恵が交差する食の交差点",
+      "description": "江戸（東京）を中心に発展した関東の食文化は、全国から人と物が集まる大都市の食と、関東平野の農村が育んだ素朴な郷土食が共存している。しょうゆ文化の発祥地としてこいくち醤油を多用する料理が多く、納豆・ねぎ・根菜類を使った力強い味付けが特徴的。茨城・栃木・群馬の農村には今も独自の行事食や保存食が息づいている。",
+      "color": "#C0392B",
+      "prefectures": [
+        { "code": "08", "name": "茨城県", "romaji": "Ibaraki" },
+        { "code": "09", "name": "栃木県", "romaji": "Tochigi" },
+        { "code": "10", "name": "群馬県", "romaji": "Gunma" },
+        { "code": "11", "name": "埼玉県", "romaji": "Saitama" },
+        { "code": "12", "name": "千葉県", "romaji": "Chiba" },
+        { "code": "13", "name": "東京都", "romaji": "Tokyo" },
+        { "code": "14", "name": "神奈川県", "romaji": "Kanagawa" }
+      ]
+    },
+    {
+      "code": "chubu",
+      "name": "中部",
+      "tagline": "山海の両恵みと発酵の技が育んだ多様な食文化",
+      "description": "日本アルプスを擁する山岳地帯から日本海・太平洋の海岸線まで、地形の多様さがそのまま食文化の多様さに直結する中部地方。石川の加賀料理・富山の海の幸・長野の山の幸・愛知のみそ文化など、エリアごとに全く異なる食の世界が展開する。特に発酵食品の種類と質の高さは全国随一で、麹文化が各地に深く根付いている。",
+      "color": "#8E44AD",
+      "prefectures": [
+        { "code": "15", "name": "新潟県", "romaji": "Niigata" },
+        { "code": "16", "name": "富山県", "romaji": "Toyama" },
+        { "code": "17", "name": "石川県", "romaji": "Ishikawa" },
+        { "code": "18", "name": "福井県", "romaji": "Fukui" },
+        { "code": "19", "name": "山梨県", "romaji": "Yamanashi" },
+        { "code": "20", "name": "長野県", "romaji": "Nagano" },
+        { "code": "21", "name": "岐阜県", "romaji": "Gifu" },
+        { "code": "22", "name": "静岡県", "romaji": "Shizuoka" },
+        { "code": "23", "name": "愛知県", "romaji": "Aichi" }
+      ]
+    },
+    {
+      "code": "kinki",
+      "name": "近畿",
+      "tagline": "千年の都が磨いた「だし」と「引き算」の美食哲学",
+      "description": "京都・大阪・奈良・滋賀・和歌山・兵庫を含む近畿地方は、日本の食文化の発信地として長く機能してきた。京都の繊細なだし文化と素材を生かす引き算の料理哲学、大阪の「くいだおれ」に象徴される食への飽くなき追求、奈良・滋賀の古くからの発酵食品文化など、それぞれが豊かな食の伝統を持ちながら互いに影響し合っている。",
+      "color": "#D4A017",
+      "prefectures": [
+        { "code": "24", "name": "三重県", "romaji": "Mie" },
+        { "code": "25", "name": "滋賀県", "romaji": "Shiga" },
+        { "code": "26", "name": "京都府", "romaji": "Kyoto" },
+        { "code": "27", "name": "大阪府", "romaji": "Osaka" },
+        { "code": "28", "name": "兵庫県", "romaji": "Hyogo" },
+        { "code": "29", "name": "奈良県", "romaji": "Nara" },
+        { "code": "30", "name": "和歌山県", "romaji": "Wakayama" }
+      ]
+    },
+    {
+      "code": "chugoku",
+      "name": "中国",
+      "tagline": "山陰と山陽の対比が生む、静かで奥深い郷土の味",
+      "description": "日本海側の山陰（鳥取・島根）と瀬戸内海側の山陽（岡山・広島・山口）で食文化が大きく異なるのが中国地方の特徴だ。山陰では出雲そばや松葉ガニ・のどぐろなど個性的な食材を生かした料理が根付き、山陽では瀬戸内の豊かな魚介を使った料理が発達した。过疎化が進む地域が多く、農山漁村の伝統料理が失われつつある点も課題となっている。",
+      "color": "#2E7D5E",
+      "prefectures": [
+        { "code": "31", "name": "鳥取県", "romaji": "Tottori" },
+        { "code": "32", "name": "島根県", "romaji": "Shimane" },
+        { "code": "33", "name": "岡山県", "romaji": "Okayama" },
+        { "code": "34", "name": "広島県", "romaji": "Hiroshima" },
+        { "code": "35", "name": "山口県", "romaji": "Yamaguchi" }
+      ]
+    },
+    {
+      "code": "shikoku",
+      "name": "四国",
+      "tagline": "遍路の島が育てた鰹と柑橘の豪快な食文化",
+      "description": "徳島・香川・愛媛・高知の4県からなる四国は、太平洋と瀬戸内海に囲まれた温暖な気候の中で独自の食文化を発展させた。高知の豪快な鰹のたたき・皿鉢料理、香川のうどん文化、愛媛の鯛めし・じゃこ天など、海の幸を大胆に使う料理が多い。また四国遍路文化とも結びついた素朴な精進料理の伝統も残っており、食の多様性が際立つ地方だ。",
+      "color": "#E67E22",
+      "prefectures": [
+        { "code": "36", "name": "徳島県", "romaji": "Tokushima" },
+        { "code": "37", "name": "香川県", "romaji": "Kagawa" },
+        { "code": "38", "name": "愛媛県", "romaji": "Ehime" },
+        { "code": "39", "name": "高知県", "romaji": "Kochi" }
+      ]
+    },
+    {
+      "code": "kyushu",
+      "name": "九州",
+      "tagline": "南の陽光と豊かな土が生む甘口文化と発酵の力",
+      "description": "福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島の7県と沖縄（便宜上含む場合もある）からなる九州は、温暖な気候と火山性の豊かな土壌が個性的な食材を育む。醤油や砂糖を多用する甘口の味付け、麦味噌文化、さつまいも・れんこんなどの根菜料理が特徴的。大陸文化の影響も受け、独自の発酵食品や漬物文化も根強く残っている。",
+      "color": "#C0392B",
+      "prefectures": [
+        { "code": "40", "name": "福岡県", "romaji": "Fukuoka" },
+        { "code": "41", "name": "佐賀県", "romaji": "Saga" },
+        { "code": "42", "name": "長崎県", "romaji": "Nagasaki" },
+        { "code": "43", "name": "熊本県", "romaji": "Kumamoto" },
+        { "code": "44", "name": "大分県", "romaji": "Oita" },
+        { "code": "45", "name": "宮崎県", "romaji": "Miyazaki" },
+        { "code": "46", "name": "鹿児島県", "romaji": "Kagoshima" },
+        { "code": "47", "name": "沖縄県", "romaji": "Okinawa" }
+      ]
+    }
+  ]
+}

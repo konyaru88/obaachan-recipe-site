@@ -1,0 +1,1034 @@
+{
+  "recipes": [
+    {
+      "id": "ishikari-nabe-hokkaido-001",
+      "title": "石狩鍋",
+      "grandmother": {
+        "name": "山田ハルさん",
+        "age": 82,
+        "prefecture": "北海道",
+        "city": "石狩市",
+        "village": "花川南",
+        "message": "鮭は頭からしっぽまで全部使うんだよ。捨てるところなんてひとつもない。"
+      },
+      "region": {
+        "area": "hokkaido",
+        "prefecture_code": "01",
+        "prefecture": "北海道"
+      },
+      "meta": {
+        "created_at": "2026-01-10",
+        "is_featured": true,
+        "is_endangered": false
+      },
+      "category": "汁物",
+      "tags": ["鮭", "味噌", "鍋", "冬の定番", "北海道"],
+      "season": ["秋", "冬"],
+      "servings": 4,
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 30,
+      "difficulty": 2,
+      "story": "石狩鍋は北海道を代表する郷土鍋料理で、石狩川流域で漁れる鮭をふんだんに使うことから名がついた。かつてアイヌの人々が鮭を丸ごと使った料理を作っていたことが起源とされ、和人との交流の中で現在の形に整えられていった。昆布だしに白味噌を合わせた汁は、鮭の旨みを最大限に引き出す。野菜をたっぷり入れることで寒い冬でも体の芯から温まる、北海道の家庭に欠かせない一品だ。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "生鮭（切り身）", "amount": 4, "unit": "切れ", "note": "頭や中骨があれば出汁用に使う" },
+            { "name": "豆腐", "amount": 1, "unit": "丁", "note": "木綿豆腐" },
+            { "name": "じゃがいも", "amount": 2, "unit": "個", "note": null },
+            { "name": "大根", "amount": 200, "unit": "g", "note": "いちょう切り" },
+            { "name": "にんじん", "amount": 1, "unit": "本", "note": null },
+            { "name": "長ねぎ", "amount": 2, "unit": "本", "note": null },
+            { "name": "白菜", "amount": 300, "unit": "g", "note": null },
+            { "name": "しいたけ", "amount": 4, "unit": "枚", "note": null }
+          ]
+        },
+        {
+          "group": "だし・調味料",
+          "items": [
+            { "name": "昆布", "amount": 20, "unit": "g", "note": "利尻昆布がおすすめ" },
+            { "name": "水", "amount": 1200, "unit": "ml", "note": null },
+            { "name": "白味噌", "amount": 60, "unit": "g", "note": null },
+            { "name": "信州味噌", "amount": 30, "unit": "g", "note": "白味噌と合わせる" },
+            { "name": "酒", "amount": 50, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 20, "unit": "ml", "note": null },
+            { "name": "バター", "amount": 10, "unit": "g", "note": "仕上げに加える" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "昆布だしを取る",
+          "description": "水に昆布を入れて30分ほど浸けてから弱火にかけ、沸騰直前に取り出す。",
+          "tip": "昆布を煮立てると雑味が出るので、沸騰前に必ず取り出すこと。"
+        },
+        {
+          "step": 2,
+          "title": "鮭を下処理する",
+          "description": "鮭の切り身に塩を薄くふって10分置き、出てきた水分をキッチンペーパーで拭き取る。熱湯をかけて霜降りにしてから冷水で洗う。",
+          "tip": "霜降りすることで臭みが取れ、だしが澄む。"
+        },
+        {
+          "step": 3,
+          "title": "野菜を切り、下茹でする",
+          "description": "じゃがいもと大根は厚めのいちょう切り、にんじんは半月切り。じゃがいもは水にさらしてから、大根・にんじんとともに下茹でしておく。",
+          "tip": null
+        },
+        {
+          "step": 4,
+          "title": "鍋を仕立てる",
+          "description": "昆布だしに酒・みりんを加えて中火にかけ、下茹でした根菜類を入れる。煮立ったら鮭、豆腐、白菜、しいたけを加える。",
+          "tip": null
+        },
+        {
+          "step": 5,
+          "title": "味噌を溶かして仕上げる",
+          "description": "野菜が柔らかくなったら火を少し弱め、白味噌と信州味噌を合わせて溶き入れる。長ねぎを加えてひと煮立ちしたら、最後にバターをひとかけ落とす。",
+          "tip": "味噌を入れた後は煮立てすぎないこと。バターが北海道らしいコクを加える。"
+        }
+      ],
+      "grandma_notes": [
+        "鮭の頭があったら一緒に入れるとだしが格段においしくなるよ。魚屋さんに頼めば安くわけてもらえる。",
+        "味噌は最後の最後に入れるの。最初から入れると香りが飛んでしまうからね。",
+        "バターを入れるのは昔からの北海道流。これだけで味がぐっとまるくなるんだよ。"
+      ],
+      "cultural_background": {
+        "history": "石狩川下流域の漁師町・石狩を発祥とする鍋料理。明治以降に北海道開拓者たちの間で広まり、昆布だし×味噌という組み合わせは開拓時代からの知恵とされる。",
+        "local_ingredients": ["石狩川の鮭", "利尻昆布", "北海道産じゃがいも"],
+        "similar_dishes": ["三平汁", "ちゃんちゃん焼き"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["sanpei-jiru-hokkaido-002"]
+    },
+    {
+      "id": "sanpei-jiru-hokkaido-002",
+      "title": "三平汁",
+      "grandmother": {
+        "name": "佐々木キミさん",
+        "age": 78,
+        "prefecture": "北海道",
+        "city": "函館市",
+        "village": "銭亀沢",
+        "message": "塩引き鮭と大根だけで作るのが本当の三平汁。余計なものはいらないんだよ。"
+      },
+      "region": {
+        "area": "hokkaido",
+        "prefecture_code": "01",
+        "prefecture": "北海道"
+      },
+      "meta": {
+        "created_at": "2026-01-11",
+        "is_featured": false,
+        "is_endangered": true
+      },
+      "category": "汁物",
+      "tags": ["塩鮭", "大根", "汁物", "保存食", "北海道", "開拓時代"],
+      "season": ["冬", "通年"],
+      "servings": 4,
+      "prep_time_minutes": 15,
+      "cook_time_minutes": 25,
+      "difficulty": 1,
+      "story": "三平汁は北海道の開拓時代から食べられてきた素朴な汁物で、塩漬けにした鮭と根菜を水から煮るだけのシンプルな料理だ。名の由来には諸説あるが、松前藩の漁師「三平」が考案したという言い伝えが最も知られている。かつて北海道の冬の食卓を支えた保存食文化の象徴であり、化学調味料が普及した現代では正統な作り方を知る人が少なくなっている。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "塩引き鮭（甘塩）", "amount": 300, "unit": "g", "note": "切り身または中骨付き" },
+            { "name": "大根", "amount": 300, "unit": "g", "note": "いちょう切り" },
+            { "name": "じゃがいも", "amount": 2, "unit": "個", "note": null },
+            { "name": "にんじん", "amount": 1, "unit": "本", "note": null },
+            { "name": "こんにゃく", "amount": 100, "unit": "g", "note": null }
+          ]
+        },
+        {
+          "group": "調味料",
+          "items": [
+            { "name": "水", "amount": 1000, "unit": "ml", "note": null },
+            { "name": "昆布", "amount": 10, "unit": "g", "note": null },
+            { "name": "塩", "amount": 2, "unit": "g", "note": "鮭の塩加減を見て調整" },
+            { "name": "酒", "amount": 30, "unit": "ml", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "塩鮭を塩抜きする",
+          "description": "塩引き鮭を水に30分ほどさらして塩を適度に抜く。甘塩の場合は15分程度でよい。",
+          "tip": "塩を抜きすぎると旨みが逃げる。少し塩気が残るくらいでよい。"
+        },
+        {
+          "step": 2,
+          "title": "野菜を切る",
+          "description": "大根はいちょう切り、じゃがいもは角切り、にんじんは半月切り、こんにゃくは手でちぎる。",
+          "tip": "こんにゃくは手でちぎると味が染みやすい。"
+        },
+        {
+          "step": 3,
+          "title": "水から煮る",
+          "description": "鍋に水と昆布を入れ、塩鮭と根菜をすべて入れて中火にかける。沸いたら昆布を取り出し、アクを丁寧に取る。",
+          "tip": "水から入れることで鮭の旨みがだしとして出る。"
+        },
+        {
+          "step": 4,
+          "title": "煮上げる",
+          "description": "弱火で20分ほど煮て根菜が柔らかくなったら、酒を加え塩で味を調える。",
+          "tip": null
+        }
+      ],
+      "grandma_notes": [
+        "塩鮭はできれば自分で塩を振ったものを使ってほしい。市販のは塩が均一すぎてね。",
+        "昆布と鮭だけで十分においしいだしが出るから、余計な調味料はいらないんだよ。"
+      ],
+      "cultural_background": {
+        "history": "松前藩時代から続く北海道の保存食文化を背景に持つ汁物。塩蔵した鮭は冬の北海道で貴重なタンパク源だった。",
+        "local_ingredients": ["北海道産塩引き鮭", "道産大根", "道産じゃがいも"],
+        "similar_dishes": ["石狩鍋", "粕汁"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["ishikari-nabe-hokkaido-001"]
+    },
+    {
+      "id": "ke-no-shiru-aomori-001",
+      "title": "けの汁",
+      "grandmother": {
+        "name": "工藤ノブさん",
+        "age": 86,
+        "prefecture": "青森県",
+        "city": "弘前市",
+        "village": "百沢",
+        "message": "小正月に作るもんだ。野菜を全部細かく刻んで、朝から夕方まで煮るんだよ。"
+      },
+      "region": {
+        "area": "tohoku",
+        "prefecture_code": "02",
+        "prefecture": "青森県"
+      },
+      "meta": {
+        "created_at": "2026-01-15",
+        "is_featured": true,
+        "is_endangered": true
+      },
+      "category": "汁物",
+      "tags": ["津軽", "小正月", "精進料理", "根菜", "伝統行事"],
+      "season": ["冬"],
+      "servings": 6,
+      "prep_time_minutes": 60,
+      "cook_time_minutes": 120,
+      "difficulty": 3,
+      "story": "けの汁は青森県津軽地方に伝わる小正月（1月15日）の行事食で、数十種類の根菜と山菜を細かく刻んで長時間煮込んだ精進汁だ。「粥の汁」が訛って「けの汁」になったとも言われる。正月に疲れた胃腸を休めるための知恵から生まれ、かつては女性たちが夜明け前から囲炉裏の前で大鍋に向かい、集落全体で分け合って食べた。山菜の保存技術と根菜の組み合わせは津軽の厳しい冬を生き抜く食の知恵の結晶である。",
+      "ingredients": [
+        {
+          "group": "根菜・豆類",
+          "items": [
+            { "name": "大根", "amount": 200, "unit": "g", "note": "細みじん切り" },
+            { "name": "にんじん", "amount": 150, "unit": "g", "note": "細みじん切り" },
+            { "name": "ごぼう", "amount": 100, "unit": "g", "note": "細みじん切り" },
+            { "name": "里芋", "amount": 200, "unit": "g", "note": "細みじん切り" },
+            { "name": "こんにゃく", "amount": 150, "unit": "g", "note": "細かく刻む" },
+            { "name": "油揚げ", "amount": 2, "unit": "枚", "note": "細かく刻む" },
+            { "name": "大豆（水煮）", "amount": 100, "unit": "g", "note": null }
+          ]
+        },
+        {
+          "group": "山菜・乾物",
+          "items": [
+            { "name": "わらび（塩蔵）", "amount": 80, "unit": "g", "note": "塩抜きして刻む" },
+            { "name": "ぜんまい（乾燥）", "amount": 30, "unit": "g", "note": "戻して刻む" },
+            { "name": "干し大根", "amount": 50, "unit": "g", "note": "戻して刻む" }
+          ]
+        },
+        {
+          "group": "だし・調味料",
+          "items": [
+            { "name": "水", "amount": 1500, "unit": "ml", "note": null },
+            { "name": "煮干し", "amount": 30, "unit": "g", "note": "頭と腸を取る" },
+            { "name": "味噌", "amount": 80, "unit": "g", "note": "津軽味噌（辛口）" },
+            { "name": "醤油", "amount": 20, "unit": "ml", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "だしを取る",
+          "description": "煮干しを水に一晩浸けてだしを取り、煮干しを取り出す。",
+          "tip": "津軽の家庭では煮干しだしが基本。昆布は入れないのが本来の作り方。"
+        },
+        {
+          "step": 2,
+          "title": "すべての具材を細かく刻む",
+          "description": "野菜・山菜・こんにゃく・油揚げをすべて5mm以下の細かいみじん切りにする。これが「けの汁」の最大の特徴。",
+          "tip": "具材を細かくすることで長時間煮てもとろけず、食べやすくなる。"
+        },
+        {
+          "step": 3,
+          "title": "長時間煮込む",
+          "description": "だし汁に硬い野菜（ごぼう・大根・にんじん）から順に加えて弱火で1時間煮る。その後、残りの具材をすべて加えてさらに1時間煮込む。",
+          "tip": "弱火で長く煮るのがコツ。焦げないよう時々かき混ぜること。"
+        },
+        {
+          "step": 4,
+          "title": "味噌で仕上げる",
+          "description": "具材がすべて柔らかくなったら火を弱め、味噌を溶き入れて醤油で味を整える。",
+          "tip": null
+        }
+      ],
+      "grandma_notes": [
+        "具材は包丁で丁寧に刻むの。フードプロセッサーを使うと水が出すぎてだめだよ。",
+        "小正月にまとめて大量に作って、三日間くらいかけて食べる。煮返すたびにおいしくなるんだ。",
+        "山菜は夏に採って塩蔵しておいたもの。それがないと本当の味にならないね。"
+      ],
+      "cultural_background": {
+        "history": "津軽地方の小正月（1月15日）に食べる行事食。女性が夜明け前から作り始め、集落全体で分け合う風習があった。",
+        "local_ingredients": ["津軽産わらび", "津軽産ぜんまい", "津軽辛口味噌"],
+        "similar_dishes": ["芋煮（山形）", "のっぺ（新潟）"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["imoni-yamagata-001"]
+    },
+    {
+      "id": "imoni-yamagata-001",
+      "title": "芋煮（山形・内陸版）",
+      "grandmother": {
+        "name": "遠藤ヤエさん",
+        "age": 79,
+        "prefecture": "山形県",
+        "city": "山形市",
+        "village": "蔵王",
+        "message": "里芋は煮崩れたっていいんだ。とろとろになった汁が一番おいしいんだから。"
+      },
+      "region": {
+        "area": "tohoku",
+        "prefecture_code": "06",
+        "prefecture": "山形県"
+      },
+      "meta": {
+        "created_at": "2026-02-01",
+        "is_featured": true,
+        "is_endangered": false
+      },
+      "category": "汁物",
+      "tags": ["里芋", "牛肉", "醤油", "芋煮会", "秋の行事"],
+      "season": ["秋"],
+      "servings": 6,
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 40,
+      "difficulty": 2,
+      "story": "山形の芋煮は毎年秋に最上川の河原で行われる「芋煮会」に欠かせない郷土料理で、その歴史は江戸時代中期にまで遡る。最上川を下る舟運で栄えた中山町では、舟乗りたちが積み荷の棒鱈と里芋を河原で煮て食べたことが始まりとも伝えられる。山形県内でも内陸は醤油ベースに牛肉、庄内は豚肉に味噌ベースと異なるスタイルがあり、その違いを巡る議論は今でも続く。秋の社交行事として集落や職場の絆を育んできた文化的な料理だ。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "里芋", "amount": 600, "unit": "g", "note": "皮をむいて大きいものは半分に" },
+            { "name": "牛肉（薄切り）", "amount": 300, "unit": "g", "note": null },
+            { "name": "こんにゃく", "amount": 1, "unit": "枚", "note": "手でちぎる" },
+            { "name": "長ねぎ", "amount": 3, "unit": "本", "note": "斜め切り" },
+            { "name": "舞茸", "amount": 100, "unit": "g", "note": "食べやすくほぐす" }
+          ]
+        },
+        {
+          "group": "だし・調味料",
+          "items": [
+            { "name": "水", "amount": 1200, "unit": "ml", "note": null },
+            { "name": "醤油", "amount": 80, "unit": "ml", "note": "山形産のもの" },
+            { "name": "みりん", "amount": 50, "unit": "ml", "note": null },
+            { "name": "酒", "amount": 50, "unit": "ml", "note": null },
+            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
+            { "name": "昆布だし", "amount": 800, "unit": "ml", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "里芋を下処理する",
+          "description": "里芋は皮をむき、塩でもんでぬめりを取り、水で洗う。大きいものは半分に切る。",
+          "tip": "ぬめりを取りすぎないこと。適度なぬめりがとろみとなりおいしさになる。"
+        },
+        {
+          "step": 2,
+          "title": "こんにゃくを下処理する",
+          "description": "こんにゃくは手でちぎり、熱湯で2分ほど下茹でしてアクを取る。",
+          "tip": null
+        },
+        {
+          "step": 3,
+          "title": "煮る",
+          "description": "昆布だしと水を合わせた鍋に里芋とこんにゃくを入れ、中火で15分煮る。醤油・みりん・酒・砂糖を加え、牛肉を広げながら加える。",
+          "tip": "牛肉はほぐしながら加えると固まらない。"
+        },
+        {
+          "step": 4,
+          "title": "仕上げる",
+          "description": "アクを取りながら10分ほど煮て、舞茸と長ねぎを加えてひと煮立ちしたら完成。",
+          "tip": "長ねぎは食感を残すため最後に加える。"
+        }
+      ],
+      "grandma_notes": [
+        "里芋は崩れるくらいまで煮るのが山形流。汁がとろっとなってきたら食べ頃だよ。",
+        "砂糖を入れるのを嫌がる人もいるけど、これが肉のくさみを消してくれるんだ。",
+        "河原で作るときは薪で炊くから香りが違う。家のガスじゃ再現できないのが残念だね。"
+      ],
+      "cultural_background": {
+        "history": "江戸中期から最上川の舟運で栄えた中山町付近を発祥とし、現在は山形市中央公園で毎年約3万食を作る「日本一の芋煮会」が開催される。",
+        "local_ingredients": ["山形産里芋（土垂）", "最上川沿いのこんにゃく芋"],
+        "similar_dishes": ["けの汁（青森）", "のっぺ（新潟）"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["ke-no-shiru-aomori-001", "dashi-yamagata-002"]
+    },
+    {
+      "id": "dashi-yamagata-002",
+      "title": "だし（山形のだし）",
+      "grandmother": {
+        "name": "鈴木フサさん",
+        "age": 74,
+        "prefecture": "山形県",
+        "city": "山形市",
+        "village": "東原",
+        "message": "夏になると毎日作るよ。冷蔵庫で一晩置くと野菜から水分が出てちょうどよくなる。"
+      },
+      "region": {
+        "area": "tohoku",
+        "prefecture_code": "06",
+        "prefecture": "山形県"
+      },
+      "meta": {
+        "created_at": "2026-02-03",
+        "is_featured": false,
+        "is_endangered": false
+      },
+      "category": "副菜",
+      "tags": ["なす", "きゅうり", "薬味", "夏野菜", "ご飯のお供"],
+      "season": ["夏"],
+      "servings": 4,
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 0,
+      "difficulty": 1,
+      "story": "山形の「だし」は夏野菜と香味野菜を細かく刻んで醤油で和えた山形県の郷土料理で、「だし」という名は「出汁」ではなく「おかず」を意味する山形の方言に由来する。農家が夏の畑でとれる野菜をそのまま使った知恵から生まれ、炊き立てのご飯に乗せるだけで食欲をそそる。きゅうり・なす・オクラ・みょうがといった夏野菜と納豆昆布の粘りが絶妙に絡み合い、今では山形のソウルフードとして全国に知られるようになった。",
+      "ingredients": [
+        {
+          "group": "野菜",
+          "items": [
+            { "name": "きゅうり", "amount": 2, "unit": "本", "note": "細かいみじん切り" },
+            { "name": "なす", "amount": 2, "unit": "本", "note": "細かいみじん切り、水にさらす" },
+            { "name": "オクラ", "amount": 8, "unit": "本", "note": "薄い小口切り" },
+            { "name": "みょうが", "amount": 4, "unit": "個", "note": "薄い小口切り" },
+            { "name": "大葉", "amount": 10, "unit": "枚", "note": "せん切り" }
+          ]
+        },
+        {
+          "group": "薬味・調味料",
+          "items": [
+            { "name": "生姜", "amount": 20, "unit": "g", "note": "みじん切り" },
+            { "name": "納豆昆布（ねばり昆布）", "amount": 10, "unit": "g", "note": "水で戻す" },
+            { "name": "醤油", "amount": 40, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 15, "unit": "ml", "note": "煮切ったもの" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "野菜を切る",
+          "description": "きゅうり・なす・オクラ・みょうが・大葉・生姜をすべて細かく切る。なすは切ったらすぐに水にさらしてあく抜きをする。",
+          "tip": "野菜はできるだけ細かく均一に切ると食感がよくなる。"
+        },
+        {
+          "step": 2,
+          "title": "昆布を戻す",
+          "description": "納豆昆布（ねばり昆布）を水大さじ2でふやかして粘りを出す。",
+          "tip": null
+        },
+        {
+          "step": 3,
+          "title": "和える",
+          "description": "水気を切ったなすと他の野菜をボウルに合わせ、戻した昆布・醤油・みりんを加えて全体を混ぜる。",
+          "tip": "味がなじむよう冷蔵庫で30分以上置くのがよい。"
+        }
+      ],
+      "grandma_notes": [
+        "ねばり昆布が入ることで全体がひとつにまとまる。これが山形のだしの秘密だよ。",
+        "翌日になるともっとおいしい。多めに作って二日分食べるのが我が家の流儀。"
+      ],
+      "cultural_background": {
+        "history": "山形市周辺を中心に発展した夏の定番料理。農家の食卓から生まれた「畑の恵みをそのまま食べる」シンプルな発想が原点。",
+        "local_ingredients": ["山形産なす", "山形産きゅうり", "ねばり昆布（がごめ昆布）"],
+        "similar_dishes": ["もろみきゅうり", "たたきごぼう"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["imoni-yamagata-001"]
+    },
+    {
+      "id": "soboro-natto-ibaraki-001",
+      "title": "そぼろ納豆",
+      "grandmother": {
+        "name": "渡辺タカさん",
+        "age": 83,
+        "prefecture": "茨城県",
+        "city": "水戸市",
+        "village": "吉沢",
+        "message": "切り干し大根と納豆を混ぜるだけだけど、これが一番ご飯に合うんだよ。毎日食べてる。"
+      },
+      "region": {
+        "area": "kanto",
+        "prefecture_code": "08",
+        "prefecture": "茨城県"
+      },
+      "meta": {
+        "created_at": "2026-02-10",
+        "is_featured": false,
+        "is_endangered": false
+      },
+      "category": "副菜",
+      "tags": ["納豆", "切り干し大根", "発酵", "水戸", "保存食"],
+      "season": ["通年"],
+      "servings": 4,
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 0,
+      "difficulty": 1,
+      "story": "そぼろ納豆は茨城県水戸市周辺に古くから伝わる郷土食で、水戸納豆と切り干し大根を醤油と酒で漬け込んだシンプルな一品だ。「そぼろ」は切り干し大根を指す言葉で、発酵した納豆の旨みと切り干し大根の甘みが合わさって独特のコクが生まれる。水戸では「水戸の六珍（ろっちん）」のひとつとしても数えられ、農家が自家製の納豆と大根を使って冬の保存食として作ってきた歴史を持つ。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "水戸納豆（小粒）", "amount": 200, "unit": "g", "note": null },
+            { "name": "切り干し大根", "amount": 60, "unit": "g", "note": "水で戻して固く絞る" }
+          ]
+        },
+        {
+          "group": "調味料",
+          "items": [
+            { "name": "醤油", "amount": 40, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 20, "unit": "ml", "note": "煮切る" },
+            { "name": "酒", "amount": 20, "unit": "ml", "note": "煮切る" },
+            { "name": "砂糖", "amount": 5, "unit": "g", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "切り干し大根を戻す",
+          "description": "切り干し大根を水に15分浸けて戻し、固く絞って水気を切る。長ければ食べやすい長さに切る。",
+          "tip": "戻しすぎると食感がなくなる。少し硬めで大丈夫。"
+        },
+        {
+          "step": 2,
+          "title": "調味料を合わせる",
+          "description": "みりんと酒を小鍋で煮切ってアルコールを飛ばし、醤油・砂糖と合わせて漬け汁を作る。",
+          "tip": null
+        },
+        {
+          "step": 3,
+          "title": "漬け込む",
+          "description": "納豆と切り干し大根を保存容器に入れ、漬け汁を加えて全体をよく混ぜる。冷蔵庫で半日以上置く。",
+          "tip": "1日置くと味がなじんでさらにおいしくなる。1週間程度保存できる。"
+        }
+      ],
+      "grandma_notes": [
+        "水戸の納豆は小粒が正解。大粒だとそぼろと絡まりにくいんだよ。",
+        "多めに作っておくと毎朝のご飯が楽になる。冷蔵庫に入れておけば1週間もつよ。"
+      ],
+      "cultural_background": {
+        "history": "江戸時代から水戸藩内で納豆の生産が盛んで、農家が自家製納豆と大根を組み合わせた保存食として発展した。",
+        "local_ingredients": ["水戸産大粒・小粒納豆", "茨城産大根（切り干し）"],
+        "similar_dishes": ["納豆の辛子和え", "大根の醤油漬け"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": []
+    },
+    {
+      "id": "jibu-ni-ishikawa-001",
+      "title": "治部煮",
+      "grandmother": {
+        "name": "中村スミさん",
+        "age": 80,
+        "prefecture": "石川県",
+        "city": "金沢市",
+        "village": "東山",
+        "message": "鴨に打ち粉をするのが金沢流。汁がとろりとして冷めにくくなるんだよ。"
+      },
+      "region": {
+        "area": "chubu",
+        "prefecture_code": "17",
+        "prefecture": "石川県"
+      },
+      "meta": {
+        "created_at": "2026-02-15",
+        "is_featured": true,
+        "is_endangered": false
+      },
+      "category": "主菜",
+      "tags": ["鴨肉", "加賀料理", "金沢", "わさび", "冬"],
+      "season": ["冬"],
+      "servings": 4,
+      "prep_time_minutes": 20,
+      "cook_time_minutes": 20,
+      "difficulty": 3,
+      "story": "治部煮は金沢を代表する加賀料理の一つで、鴨肉（または鶏肉）に小麦粉をまぶしてだし汁で煮た料理だ。「じぶじぶ」と煮る音から名がついたとも、豊臣秀吉の兵糧奉行・岡部治部右衛門が伝えたとも言われる。打ち粉によって肉から旨みがとろみと一緒に溶け出し、加賀野菜のすだれ麩や百合根とともに上品な一椀に仕上がる。茶道文化が根付く金沢では懐石料理の一品としても供される、格調高い伝統料理だ。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "鴨肉（または鶏胸肉）", "amount": 300, "unit": "g", "note": "薄いそぎ切り" },
+            { "name": "小麦粉", "amount": 30, "unit": "g", "note": "打ち粉用" },
+            { "name": "すだれ麩", "amount": 8, "unit": "枚", "note": "水で戻す" },
+            { "name": "百合根", "amount": 80, "unit": "g", "note": "鱗片をひとつずつはがす" },
+            { "name": "三つ葉", "amount": 1, "unit": "束", "note": null },
+            { "name": "わさび", "amount": 20, "unit": "g", "note": "添える" }
+          ]
+        },
+        {
+          "group": "だし・調味料",
+          "items": [
+            { "name": "一番だし（昆布+鰹節）", "amount": 600, "unit": "ml", "note": null },
+            { "name": "醤油", "amount": 50, "unit": "ml", "note": "うす口醤油" },
+            { "name": "みりん", "amount": 40, "unit": "ml", "note": null },
+            { "name": "酒", "amount": 30, "unit": "ml", "note": null },
+            { "name": "砂糖", "amount": 10, "unit": "g", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "鴨肉に打ち粉をする",
+          "description": "薄くそぎ切りにした鴨肉に小麦粉をしっかりまぶし、余分な粉は払い落とす。",
+          "tip": "打ち粉は直前につけること。時間が経つと粉が水分を吸いすぎる。"
+        },
+        {
+          "step": 2,
+          "title": "だし汁を作る",
+          "description": "昆布と鰹節で丁寧に一番だしを取り、うす口醤油・みりん・酒・砂糖を合わせて煮立てる。",
+          "tip": "うす口醤油を使うことで上品な色合いに仕上がる。"
+        },
+        {
+          "step": 3,
+          "title": "具材を煮る",
+          "description": "だし汁に百合根と戻したすだれ麩を入れて3分煮る。鴨肉を1枚ずつ広げて加え、中火でじっくり火を通す。",
+          "tip": "鴨肉の打ち粉が溶けてとろみが出てくる。かき混ぜすぎず優しく扱う。"
+        },
+        {
+          "step": 4,
+          "title": "盛り付ける",
+          "description": "器に盛り、三つ葉を飾り、わさびを添える。わさびを崩しながら食べるのが金沢流。",
+          "tip": null
+        }
+      ],
+      "grandma_notes": [
+        "わさびは一緒に煮てはいけない。食べる直前に添えて、溶かしながらいただくのが正式。",
+        "打ち粉は薄く均一につけること。厚すぎると糊みたいになってしまう。",
+        "百合根は高価だけど、これが入ると格段に上品になるから省かないで。"
+      ],
+      "cultural_background": {
+        "history": "加賀百万石の武家文化・茶道文化の中で洗練された金沢の代表的郷土料理。懐石料理の影響を受けた上品な仕立てが特徴。",
+        "local_ingredients": ["石川産百合根", "加賀麩（すだれ麩）", "石川産わさび"],
+        "similar_dishes": ["かぶら寿し", "のっぺ汁"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["kabura-zushi-ishikawa-002"]
+    },
+    {
+      "id": "kabura-zushi-ishikawa-002",
+      "title": "かぶら寿し",
+      "grandmother": {
+        "name": "前田テルさん",
+        "age": 77,
+        "prefecture": "石川県",
+        "city": "金沢市",
+        "village": "大野",
+        "message": "12月に漬け始めて、正月に食べる。一年で一番手間のかかる料理だけど、やめられないね。"
+      },
+      "region": {
+        "area": "chubu",
+        "prefecture_code": "17",
+        "prefecture": "石川県"
+      },
+      "meta": {
+        "created_at": "2026-02-16",
+        "is_featured": false,
+        "is_endangered": true
+      },
+      "category": "漬物",
+      "tags": ["かぶ", "ぶり", "麹", "発酵", "冬", "正月料理"],
+      "season": ["冬"],
+      "servings": 10,
+      "prep_time_minutes": 60,
+      "cook_time_minutes": 0,
+      "difficulty": 3,
+      "story": "かぶら寿しは石川県の冬を代表する伝統発酵食品で、塩漬けしたかぶら（蕪）にぶりの切り身を挟み、麹と砂糖で仕込んで2週間ほど発酵させた「なれずし」の一種だ。江戸時代から金沢の正月には欠かせない料理として親しまれ、かつては各家庭で独自の配合で漬けていた。麹の甘い香りとぶりの旨み、かぶらの爽やかさが渾然一体となった複雑な風味は、現代の食品加工技術では再現困難な職人的発酵芸術といえる。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "かぶら（大）", "amount": 3, "unit": "個", "note": "直径10cm以上のもの" },
+            { "name": "ぶり（刺身用さく）", "amount": 200, "unit": "g", "note": "薄く削ぎ切り" },
+            { "name": "塩", "amount": 100, "unit": "g", "note": "下漬け用" }
+          ]
+        },
+        {
+          "group": "麹床",
+          "items": [
+            { "name": "米麹", "amount": 200, "unit": "g", "note": null },
+            { "name": "砂糖", "amount": 100, "unit": "g", "note": null },
+            { "name": "みりん", "amount": 50, "unit": "ml", "note": null },
+            { "name": "ゆずの皮", "amount": 1, "unit": "個分", "note": "せん切り" },
+            { "name": "人参", "amount": 30, "unit": "g", "note": "せん切り・色付け用" }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "かぶらを下漬けする",
+          "description": "かぶらは皮をむき、2cm厚の輪切りにして中央に切り込みを入れる。塩をまぶして重石をかけ、2日間下漬けする。",
+          "tip": "切り込みはかぶらが割れないよう底面1cmを残して入れる。"
+        },
+        {
+          "step": 2,
+          "title": "ぶりを塩漬けする",
+          "description": "ぶりの切り身に塩をふり、冷蔵庫で1日置いて水分を出す。",
+          "tip": null
+        },
+        {
+          "step": 3,
+          "title": "麹床を作る",
+          "description": "米麹に砂糖・みりんを混ぜ、1日おいて麹を柔らかくする。ゆずの皮と人参を加える。",
+          "tip": "麹が柔らかくなると甘い香りが立ちのぼってくる。"
+        },
+        {
+          "step": 4,
+          "title": "仕込む",
+          "description": "下漬けしたかぶらの切り込みにぶりを挟み、保存容器の底に麹床を敷いてかぶらを並べ、隙間にも麹床を詰める。重石をかけて10〜14日冷暗所に置く。",
+          "tip": "仕込み温度は5〜10℃が理想。冷蔵庫の野菜室でもよい。"
+        }
+      ],
+      "grandma_notes": [
+        "ぶりは必ず新鮮なものを使うこと。鮮度が味に直結する。",
+        "麹はたっぷり使うのがコツ。けちると甘みと旨みが足りなくなる。",
+        "食べ頃は仕込みから12日前後。麹の甘い香りがしっかりしてきたらサインだよ。"
+      ],
+      "cultural_background": {
+        "history": "江戸時代から金沢の冬の保存食・正月料理として根付き、各家庭で独自のレシピが伝承されてきた。現在は職人が作る高級食品としても知られる。",
+        "local_ingredients": ["加賀かぶら", "能登産ぶり", "加賀ゆず", "石川産米麹"],
+        "similar_dishes": ["大根寿し", "いずし（北海道）"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["jibu-ni-ishikawa-001"]
+    },
+    {
+      "id": "obanzai-kyoto-001",
+      "title": "たいたん（焚き合わせ）",
+      "grandmother": {
+        "name": "田中ウメさん",
+        "age": 85,
+        "prefecture": "京都府",
+        "city": "京都市",
+        "village": "西陣",
+        "message": "「たいたん」いうのはね、それぞれの素材をうまく炊き合わせること。混ぜて煮るんとは違うんえ。"
+      },
+      "region": {
+        "area": "kinki",
+        "prefecture_code": "26",
+        "prefecture": "京都府"
+      },
+      "meta": {
+        "created_at": "2026-02-20",
+        "is_featured": true,
+        "is_endangered": false
+      },
+      "category": "副菜",
+      "tags": ["おばんざい", "炊き合わせ", "京都", "だし", "加賀野菜"],
+      "season": ["通年"],
+      "servings": 4,
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 40,
+      "difficulty": 3,
+      "story": "京都のおばんざい「たいたん（焚き合わせ）」は、それぞれの素材を別々に味つけして炊き、器に盛り合わせる京都の家庭料理の真骨頂だ。素材の色・形・味を生かすために別炊きするという考え方は、何百年にもわたる京の台所文化が育んだ知恵であり、上品なだし文化の極致でもある。かつては御所の台所で磨かれた技が町家や一般家庭に降りてきたとも言われ、おばんざいの中でも「たいたん」は家庭の料理技術の高さを示す一品だった。",
+      "ingredients": [
+        {
+          "group": "海老芋",
+          "items": [
+            { "name": "海老芋", "amount": 4, "unit": "個", "note": "六方むきにする" },
+            { "name": "だし", "amount": 300, "unit": "ml", "note": null },
+            { "name": "うす口醤油", "amount": 15, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 20, "unit": "ml", "note": null }
+          ]
+        },
+        {
+          "group": "南瓜",
+          "items": [
+            { "name": "南瓜", "amount": 300, "unit": "g", "note": "面取りする" },
+            { "name": "だし", "amount": 200, "unit": "ml", "note": null },
+            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
+            { "name": "うす口醤油", "amount": 10, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 15, "unit": "ml", "note": null }
+          ]
+        },
+        {
+          "group": "高野豆腐・ふ",
+          "items": [
+            { "name": "高野豆腐", "amount": 2, "unit": "枚", "note": "水で戻す" },
+            { "name": "だし", "amount": 200, "unit": "ml", "note": null },
+            { "name": "うす口醤油", "amount": 15, "unit": "ml", "note": null },
+            { "name": "みりん", "amount": 15, "unit": "ml", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "海老芋を炊く",
+          "description": "六方むきにした海老芋を米のとぎ汁で下茹でし、だし・うす口醤油・みりんで柔らかくなるまで弱火でゆっくり炊く。",
+          "tip": "六方むきは京料理の美しさの基本。角を落とすことで煮崩れも防げる。"
+        },
+        {
+          "step": 2,
+          "title": "南瓜を炊く",
+          "description": "面取りした南瓜を皮を下にして鍋に並べ、だし・砂糖・うす口醤油・みりんを加えて落し蓋をして中火で炊く。",
+          "tip": "南瓜は皮を下にして炊くと色が鮮やかに仕上がる。"
+        },
+        {
+          "step": 3,
+          "title": "高野豆腐を炊く",
+          "description": "水で戻した高野豆腐を軽く絞り、だし・うす口醤油・みりんで含ませるように弱火で炊く。",
+          "tip": null
+        },
+        {
+          "step": 4,
+          "title": "盛り合わせる",
+          "description": "三種を器にバランスよく盛り合わせる。それぞれの色と形が引き立つよう配置する。",
+          "tip": "盛り付けも料理の一部。素材の色を意識して美しく整える。"
+        }
+      ],
+      "grandma_notes": [
+        "素材によってだしの量も醤油の量も変える。海老芋は薄めで、南瓜は少し甘めに。",
+        "「たいたん」はいっぺんに作るものやない。素材ひとつひとつと向き合うことが大事。",
+        "うす口醤油を使うのが京都流。色が薄いから素材の色が生きるんえ。"
+      ],
+      "cultural_background": {
+        "history": "御所文化や寺院料理の影響を受けて発展した京都の家庭料理。「おばんざい」文化の中核をなす技法で、素材本来の味を引き出すだし文化と不可分。",
+        "local_ingredients": ["京都産海老芋", "加茂なす", "堀川ごぼう"],
+        "similar_dishes": ["精進料理の炊き合わせ", "会席料理の煮物椀"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": []
+    },
+    {
+      "id": "ikinaridango-kumamoto-001",
+      "title": "いきなり団子",
+      "grandmother": {
+        "name": "松本ミナさん",
+        "age": 76,
+        "prefecture": "熊本県",
+        "city": "熊本市",
+        "village": "河内",
+        "message": "さつまいもは熊本の赤土で育てた甘いもんを使いなさい。それだけで全然ちがうとよ。"
+      },
+      "region": {
+        "area": "kyushu",
+        "prefecture_code": "43",
+        "prefecture": "熊本県"
+      },
+      "meta": {
+        "created_at": "2026-03-01",
+        "is_featured": true,
+        "is_endangered": false
+      },
+      "category": "おやつ",
+      "tags": ["さつまいも", "小豆", "蒸し菓子", "熊本", "郷土菓子"],
+      "season": ["秋", "冬"],
+      "servings": 8,
+      "prep_time_minutes": 40,
+      "cook_time_minutes": 20,
+      "difficulty": 2,
+      "story": "いきなり団子は熊本県を代表する郷土菓子で、小麦粉の生地でさつまいもとあんこを包んで蒸したシンプルなおやつだ。「いきなり（=唐突に・すぐに）」という名は、生のいもをそのまま（いきなり）生地に包んで蒸す作り方に由来するとも、「急に（いきなり）」客がきても作れる手軽な菓子であるからともいわれる。農家のおやつとして農繁期に大量に作られてきた歴史があり、蒸かし芋の自然な甘みとあんこの甘さが絶妙にマッチした素朴な味わいは今も熊本県民に深く愛されている。",
+      "ingredients": [
+        {
+          "group": "生地",
+          "items": [
+            { "name": "薄力粉", "amount": 200, "unit": "g", "note": null },
+            { "name": "水", "amount": 100, "unit": "ml", "note": "少しずつ加える" },
+            { "name": "塩", "amount": 2, "unit": "g", "note": null }
+          ]
+        },
+        {
+          "group": "中身",
+          "items": [
+            { "name": "さつまいも", "amount": 400, "unit": "g", "note": "1cm輪切り" },
+            { "name": "粒あん", "amount": 200, "unit": "g", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "生地を作る",
+          "description": "薄力粉と塩をボウルに入れ、水を少しずつ加えながら耳たぶよりやや硬めになるまでこねる。ひとまとめにしてラップをかけ30分休ませる。",
+          "tip": "こねすぎるとグルテンが出て硬くなる。まとまったら休ませることが大切。"
+        },
+        {
+          "step": 2,
+          "title": "さつまいもを切る",
+          "description": "さつまいもを1cm幅の輪切りにして水にさらしてあくを抜く。",
+          "tip": null
+        },
+        {
+          "step": 3,
+          "title": "包む",
+          "description": "生地を8等分して丸め、めん棒で楕円形に伸ばす。さつまいもの輪切りにあんこを適量乗せ、生地で包む。端をしっかりつまんで閉じる。",
+          "tip": "生地が薄くなりすぎると蒸したときに破れる。3mm程度の厚さを保つこと。"
+        },
+        {
+          "step": 4,
+          "title": "蒸す",
+          "description": "蒸し器に濡れた布巾を敷き、包んだ団子を並べて強火で20分蒸す。",
+          "tip": "蒸し上がったら蒸し器の蓋を少しずらしてから開けると、水滴が落ちない。"
+        }
+      ],
+      "grandma_notes": [
+        "さつまいもは熊本の赤土で育てたものが甘くておいしい。できれば地元の農家から直接買って。",
+        "生地は薄く伸ばしすぎないこと。厚みがあったほうがもちもちして美味しい。",
+        "蒸きたてが一番。時間が経ったら電子レンジで温め直すといいよ。"
+      ],
+      "cultural_background": {
+        "history": "熊本の農村部で農繁期のおやつとして発展。いもを生のまま包んで蒸す合理的な作り方は農家の知恵そのもの。現在は熊本の代表的な土産物としても知られる。",
+        "local_ingredients": ["熊本産さつまいも（赤土栽培）", "熊本産小豆"],
+        "similar_dishes": ["からし蓮根", "野菜まんじゅう"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["karashi-renkon-kumamoto-002"]
+    },
+    {
+      "id": "karashi-renkon-kumamoto-002",
+      "title": "からし蓮根",
+      "grandmother": {
+        "name": "坂本ヨシさん",
+        "age": 81,
+        "prefecture": "熊本県",
+        "city": "熊本市",
+        "village": "島崎",
+        "message": "からしは気合いを入れて練るんだよ。弱いからしじゃ熊本のからし蓮根にならんとよ。"
+      },
+      "region": {
+        "area": "kyushu",
+        "prefecture_code": "43",
+        "prefecture": "熊本県"
+      },
+      "meta": {
+        "created_at": "2026-03-02",
+        "is_featured": false,
+        "is_endangered": false
+      },
+      "category": "副菜",
+      "tags": ["蓮根", "からし", "味噌", "熊本", "揚げ物", "郷土料理"],
+      "season": ["通年"],
+      "servings": 6,
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 15,
+      "difficulty": 3,
+      "story": "からし蓮根は熊本藩第3代藩主・細川忠利の栄養食として江戸時代初期に考案されたと伝えられる。蓮根の穴に辛子味噌を詰め、卵衣をまとわせて揚げた料理で、その断面が肥後の家紋「九曜紋」に似ることから藩外への持ち出しが禁じられていたという逸話もある。現在は熊本土産の定番として全国に知られるが、家庭で手作りするには高度な技術が必要なため、作り方を知る人が少なくなりつつある。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            { "name": "蓮根（太め）", "amount": 2, "unit": "節", "note": "穴が大きく均一なもの" },
+            { "name": "揚げ油", "amount": 500, "unit": "ml", "note": null }
+          ]
+        },
+        {
+          "group": "からし味噌",
+          "items": [
+            { "name": "麦味噌", "amount": 100, "unit": "g", "note": "熊本産" },
+            { "name": "練りからし", "amount": 30, "unit": "g", "note": "粉からしを練ったもの" },
+            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
+            { "name": "みりん", "amount": 20, "unit": "ml", "note": null }
+          ]
+        },
+        {
+          "group": "衣",
+          "items": [
+            { "name": "卵", "amount": 2, "unit": "個", "note": null },
+            { "name": "薄力粉", "amount": 100, "unit": "g", "note": null },
+            { "name": "ターメリック", "amount": 2, "unit": "g", "note": "黄色い色付け用" },
+            { "name": "水", "amount": 50, "unit": "ml", "note": null }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "title": "蓮根を下処理する",
+          "description": "蓮根の両端を切り落とし、酢水に10分さらしてあくを抜く。蒸し器で10分蒸して少し火を通す。",
+          "tip": "完全に火を通す必要はない。半生の状態で次の工程へ。"
+        },
+        {
+          "step": 2,
+          "title": "からし味噌を作る",
+          "description": "麦味噌・練りからし・砂糖・みりんを合わせてよく練る。ペースト状になるまでしっかり混ぜる。",
+          "tip": "からしは湯を使って練ると辛みが増す。力強くよく練ること。"
+        },
+        {
+          "step": 3,
+          "title": "からし味噌を詰める",
+          "description": "蒸した蓮根の穴にからし味噌を箸や絞り袋で丁寧に詰める。全穴にしっかり詰めること。",
+          "tip": "詰める前に蓮根をしっかり乾かしておくと味噌が抜けにくい。"
+        },
+        {
+          "step": 4,
+          "title": "衣をつけて揚げる",
+          "description": "卵・薄力粉・ターメリック・水を混ぜて衣を作る。蓮根全体に衣をまとわせ、170℃の油でゆっくりと揚げる。",
+          "tip": "ターメリックが熊本の黄色い衣の秘密。じっくり低温で揚げることで中まで温まる。"
+        }
+      ],
+      "grandma_notes": [
+        "からし味噌は辛くなければ意味がない。最初はむせるくらい辛くて丁度いい。食べると汗が出てくるくらいが本物だよ。",
+        "衣の黄色はターメリックで出す。これが熊本のからし蓮根の証だよ。",
+        "薄切りにしたとき、穴が黄色い星みたいに見えるでしょ？それが美しい断面なんだよ。"
+      ],
+      "cultural_background": {
+        "history": "江戸初期に細川忠利の滋養食として考案され、藩の機密料理として扱われた。肥後の家紋に似た断面が誇りとされ、現在は熊本を代表する郷土料理・土産物として全国に知られる。",
+        "local_ingredients": ["熊本産蓮根（大節）", "熊本産麦味噌", "九州産粉からし"],
+        "similar_dishes": ["いきなり団子", "蓮根の天ぷら"]
+      },
+      "photos": {
+        "main": "assets/images/recipes/placeholder.jpg",
+        "thumbnail": "assets/images/recipes/placeholder.jpg"
+      },
+      "related_recipe_ids": ["ikinaridango-kumamoto-001"]
+    }
+  ]
+}
