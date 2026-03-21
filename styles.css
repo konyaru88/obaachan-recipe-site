@@ -2264,6 +2264,9 @@ input, textarea, select {
   flex-wrap: wrap;
   text-align: center;
   letter-spacing: 0.03em;
+  position: sticky;
+  top: 0;
+  z-index: 101;
 }
 .beta-bar__badge {
   background: var(--color-accent-gold);

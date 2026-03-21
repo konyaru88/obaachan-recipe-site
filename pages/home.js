@@ -140,7 +140,7 @@ export default async function renderHome(router) {
           日本の食文化を守る大切な一歩になります。
         </p>
         <div class="recruit-block__channels">
-          <a href="https://www.instagram.com/obaachan_recipe/" target="_blank" rel="noopener noreferrer" class="recruit-channel recruit-channel--instagram">
+          <a href="https://www.instagram.com/obaachan_recipe" target="_blank" rel="noopener noreferrer" class="recruit-channel recruit-channel--instagram">
             <span class="recruit-channel__icon" aria-hidden="true">📸</span>
             <span class="recruit-channel__name">Instagram</span>
             <span class="recruit-channel__handle">@obaachan_recipe</span>
