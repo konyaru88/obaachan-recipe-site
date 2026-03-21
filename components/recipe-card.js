@@ -39,6 +39,9 @@ export default function renderRecipeCard(recipe) {
     ? `<span class="badge badge--endangered">消えゆくレシピ</span>`
     : '';
 
+  // 現在はすべてサンプルデータ
+  const sampleBadge = `<span class="badge badge--sample">サンプル</span>`;
+
   const tagItems = tags.slice(0, 3)
     .map((t) => `<span class="recipe-card__tag">${escapeHtml(t)}</span>`)
     .join('');
@@ -48,7 +51,7 @@ export default function renderRecipeCard(recipe) {
   <a href="#/recipe/${escapeHtml(String(id))}" class="recipe-card__link" aria-label="${safeTitle}のレシピを見る">
     <div class="recipe-card__thumb${imageUrl ? '' : ' recipe-card__image-placeholder'}">
       ${imgTag}
-      ${endangeredBadge ? `<div class="recipe-card__badges">${endangeredBadge}</div>` : ''}
+      <div class="recipe-card__badges">${endangeredBadge}${sampleBadge}</div>
       ${prefecture ? `<span class="recipe-card__region-badge">${prefecture}</span>` : ''}
     </div>
     <div class="recipe-card__body">

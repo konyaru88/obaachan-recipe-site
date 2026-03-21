@@ -127,6 +127,35 @@ export default async function renderHome(router) {
     </div>
   </section>
 
+  <!-- レシピ募集 -->
+  <section class="home__recruit" aria-labelledby="recruit-heading">
+    <div class="container">
+      <div class="recruit-block">
+        <div class="recruit-block__deco" aria-hidden="true">📮</div>
+        <div class="recruit-block__beta-badge">β版公開中</div>
+        <h2 id="recruit-heading" class="recruit-block__title">あなたのおばあちゃんのレシピを<br>教えてください</h2>
+        <p class="recruit-block__text">
+          料理名だけでもOKです。<br>
+          「うちの祖母がよく作っていた」という記憶が、<br>
+          日本の食文化を守る大切な一歩になります。
+        </p>
+        <div class="recruit-block__channels">
+          <a href="https://www.instagram.com/obaachan_recipe/" target="_blank" rel="noopener noreferrer" class="recruit-channel recruit-channel--instagram">
+            <span class="recruit-channel__icon" aria-hidden="true">📸</span>
+            <span class="recruit-channel__name">Instagram</span>
+            <span class="recruit-channel__handle">@obaachan_recipe</span>
+          </a>
+          <a href="https://www.threads.net/@obaachan_recipe" target="_blank" rel="noopener noreferrer" class="recruit-channel recruit-channel--threads">
+            <span class="recruit-channel__icon" aria-hidden="true">🧵</span>
+            <span class="recruit-channel__name">Threads</span>
+            <span class="recruit-channel__handle">@obaachan_recipe</span>
+          </a>
+        </div>
+        <p class="recruit-block__note">DMでもコメントでも、どちらでも大歓迎です 🙏</p>
+      </div>
+    </div>
+  </section>
+
   <!-- サービスの想い -->
   <section class="home__about" aria-labelledby="about-heading">
     <div class="container">

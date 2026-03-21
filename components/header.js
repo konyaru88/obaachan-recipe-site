@@ -14,6 +14,13 @@ export default function renderHeader(router) {
   const navClass = (path) => isActive(path) ? 'nav__link nav__link--active is-active' : 'nav__link';
 
   return `
+<!-- β版お知らせバー -->
+<div class="beta-bar" role="banner" aria-label="お知らせ">
+  <span class="beta-bar__badge">β版公開中</span>
+  <span class="beta-bar__text">現在β版公開中・レシピ募集中 ── あなたのおばあちゃんの味を教えてください</span>
+  <a href="#/articles" class="beta-bar__link">詳しくはこちら</a>
+</div>
+
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="#/">

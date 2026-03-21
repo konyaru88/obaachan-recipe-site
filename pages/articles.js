@@ -50,7 +50,10 @@ export default async function renderArticles({ query = {} } = {}) {
         <a href="#/article/${escapeHtml(article.id)}" class="article-card">
           <div class="article-card__thumb" aria-hidden="true">${escapeHtml(article.thumbnail_emoji)}</div>
           <div class="article-card__body">
-            <span class="article-card__category">${escapeHtml(article.category)}</span>
+            <div class="article-card__header-row">
+              <span class="article-card__category">${escapeHtml(article.category)}</span>
+              <span class="badge badge--sample">サンプル</span>
+            </div>
             <h2 class="article-card__title">${escapeHtml(article.title)}</h2>
             <p class="article-card__lead">${escapeHtml(article.lead)}</p>
             <div class="article-card__meta">
