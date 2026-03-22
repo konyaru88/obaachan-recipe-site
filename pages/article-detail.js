@@ -23,6 +23,14 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
 
   const date = article.published_at.replace(/-/g, '.').slice(2);
 
+  // インライン記法の変換
+  const formatInline = (text) => {
+    let result = text;
+    result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    result = result.replace(/\{\{recruit:(.+?)\}\}/g, '<a href="#/" class="article-recruit-link" data-recruit>$1</a>');
+    return result;
+  };
+
   // 本文を段落に変換（空行区切り、## をh2に変換）
   const bodyHtml = article.body
     .split('\n\n')
@@ -38,15 +46,12 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
         if (lines.length > 1) {
           const rest = lines.slice(1).join('\n').trim();
           const html = escapeHtml(rest).replace(/\n/g, '<br>');
-          const withBold = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-          return [heading, `<p>${withBold}</p>`];
+          return [heading, `<p>${formatInline(html)}</p>`];
         }
         return heading;
       }
-      // **text** を <strong> に変換
       const html = escapeHtml(trimmed).replace(/\n/g, '<br>');
-      const withBold = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-      return `<p>${withBold}</p>`;
+      return `<p>${formatInline(html)}</p>`;
     })
     .join('');
 
@@ -125,4 +130,13 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
 `;
 
   setPage(html);
+
+  // 応募セクションへのリンク処理
+  document.querySelectorAll('[data-recruit]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      sessionStorage.setItem('scrollTo', 'recruit');
+      window.location.hash = '#/';
+    });
+  });
 }

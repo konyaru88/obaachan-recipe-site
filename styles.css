@@ -2232,6 +2232,18 @@ input, textarea, select {
   margin: var(--space-2xl) 0;
 }
 
+.article-recruit-link {
+  color: var(--color-accent-red);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-accent-gold);
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+.article-recruit-link:hover {
+  border-color: var(--color-accent-red);
+}
+
 .article-references {
   margin-top: var(--space-2xl);
   padding-top: var(--space-lg);

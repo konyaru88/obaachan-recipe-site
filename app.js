@@ -2,13 +2,13 @@
  * メインエントリポイント
  */
 import Router from './utils/router.js';
-import renderHome from './pages/home.js';
+import renderHome from './pages/home.js?v=20260322';
 import renderList from './pages/list.js';
 import renderDetail from './pages/detail.js';
 import renderRegion from './pages/region.js';
 import renderSearch from './pages/search.js';
-import renderArticles from './pages/articles.js';
-import renderArticleDetail from './pages/article-detail.js';
+import renderArticles from './pages/articles.js?v=20260322';
+import renderArticleDetail from './pages/article-detail.js?v=20260322';
 import renderHeader from './components/header.js';
 import renderFooter from './components/footer.js';
 

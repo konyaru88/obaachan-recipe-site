@@ -191,7 +191,7 @@ export default async function renderHome(router) {
     sessionStorage.removeItem('scrollTo');
     setTimeout(() => {
       document.getElementById('recruit')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    }, 300);
   }
 
   // ヒーロー検索フォームのイベント
