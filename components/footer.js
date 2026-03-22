@@ -8,25 +8,37 @@
  */
 export default function renderFooter() {
   return `
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__brand">
-      <a class="footer__logo" href="#/">
-        <span class="footer__logo-icon">🍱</span>
-        <span class="footer__logo-text">おばあちゃんのレシピ</span>
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <a class="site-footer__logo" href="#/">
+        <span>🍱</span>
+        おばあちゃんのレシピ
       </a>
-      <p class="footer__tagline">古き良き味を、未来へつなぐ</p>
+      <p class="site-footer__tagline">古き良き味を、未来へつなぐ</p>
     </div>
 
-    <nav class="footer__nav" aria-label="フッターナビゲーション">
-      <a href="#/" class="footer__link">ホーム</a>
-      <a href="#/recipes" class="footer__link">レシピ一覧</a>
-      <a href="#/regions" class="footer__link">地域で探す</a>
+    <nav aria-label="フッターナビゲーション">
+      <p class="site-footer__heading">MENU</p>
+      <ul class="site-footer__links">
+        <li><a href="#/">ホーム</a></li>
+        <li><a href="#/recipes">レシピ一覧</a></li>
+        <li><a href="#/regions">地域で探す</a></li>
+        <li><a href="#/articles">読み物</a></li>
+      </ul>
     </nav>
+
+    <div>
+      <p class="site-footer__heading">SNS</p>
+      <ul class="site-footer__links">
+        <li><a href="https://www.instagram.com/obaachan_recipe" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://www.threads.net/@obaachan_recipe" target="_blank" rel="noopener noreferrer">Threads</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="footer__bottom">
-    <p class="footer__copy">&copy; 2025 おばあちゃんのレシピ</p>
+  <div class="site-footer__bottom container">
+    <p>&copy; 2026 おばあちゃんのレシピ</p>
   </div>
 </footer>
 `;

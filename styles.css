@@ -390,10 +390,13 @@ input, textarea, select {
 }
 
 .recipe-card__badges {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
   display: flex;
   gap: var(--space-xs);
   flex-wrap: wrap;
-  margin-bottom: var(--space-xs);
+  align-items: flex-start;
 }
 
 .recipe-card__region {
@@ -2291,12 +2294,12 @@ input, textarea, select {
 
 /* サンプルバッジ */
 .badge--sample {
-  background: rgba(255,255,255,0.15);
+  background: rgba(44, 26, 14, 0.55);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: none;
   font-size: 0.65rem;
   font-weight: 700;
-  padding: 1px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
   letter-spacing: 0.05em;
   backdrop-filter: blur(4px);

@@ -18,7 +18,7 @@ export default function renderHeader(router) {
 <div class="beta-bar" role="banner" aria-label="お知らせ">
   <span class="beta-bar__badge">β版公開中</span>
   <span class="beta-bar__text">現在β版公開中・レシピ募集中 ── あなたのおばあちゃんの味を教えてください</span>
-  <a href="#/articles" class="beta-bar__link">詳しくはこちら</a>
+  <a href="#/" class="beta-bar__link" onclick="sessionStorage.setItem('scrollTo','recruit')">詳しくはこちら</a>
 </div>
 
 <header class="site-header">

@@ -128,7 +128,7 @@ export default async function renderHome(router) {
   </section>
 
   <!-- レシピ募集 -->
-  <section class="home__recruit" aria-labelledby="recruit-heading">
+  <section id="recruit" class="home__recruit" aria-labelledby="recruit-heading">
     <div class="container">
       <div class="recruit-block">
         <div class="recruit-block__deco" aria-hidden="true">📮</div>
@@ -185,6 +185,14 @@ export default async function renderHome(router) {
 `;
 
   setPage(html);
+
+  // 「詳しくはこちら」からのスクロール（他ページ経由の場合はsessionStorageでフラグを受け取る）
+  if (sessionStorage.getItem('scrollTo') === 'recruit') {
+    sessionStorage.removeItem('scrollTo');
+    setTimeout(() => {
+      document.getElementById('recruit')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
 
   // ヒーロー検索フォームのイベント
   const heroForm = document.getElementById('hero-search-form');
