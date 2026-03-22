@@ -23,11 +23,42 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
 
   const date = article.published_at.replace(/-/g, '.').slice(2);
 
-  // 本文を段落に変換（空行区切り）
+  // 本文を段落に変換（空行区切り、## をh2に変換）
   const bodyHtml = article.body
     .split('\n\n')
-    .map(para => `<p>${escapeHtml(para.trim()).replace(/\n/g, '<br>')}</p>`)
+    .flatMap(para => {
+      const trimmed = para.trim();
+      if (trimmed === '---') {
+        return '<hr class="article-content__divider">';
+      }
+      // ## Heading\nBody text のケースを分割
+      if (trimmed.startsWith('## ')) {
+        const lines = trimmed.split('\n');
+        const heading = `<h2 class="article-content__heading">${escapeHtml(lines[0].slice(3))}</h2>`;
+        if (lines.length > 1) {
+          const rest = lines.slice(1).join('\n').trim();
+          const html = escapeHtml(rest).replace(/\n/g, '<br>');
+          const withBold = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+          return [heading, `<p>${withBold}</p>`];
+        }
+        return heading;
+      }
+      // **text** を <strong> に変換
+      const html = escapeHtml(trimmed).replace(/\n/g, '<br>');
+      const withBold = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      return `<p>${withBold}</p>`;
+    })
     .join('');
+
+  // 参考文献
+  const referencesHtml = article.references && article.references.length > 0
+    ? `<footer class="article-references">
+        <h3 class="article-references__title">参考文献</h3>
+        <ul class="article-references__list">
+          ${article.references.map(ref => `<li>${escapeHtml(ref)}</li>`).join('')}
+        </ul>
+      </footer>`
+    : '';
 
   // 関連レシピリンク
   const relatedHtml = article.related_recipe_id
@@ -60,6 +91,7 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
       <header class="article-header">
         <span class="article-card__category">${escapeHtml(article.category)}</span>
         <h1 class="article-header__title">${escapeHtml(article.title)}</h1>
+        ${article.subtitle ? `<p class="article-header__subtitle">${escapeHtml(article.subtitle)}</p>` : ''}
         <div class="article-header__meta">
           <time datetime="${escapeHtml(article.published_at)}">${escapeHtml(date)}</time>
           <span>約${article.reading_time}分で読める</span>
@@ -72,6 +104,9 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
       <div class="article-content">
         ${bodyHtml}
       </div>
+
+      <!-- 参考文献 -->
+      ${referencesHtml}
 
       <!-- 関連レシピ -->
       ${relatedHtml}

@@ -2207,6 +2207,53 @@ input, textarea, select {
   font-weight: 500;
 }
 
+.article-header__subtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-serif);
+  margin-top: calc(-1 * var(--space-sm));
+  margin-bottom: var(--space-md);
+}
+
+.article-content__heading {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-accent-gold);
+}
+
+.article-content__divider {
+  border: none;
+  border-top: 1px solid var(--color-divider);
+  margin: var(--space-2xl) 0;
+}
+
+.article-references {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-divider);
+}
+.article-references__title {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+.article-references__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.article-references__list li {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
 .article-related {
   background: var(--color-bg-warm);
   border-radius: var(--radius-lg);

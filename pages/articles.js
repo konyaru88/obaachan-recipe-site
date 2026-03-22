@@ -52,7 +52,6 @@ export default async function renderArticles({ query = {} } = {}) {
           <div class="article-card__body">
             <div class="article-card__header-row">
               <span class="article-card__category">${escapeHtml(article.category)}</span>
-              <span class="badge badge--sample">サンプル</span>
             </div>
             <h2 class="article-card__title">${escapeHtml(article.title)}</h2>
             <p class="article-card__lead">${escapeHtml(article.lead)}</p>
