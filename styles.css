@@ -8,22 +8,25 @@
    ============================================================ */
 :root {
   /* カラーパレット */
-  --color-bg-base:       #FAF7F2; /* 生成り */
-  --color-bg-warm:       #F5EFE6;
-  --color-bg-card:       #FFFDF9;
-  --color-text-primary:  #2C1A0E;
-  --color-text-secondary:#6B4C35;
-  --color-text-muted:    #A0856D;
-  --color-accent-red:    #C0392B; /* 弁柄色 */
-  --color-accent-gold:   #C9A84C; /* 山吹色 */
-  --color-accent-green:  #5B7B4F; /* 若竹色 */
-  --color-border:        #D9CBBF;
-  --color-divider:       #EAE0D5;
+  --color-bg-base:       #F0E8DA; /* 温かい羊皮紙色 */
+  --color-bg-warm:       #E8DCC8; /* トースト色 */
+  --color-bg-card:       #FAF5EC; /* 温かいアイボリー */
+  --color-text-primary:  #1F150A; /* 深い茶黒 */
+  --color-text-secondary:#5C3D24; /* 深い茶色 */
+  --color-text-muted:    #8B7058; /* 温かいミュート */
+  --color-accent-red:    #A63020; /* 深い弁柄色 */
+  --color-accent-gold:   #B8893A; /* 銅色寄りのゴールド */
+  --color-accent-green:  #4A6B3E; /* 深い若竹色 */
+  --color-border:        #C4B09A; /* 温かいボーダー */
+  --color-divider:       #D9CCBB; /* 温かいディバイダー */
+  --color-copper:        #B87333; /* 銅鍋のアクセント色 */
+  --color-bg-dark:       #3A2416; /* 木目ダークトーン */
 
   /* タイポグラフィ */
   --font-serif: 'Noto Serif JP', serif;
   --font-sans:  'Noto Sans JP', sans-serif;
   --font-hand:  'Kaisei Tokumin', serif;
+  --font-round: 'Zen Maru Gothic', sans-serif;
 
   /* スペーシング */
   --space-xs:  0.25rem;
@@ -35,9 +38,9 @@
   --space-3xl: 5rem;
 
   /* シャドウ */
-  --shadow-sm: 0 1px 3px rgba(44, 26, 14, 0.08);
-  --shadow-md: 0 4px 12px rgba(44, 26, 14, 0.12);
-  --shadow-lg: 0 8px 24px rgba(44, 26, 14, 0.15);
+  --shadow-sm: 0 1px 3px rgba(31, 21, 10, 0.10);
+  --shadow-md: 0 4px 12px rgba(31, 21, 10, 0.15);
+  --shadow-lg: 0 8px 24px rgba(31, 21, 10, 0.20);
 
   /* ボーダーラジウス */
   --radius-sm: 4px;
@@ -63,6 +66,7 @@ html {
 
 body {
   background-color: var(--color-bg-base);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cpath d='M20 20.5a.5.5 0 110-1 .5.5 0 010 1z' fill='%23000' fill-opacity='.015'/%3E%3C/svg%3E");
   font-family: var(--font-sans);
   color: var(--color-text-primary);
   line-height: 1.7;
@@ -162,7 +166,7 @@ input, textarea, select {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 247, 242, 0.92);
+  background: rgba(240, 232, 218, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
@@ -198,7 +202,7 @@ input, textarea, select {
 }
 
 .site-header__nav a {
-  font-family: var(--font-sans);
+  font-family: var(--font-round);
   font-size: 0.9rem;
   color: var(--color-text-secondary);
   padding-bottom: 2px;
@@ -264,9 +268,11 @@ input, textarea, select {
   text-align: center;
   background: linear-gradient(
     180deg,
-    #EDE5D8 0%,
-    #F5EFE6 40%,
-    #FAF7F2 100%
+    #3A2416 0%,
+    #5C3D24 25%,
+    #7A5A2E 50%,
+    #C9944A 75%,
+    #F0E8DA 100%
   );
   overflow: hidden;
 }
@@ -276,8 +282,9 @@ input, textarea, select {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(192, 57, 43, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(201, 168, 76, 0.06) 0%, transparent 60%);
+    radial-gradient(ellipse at 30% 60%, rgba(184, 115, 51, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 40%, rgba(184, 137, 58, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(166, 48, 32, 0.06) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -288,8 +295,8 @@ input, textarea, select {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
-  color: var(--color-accent-gold);
-  opacity: 0.5;
+  color: var(--color-copper);
+  opacity: 0.35;
   letter-spacing: 0.2em;
   white-space: nowrap;
   overflow: hidden;
@@ -304,10 +311,10 @@ input, textarea, select {
 }
 
 .hero__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-round);
   font-size: 0.8rem;
   letter-spacing: 0.3em;
-  color: var(--color-accent-gold);
+  color: var(--color-copper);
   margin-bottom: var(--space-md);
   text-transform: uppercase;
 }
@@ -316,19 +323,20 @@ input, textarea, select {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #FAF5EC;
   line-height: 1.5;
   margin-bottom: var(--space-lg);
+  text-shadow: 0 2px 8px rgba(31, 21, 10, 0.3);
 }
 
 .hero__title span {
-  color: var(--color-accent-red);
+  color: #E8A87C;
 }
 
 .hero__subtitle {
-  font-family: var(--font-sans);
+  font-family: var(--font-round);
   font-size: 1.1rem;
-  color: var(--color-text-secondary);
+  color: rgba(250, 245, 236, 0.85);
   max-width: 480px;
   margin: 0 auto var(--space-xl);
   line-height: 1.8;
@@ -365,7 +373,7 @@ input, textarea, select {
 
 .recipe-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 0 1px var(--color-copper);
 }
 
 .recipe-card__image {
@@ -378,7 +386,7 @@ input, textarea, select {
 .recipe-card__image-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background: var(--color-bg-warm);
+  background: linear-gradient(135deg, #E8DCC8 0%, #D4C4AB 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +542,7 @@ input, textarea, select {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: var(--color-accent-red);
+  background: linear-gradient(180deg, var(--color-copper), var(--color-accent-red));
   border-radius: 2px;
 }
 
@@ -639,8 +647,9 @@ input, textarea, select {
 }
 
 .recipe-detail__story {
-  background: var(--color-bg-warm);
+  background: linear-gradient(135deg, #E8DCC8 0%, #F0E8DA 100%);
   border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-copper);
   padding: var(--space-xl);
   margin: var(--space-2xl) 0;
   font-family: var(--font-serif);
@@ -828,7 +837,7 @@ input, textarea, select {
    フッター
    ============================================================ */
 .site-footer {
-  background: var(--color-text-primary);
+  background: linear-gradient(180deg, #1F150A 0%, #2C1A0E 100%);
   color: rgba(255, 255, 255, 0.75);
   padding: var(--space-3xl) 0 var(--space-xl);
   margin-top: var(--space-3xl);
@@ -985,7 +994,7 @@ input, textarea, select {
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-xl);
   border-radius: 100px;
-  font-family: var(--font-sans);
+  font-family: var(--font-round);
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
@@ -1277,8 +1286,8 @@ input, textarea, select {
    追加: ホームページセクション
    ============================================================ */
 .home__endangered {
-  background: #FFF8EE;
-  border-top: 3px solid var(--color-accent-gold);
+  background: linear-gradient(135deg, #F5E6CC 0%, #EDD8B8 100%);
+  border-top: 3px solid var(--color-copper);
   border-bottom: 1px solid var(--color-border);
   padding: var(--space-2xl) 0;
 }
@@ -1297,6 +1306,11 @@ input, textarea, select {
 .home__regions,
 .home__about {
   padding: var(--space-3xl) 0;
+}
+
+.home__about {
+  background: var(--color-bg-warm);
+  border-top: 1px solid var(--color-divider);
 }
 
 .about-block {
@@ -2315,8 +2329,8 @@ input, textarea, select {
 
 /* β版お知らせバー */
 .beta-bar {
-  background: linear-gradient(90deg, #2C1A0E 0%, #4a2e1a 100%);
-  color: #FAF7F2;
+  background: linear-gradient(90deg, #1F150A 0%, #3A2416 100%);
+  color: #FAF5EC;
   font-size: 0.8rem;
   padding: 8px var(--space-lg);
   display: flex;
@@ -2385,7 +2399,7 @@ input, textarea, select {
 /* レシピ募集セクション */
 .home__recruit {
   padding: var(--space-3xl) 0;
-  background: linear-gradient(135deg, #FDF6EC 0%, #FAF0E0 100%);
+  background: linear-gradient(135deg, #E8DCC8 0%, #D4C4AB 100%);
   border-top: 1px solid var(--color-divider);
   border-bottom: 1px solid var(--color-divider);
 }
