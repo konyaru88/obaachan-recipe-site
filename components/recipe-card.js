@@ -25,15 +25,21 @@ export default function renderRecipeCard(recipe) {
   const timeStr = formatTime(cookTime);
   const servingsStr = servings ? `${servings}人分` : '-';
 
+  const categoryEmoji = {
+    '汁物': '🍲', '主菜': '🐟', '副菜': '🥬',
+    '漬物': '🥒', 'ごはんもの': '🍚', 'おやつ': '🍡',
+  };
+  const emoji = recipe.thumbnail_emoji || categoryEmoji[recipe.category] || '🍱';
+
   const imgTag = imageUrl
     ? `<img
          class="recipe-card__image"
          src="${escapeHtml(imageUrl)}"
          alt="${safeTitle}"
          loading="lazy"
-         onerror="this.onerror=null;this.src='';this.parentNode.classList.add('recipe-card__thumb--noimg');"
+         onerror="this.onerror=null;this.style.display='none';this.parentNode.classList.add('recipe-card__image-placeholder');var s=document.createElement('span');s.className='recipe-card__emoji-placeholder';s.setAttribute('aria-hidden','true');s.textContent='${emoji}';this.parentNode.appendChild(s);"
        />`
-    : '';
+    : `<span class="recipe-card__emoji-placeholder" aria-hidden="true">${emoji}</span>`;
 
   const endangeredBadge = isEndangered
     ? `<span class="badge badge--endangered">消えゆくレシピ</span>`

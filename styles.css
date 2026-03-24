@@ -266,14 +266,10 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    #3A2416 0%,
-    #5C3D24 25%,
-    #7A5A2E 50%,
-    #C9944A 75%,
-    #F0E8DA 100%
-  );
+  background: linear-gradient(rgba(58, 36, 22, 0.6), rgba(58, 36, 22, 0.75)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -2523,6 +2519,344 @@ input, textarea, select {
 .mobile-menu {
   display: none;
 }
+
+/* ============================================================
+   おばあちゃんから探す / レシピから探す セクション
+   ============================================================ */
+.home__explore {
+  padding: var(--space-3xl) 0;
+  background: #F0F5ED;
+  position: relative;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-col .section-title {
+  font-size: 1.4rem;
+}
+
+.explore-col .section-subtitle {
+  margin-bottom: var(--space-lg);
+}
+
+/* おばあちゃんカード */
+.grandma-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.grandma-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grandma-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text-primary);
+}
+
+.grandma-card__avatar {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F5E6CC, #EDD8B8);
+  border-radius: 50%;
+}
+
+.grandma-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.grandma-card__name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.grandma-card__place {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.grandma-card__count {
+  font-size: 0.75rem;
+  color: var(--color-accent-green);
+  font-weight: 600;
+}
+
+/* カテゴリボタン */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.category-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-sm);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  gap: var(--space-xs);
+}
+
+.category-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-accent-green);
+  color: #fff;
+}
+
+.category-btn__emoji {
+  font-size: 1.8rem;
+}
+
+.category-btn__label {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   地域マップセクション
+   ============================================================ */
+.home__regions-map {
+  padding: var(--space-3xl) 0;
+  background: #EDF3F8;
+  position: relative;
+}
+
+.region-map {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Japan-like geographic layout */
+.region-map-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--color-bg-card);
+  border: 2px solid var(--region-color, var(--color-border));
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: var(--space-xs);
+  text-align: center;
+  position: relative;
+}
+
+.region-map-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-text-primary);
+}
+
+.region-map-item__emoji {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.region-map-item:hover .region-map-item__emoji {
+  animation: bounce 0.5s ease;
+}
+
+.region-map-item__name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.region-map-item__count {
+  display: inline-block;
+  background: var(--region-color, var(--color-accent-gold));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+/* Geographic grid positioning */
+.region-map-item[data-region="hokkaido"] { grid-column: 3 / 5; grid-row: 1; }
+.region-map-item[data-region="tohoku"]   { grid-column: 3 / 4; grid-row: 2; }
+.region-map-item[data-region="kanto"]    { grid-column: 4 / 5; grid-row: 2; }
+.region-map-item[data-region="chubu"]    { grid-column: 3 / 4; grid-row: 3; }
+.region-map-item[data-region="kinki"]    { grid-column: 2 / 3; grid-row: 3; }
+.region-map-item[data-region="chugoku"]  { grid-column: 1 / 2; grid-row: 2; }
+.region-map-item[data-region="shikoku"]  { grid-column: 1 / 2; grid-row: 3; }
+.region-map-item[data-region="kyushu"]   { grid-column: 1 / 2; grid-row: 4; }
+
+/* ============================================================
+   SVG Wave Dividers
+   ============================================================ */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.wave-divider--cream-to-green {
+  background: var(--color-bg-base);
+}
+
+.wave-divider--cream-to-green svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wave-divider--green-to-blue {
+  background: #F0F5ED;
+}
+
+.wave-divider--blue-to-warm {
+  background: #EDF3F8;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  40%      { transform: translateY(-8px); }
+  60%      { transform: translateY(-4px); }
+}
+
+.animate-on-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-scroll-ready .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.js-scroll-ready .animate-on-scroll.is-visible {
+  animation: fadeInUp 0.6s ease both;
+}
+
+/* stagger delay for cards */
+.animate-on-scroll.is-visible:nth-child(2) { animation-delay: 0.1s; }
+.animate-on-scroll.is-visible:nth-child(3) { animation-delay: 0.2s; }
+.animate-on-scroll.is-visible:nth-child(4) { animation-delay: 0.3s; }
+.animate-on-scroll.is-visible:nth-child(5) { animation-delay: 0.4s; }
+.animate-on-scroll.is-visible:nth-child(6) { animation-delay: 0.5s; }
+
+/* ============================================================
+   Recipe card emoji placeholder
+   ============================================================ */
+.recipe-card__emoji-placeholder {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* ============================================================
+   Responsive: Explore, Region Map, new sections
+   ============================================================ */
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .region-map {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  /* On mobile, reset geographic positioning to auto flow */
+  .region-map-item[data-region="hokkaido"],
+  .region-map-item[data-region="tohoku"],
+  .region-map-item[data-region="kanto"],
+  .region-map-item[data-region="chubu"],
+  .region-map-item[data-region="kinki"],
+  .region-map-item[data-region="chugoku"],
+  .region-map-item[data-region="shikoku"],
+  .region-map-item[data-region="kyushu"] {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .region-map-item {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .region-map-item__emoji {
+    font-size: 1.5rem;
+  }
+
+  .home__explore,
+  .home__regions-map {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grandma-card__avatar {
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+}
+
 
 /* ============================================================
    モバイル対応メディアクエリ（768px以下）

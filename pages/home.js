@@ -3,12 +3,33 @@
  */
 import { setPage } from '../app.js';
 import {
-  getEndangeredRecipes,
   fetchRecipes,
   fetchRegions,
 } from '../utils/store.js';
 import renderRecipeCard from '../components/recipe-card.js';
 import { escapeHtml, areaName } from '../utils/helpers.js';
+
+/** 地域ごとの絵文字 */
+const regionEmoji = {
+  hokkaido: '🦀',
+  tohoku: '🍎',
+  kanto: '🍜',
+  chubu: '⛰️',
+  kinki: '🦌',
+  chugoku: '🐙',
+  shikoku: '🍊',
+  kyushu: '🌋',
+};
+
+/** カテゴリごとの絵文字 */
+const categories = [
+  { emoji: '🍲', label: '汁物' },
+  { emoji: '🐟', label: '主菜' },
+  { emoji: '🥬', label: '副菜' },
+  { emoji: '🥒', label: '漬物' },
+  { emoji: '🍚', label: 'ごはんもの' },
+  { emoji: '🍡', label: 'おやつ' },
+];
 
 /**
  * ホームページを描画する
@@ -16,52 +37,92 @@ import { escapeHtml, areaName } from '../utils/helpers.js';
  */
 export default async function renderHome(router) {
   // データを並行取得
-  const [endangered, allRecipes, regions] = await Promise.all([
-    getEndangeredRecipes(),
+  const [allRecipes, regions] = await Promise.all([
     fetchRecipes(),
     fetchRegions(),
   ]);
-
-  // 消えゆくレシピ（最大3件）
-  const endangeredSlice = endangered.slice(0, 3);
 
   // 新着レシピ（最大6件 - IDの降順）
   const latest = [...allRecipes]
     .sort((a, b) => (b.id ?? 0) - (a.id ?? 0))
     .slice(0, 6);
 
-  // 地域ボタン（8地方）
-  const regionButtons = regions.length > 0
+  // おばあちゃんデータを集約（名前でグループ化）
+  const grandmaMap = new Map();
+  for (const r of allRecipes) {
+    const g = r.grandmother;
+    if (!g || !g.name) continue;
+    if (!grandmaMap.has(g.name)) {
+      grandmaMap.set(g.name, {
+        name: g.name,
+        prefecture: g.prefecture ?? '',
+        city: g.city ?? '',
+        count: 0,
+      });
+    }
+    grandmaMap.get(g.name).count++;
+  }
+  const grandmas = [...grandmaMap.values()].slice(0, 3);
+
+  // おばあちゃんカード HTML
+  const grandmaCards = grandmas.map((g) => `
+    <a href="#/recipes" class="grandma-card">
+      <div class="grandma-card__avatar">👵</div>
+      <div class="grandma-card__info">
+        <span class="grandma-card__name">${escapeHtml(g.name)}</span>
+        <span class="grandma-card__place">${escapeHtml(g.prefecture)}・${escapeHtml(g.city)}</span>
+        <span class="grandma-card__count">${g.count}件のレシピ</span>
+      </div>
+    </a>
+  `).join('');
+
+  // カテゴリボタン HTML
+  const categoryButtons = categories.map((c) => `
+    <a href="#/recipes?category=${encodeURIComponent(c.label)}" class="category-btn animate-on-scroll">
+      <span class="category-btn__emoji">${c.emoji}</span>
+      <span class="category-btn__label">${escapeHtml(c.label)}</span>
+    </a>
+  `).join('');
+
+  // 地域マップアイテム HTML
+  const regionMapItems = regions.length > 0
     ? regions.map((r) => `
-        <a href="#/region/${escapeHtml(r.code)}" class="region-btn" style="--region-color:${escapeHtml(r.color ?? '#8B4513')}">
-          <span class="region-btn__icon" aria-hidden="true">${escapeHtml(r.icon ?? '🗾')}</span>
-          <span class="region-btn__name">${escapeHtml(r.name ?? areaName(r.code))}</span>
-          ${r.recipe_count != null ? `<span class="region-btn__count">${escapeHtml(String(r.recipe_count))}件</span>` : ''}
+        <a href="#/region/${escapeHtml(r.code)}" class="region-map-item animate-on-scroll"
+           data-region="${escapeHtml(r.code)}"
+           style="--region-color:${escapeHtml(r.color ?? '#8B4513')}">
+          <span class="region-map-item__emoji" aria-hidden="true">${regionEmoji[r.code] ?? '🗾'}</span>
+          <span class="region-map-item__name">${escapeHtml(r.name ?? areaName(r.code))}</span>
+          ${r.recipe_count != null ? `<span class="region-map-item__count">${escapeHtml(String(r.recipe_count))}件</span>` : ''}
         </a>
       `).join('')
-    : ['hokkaido', 'tohoku', 'kanto', 'chubu', 'kinki', 'chugoku', 'shikoku', 'kyushu'].map((code) => `
-        <a href="#/region/${code}" class="region-btn">
-          <span class="region-btn__name">${escapeHtml(areaName(code))}</span>
+    : Object.keys(regionEmoji).map((code) => `
+        <a href="#/region/${code}" class="region-map-item animate-on-scroll" data-region="${code}">
+          <span class="region-map-item__emoji" aria-hidden="true">${regionEmoji[code]}</span>
+          <span class="region-map-item__name">${escapeHtml(areaName(code))}</span>
         </a>
       `).join('');
 
-  // 消えゆくレシピセクション
-  const endangeredSection = endangeredSlice.length > 0 ? `
-    <section class="home__endangered" aria-labelledby="endangered-heading">
-      <div class="section-header section-header--endangered">
-        <h2 id="endangered-heading" class="section-title section-title--endangered">
-          <span aria-hidden="true">🕯</span> 消えゆくレシピ
-        </h2>
-        <p class="section-subtitle">次の世代に伝えたい、失われつつある郷土の味</p>
-      </div>
-      <div class="recipe-grid recipe-grid--3">
-        ${endangeredSlice.map(renderRecipeCard).join('')}
-      </div>
-      <div class="section-footer">
-        <a href="#/recipes?filter=endangered" class="btn btn--outline">消えゆくレシピをすべて見る</a>
-      </div>
-    </section>
-  ` : '';
+  // SVG wave helpers
+  const waveCreamToGreen = `
+    <div class="wave-divider wave-divider--cream-to-green">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z" fill="#F0F5ED"/>
+      </svg>
+    </div>`;
+
+  const waveGreenToBlue = `
+    <div class="wave-divider wave-divider--green-to-blue">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C240,0 480,40 720,20 C960,0 1200,40 1440,20 L1440,40 L0,40 Z" fill="#EDF3F8"/>
+      </svg>
+    </div>`;
+
+  const waveBlueToWarm = `
+    <div class="wave-divider wave-divider--blue-to-warm">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,40 L0,40 Z" fill="#E8DCC8"/>
+      </svg>
+    </div>`;
 
   const html = `
 <main id="main" class="home">
@@ -92,13 +153,10 @@ export default async function renderHome(router) {
     </div>
   </section>
 
-  <!-- 消えゆくレシピ特集 -->
-  ${endangeredSection}
-
   <!-- 新着レシピ -->
   <section class="home__latest" aria-labelledby="latest-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header animate-on-scroll">
         <h2 id="latest-heading" class="section-title">新着レシピ</h2>
         <p class="section-subtitle">おばあちゃんたちから届いたばかりの味</p>
       </div>
@@ -111,15 +169,42 @@ export default async function renderHome(router) {
     </div>
   </section>
 
-  <!-- 地域で探す -->
-  <section class="home__regions" aria-labelledby="regions-heading">
+  ${waveCreamToGreen}
+
+  <!-- おばあちゃんから探す / レシピから探す -->
+  <section class="home__explore" aria-labelledby="explore-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="explore-grid">
+        <div class="explore-col">
+          <h2 class="section-title animate-on-scroll" id="explore-heading">おばあちゃんから探す</h2>
+          <p class="section-subtitle animate-on-scroll">レシピを伝えてくれた人たち</p>
+          <div class="grandma-list">
+            ${grandmaCards}
+          </div>
+          <a href="#/recipes" class="btn btn--outline">もっと見る</a>
+        </div>
+        <div class="explore-col">
+          <h2 class="section-title animate-on-scroll">レシピから探す</h2>
+          <p class="section-subtitle animate-on-scroll">料理のジャンルで選ぶ</p>
+          <div class="category-grid">
+            ${categoryButtons}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  ${waveGreenToBlue}
+
+  <!-- 地域で探す（マップ風） -->
+  <section class="home__regions-map" aria-labelledby="regions-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
         <h2 id="regions-heading" class="section-title">地域で探す</h2>
         <p class="section-subtitle">あなたのふるさとの味、探してみませんか</p>
       </div>
-      <div class="region-grid">
-        ${regionButtons}
+      <div class="region-map">
+        ${regionMapItems}
       </div>
       <div class="section-footer">
         <a href="#/regions" class="btn btn--outline">地域一覧をすべて見る</a>
@@ -127,10 +212,12 @@ export default async function renderHome(router) {
     </div>
   </section>
 
+  ${waveBlueToWarm}
+
   <!-- レシピ募集 -->
   <section id="recruit" class="home__recruit" aria-labelledby="recruit-heading">
     <div class="container">
-      <div class="recruit-block">
+      <div class="recruit-block animate-on-scroll">
         <div class="recruit-block__deco" aria-hidden="true">📮</div>
         <div class="recruit-block__beta-badge">β版公開中</div>
         <h2 id="recruit-heading" class="recruit-block__title">あなたのおばあちゃんのレシピを<br>教えてください</h2>
@@ -159,7 +246,7 @@ export default async function renderHome(router) {
   <!-- サービスの想い -->
   <section class="home__about" aria-labelledby="about-heading">
     <div class="container">
-      <div class="about-block">
+      <div class="about-block animate-on-scroll">
         <div class="about-block__deco" aria-hidden="true">👵</div>
         <h2 id="about-heading" class="about-block__title">このサービスについて</h2>
         <p class="about-block__text">
@@ -185,6 +272,24 @@ export default async function renderHome(router) {
 `;
 
   setPage(html);
+
+  // スクロールアニメーション（IntersectionObserver）
+  const animatedEls = document.querySelectorAll('.animate-on-scroll');
+  if (animatedEls.length > 0 && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-scroll-ready');
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      }
+    }, { threshold: 0.1 });
+    animatedEls.forEach((el) => observer.observe(el));
+  } else {
+    // Fallback: show all immediately
+    animatedEls.forEach((el) => el.classList.add('is-visible'));
+  }
 
   // 「詳しくはこちら」からのスクロール（他ページ経由の場合はsessionStorageでフラグを受け取る）
   if (sessionStorage.getItem('scrollTo') === 'recruit') {

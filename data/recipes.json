@@ -22,8 +22,17 @@
         "is_endangered": false
       },
       "category": "汁物",
-      "tags": ["鮭", "味噌", "鍋", "冬の定番", "北海道"],
-      "season": ["秋", "冬"],
+      "tags": [
+        "鮭",
+        "味噌",
+        "鍋",
+        "冬の定番",
+        "北海道"
+      ],
+      "season": [
+        "秋",
+        "冬"
+      ],
       "servings": 4,
       "prep_time_minutes": 20,
       "cook_time_minutes": 30,
@@ -33,26 +42,101 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "生鮭（切り身）", "amount": 4, "unit": "切れ", "note": "頭や中骨があれば出汁用に使う" },
-            { "name": "豆腐", "amount": 1, "unit": "丁", "note": "木綿豆腐" },
-            { "name": "じゃがいも", "amount": 2, "unit": "個", "note": null },
-            { "name": "大根", "amount": 200, "unit": "g", "note": "いちょう切り" },
-            { "name": "にんじん", "amount": 1, "unit": "本", "note": null },
-            { "name": "長ねぎ", "amount": 2, "unit": "本", "note": null },
-            { "name": "白菜", "amount": 300, "unit": "g", "note": null },
-            { "name": "しいたけ", "amount": 4, "unit": "枚", "note": null }
+            {
+              "name": "生鮭（切り身）",
+              "amount": 4,
+              "unit": "切れ",
+              "note": "頭や中骨があれば出汁用に使う"
+            },
+            {
+              "name": "豆腐",
+              "amount": 1,
+              "unit": "丁",
+              "note": "木綿豆腐"
+            },
+            {
+              "name": "じゃがいも",
+              "amount": 2,
+              "unit": "個",
+              "note": null
+            },
+            {
+              "name": "大根",
+              "amount": 200,
+              "unit": "g",
+              "note": "いちょう切り"
+            },
+            {
+              "name": "にんじん",
+              "amount": 1,
+              "unit": "本",
+              "note": null
+            },
+            {
+              "name": "長ねぎ",
+              "amount": 2,
+              "unit": "本",
+              "note": null
+            },
+            {
+              "name": "白菜",
+              "amount": 300,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "しいたけ",
+              "amount": 4,
+              "unit": "枚",
+              "note": null
+            }
           ]
         },
         {
           "group": "だし・調味料",
           "items": [
-            { "name": "昆布", "amount": 20, "unit": "g", "note": "利尻昆布がおすすめ" },
-            { "name": "水", "amount": 1200, "unit": "ml", "note": null },
-            { "name": "白味噌", "amount": 60, "unit": "g", "note": null },
-            { "name": "信州味噌", "amount": 30, "unit": "g", "note": "白味噌と合わせる" },
-            { "name": "酒", "amount": 50, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 20, "unit": "ml", "note": null },
-            { "name": "バター", "amount": 10, "unit": "g", "note": "仕上げに加える" }
+            {
+              "name": "昆布",
+              "amount": 20,
+              "unit": "g",
+              "note": "利尻昆布がおすすめ"
+            },
+            {
+              "name": "水",
+              "amount": 1200,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "白味噌",
+              "amount": 60,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "信州味噌",
+              "amount": 30,
+              "unit": "g",
+              "note": "白味噌と合わせる"
+            },
+            {
+              "name": "酒",
+              "amount": 50,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 20,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "バター",
+              "amount": 10,
+              "unit": "g",
+              "note": "仕上げに加える"
+            }
           ]
         }
       ],
@@ -95,14 +179,24 @@
       ],
       "cultural_background": {
         "history": "石狩川下流域の漁師町・石狩を発祥とする鍋料理。明治以降に北海道開拓者たちの間で広まり、昆布だし×味噌という組み合わせは開拓時代からの知恵とされる。",
-        "local_ingredients": ["石狩川の鮭", "利尻昆布", "北海道産じゃがいも"],
-        "similar_dishes": ["三平汁", "ちゃんちゃん焼き"]
+        "local_ingredients": [
+          "石狩川の鮭",
+          "利尻昆布",
+          "北海道産じゃがいも"
+        ],
+        "similar_dishes": [
+          "三平汁",
+          "ちゃんちゃん焼き"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["sanpei-jiru-hokkaido-002"]
+      "related_recipe_ids": [
+        "sanpei-jiru-hokkaido-002"
+      ],
+      "thumbnail_emoji": "🍲"
     },
     {
       "id": "sanpei-jiru-hokkaido-002",
@@ -126,8 +220,18 @@
         "is_endangered": true
       },
       "category": "汁物",
-      "tags": ["塩鮭", "大根", "汁物", "保存食", "北海道", "開拓時代"],
-      "season": ["冬", "通年"],
+      "tags": [
+        "塩鮭",
+        "大根",
+        "汁物",
+        "保存食",
+        "北海道",
+        "開拓時代"
+      ],
+      "season": [
+        "冬",
+        "通年"
+      ],
       "servings": 4,
       "prep_time_minutes": 15,
       "cook_time_minutes": 25,
@@ -137,20 +241,65 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "塩引き鮭（甘塩）", "amount": 300, "unit": "g", "note": "切り身または中骨付き" },
-            { "name": "大根", "amount": 300, "unit": "g", "note": "いちょう切り" },
-            { "name": "じゃがいも", "amount": 2, "unit": "個", "note": null },
-            { "name": "にんじん", "amount": 1, "unit": "本", "note": null },
-            { "name": "こんにゃく", "amount": 100, "unit": "g", "note": null }
+            {
+              "name": "塩引き鮭（甘塩）",
+              "amount": 300,
+              "unit": "g",
+              "note": "切り身または中骨付き"
+            },
+            {
+              "name": "大根",
+              "amount": 300,
+              "unit": "g",
+              "note": "いちょう切り"
+            },
+            {
+              "name": "じゃがいも",
+              "amount": 2,
+              "unit": "個",
+              "note": null
+            },
+            {
+              "name": "にんじん",
+              "amount": 1,
+              "unit": "本",
+              "note": null
+            },
+            {
+              "name": "こんにゃく",
+              "amount": 100,
+              "unit": "g",
+              "note": null
+            }
           ]
         },
         {
           "group": "調味料",
           "items": [
-            { "name": "水", "amount": 1000, "unit": "ml", "note": null },
-            { "name": "昆布", "amount": 10, "unit": "g", "note": null },
-            { "name": "塩", "amount": 2, "unit": "g", "note": "鮭の塩加減を見て調整" },
-            { "name": "酒", "amount": 30, "unit": "ml", "note": null }
+            {
+              "name": "水",
+              "amount": 1000,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "昆布",
+              "amount": 10,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "塩",
+              "amount": 2,
+              "unit": "g",
+              "note": "鮭の塩加減を見て調整"
+            },
+            {
+              "name": "酒",
+              "amount": 30,
+              "unit": "ml",
+              "note": null
+            }
           ]
         }
       ],
@@ -186,14 +335,24 @@
       ],
       "cultural_background": {
         "history": "松前藩時代から続く北海道の保存食文化を背景に持つ汁物。塩蔵した鮭は冬の北海道で貴重なタンパク源だった。",
-        "local_ingredients": ["北海道産塩引き鮭", "道産大根", "道産じゃがいも"],
-        "similar_dishes": ["石狩鍋", "粕汁"]
+        "local_ingredients": [
+          "北海道産塩引き鮭",
+          "道産大根",
+          "道産じゃがいも"
+        ],
+        "similar_dishes": [
+          "石狩鍋",
+          "粕汁"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["ishikari-nabe-hokkaido-001"]
+      "related_recipe_ids": [
+        "ishikari-nabe-hokkaido-001"
+      ],
+      "thumbnail_emoji": "🍲"
     },
     {
       "id": "ke-no-shiru-aomori-001",
@@ -217,8 +376,16 @@
         "is_endangered": true
       },
       "category": "汁物",
-      "tags": ["津軽", "小正月", "精進料理", "根菜", "伝統行事"],
-      "season": ["冬"],
+      "tags": [
+        "津軽",
+        "小正月",
+        "精進料理",
+        "根菜",
+        "伝統行事"
+      ],
+      "season": [
+        "冬"
+      ],
       "servings": 6,
       "prep_time_minutes": 60,
       "cook_time_minutes": 120,
@@ -228,30 +395,100 @@
         {
           "group": "根菜・豆類",
           "items": [
-            { "name": "大根", "amount": 200, "unit": "g", "note": "細みじん切り" },
-            { "name": "にんじん", "amount": 150, "unit": "g", "note": "細みじん切り" },
-            { "name": "ごぼう", "amount": 100, "unit": "g", "note": "細みじん切り" },
-            { "name": "里芋", "amount": 200, "unit": "g", "note": "細みじん切り" },
-            { "name": "こんにゃく", "amount": 150, "unit": "g", "note": "細かく刻む" },
-            { "name": "油揚げ", "amount": 2, "unit": "枚", "note": "細かく刻む" },
-            { "name": "大豆（水煮）", "amount": 100, "unit": "g", "note": null }
+            {
+              "name": "大根",
+              "amount": 200,
+              "unit": "g",
+              "note": "細みじん切り"
+            },
+            {
+              "name": "にんじん",
+              "amount": 150,
+              "unit": "g",
+              "note": "細みじん切り"
+            },
+            {
+              "name": "ごぼう",
+              "amount": 100,
+              "unit": "g",
+              "note": "細みじん切り"
+            },
+            {
+              "name": "里芋",
+              "amount": 200,
+              "unit": "g",
+              "note": "細みじん切り"
+            },
+            {
+              "name": "こんにゃく",
+              "amount": 150,
+              "unit": "g",
+              "note": "細かく刻む"
+            },
+            {
+              "name": "油揚げ",
+              "amount": 2,
+              "unit": "枚",
+              "note": "細かく刻む"
+            },
+            {
+              "name": "大豆（水煮）",
+              "amount": 100,
+              "unit": "g",
+              "note": null
+            }
           ]
         },
         {
           "group": "山菜・乾物",
           "items": [
-            { "name": "わらび（塩蔵）", "amount": 80, "unit": "g", "note": "塩抜きして刻む" },
-            { "name": "ぜんまい（乾燥）", "amount": 30, "unit": "g", "note": "戻して刻む" },
-            { "name": "干し大根", "amount": 50, "unit": "g", "note": "戻して刻む" }
+            {
+              "name": "わらび（塩蔵）",
+              "amount": 80,
+              "unit": "g",
+              "note": "塩抜きして刻む"
+            },
+            {
+              "name": "ぜんまい（乾燥）",
+              "amount": 30,
+              "unit": "g",
+              "note": "戻して刻む"
+            },
+            {
+              "name": "干し大根",
+              "amount": 50,
+              "unit": "g",
+              "note": "戻して刻む"
+            }
           ]
         },
         {
           "group": "だし・調味料",
           "items": [
-            { "name": "水", "amount": 1500, "unit": "ml", "note": null },
-            { "name": "煮干し", "amount": 30, "unit": "g", "note": "頭と腸を取る" },
-            { "name": "味噌", "amount": 80, "unit": "g", "note": "津軽味噌（辛口）" },
-            { "name": "醤油", "amount": 20, "unit": "ml", "note": null }
+            {
+              "name": "水",
+              "amount": 1500,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "煮干し",
+              "amount": 30,
+              "unit": "g",
+              "note": "頭と腸を取る"
+            },
+            {
+              "name": "味噌",
+              "amount": 80,
+              "unit": "g",
+              "note": "津軽味噌（辛口）"
+            },
+            {
+              "name": "醤油",
+              "amount": 20,
+              "unit": "ml",
+              "note": null
+            }
           ]
         }
       ],
@@ -288,14 +525,24 @@
       ],
       "cultural_background": {
         "history": "津軽地方の小正月（1月15日）に食べる行事食。女性が夜明け前から作り始め、集落全体で分け合う風習があった。",
-        "local_ingredients": ["津軽産わらび", "津軽産ぜんまい", "津軽辛口味噌"],
-        "similar_dishes": ["芋煮（山形）", "のっぺ（新潟）"]
+        "local_ingredients": [
+          "津軽産わらび",
+          "津軽産ぜんまい",
+          "津軽辛口味噌"
+        ],
+        "similar_dishes": [
+          "芋煮（山形）",
+          "のっぺ（新潟）"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["imoni-yamagata-001"]
+      "related_recipe_ids": [
+        "imoni-yamagata-001"
+      ],
+      "thumbnail_emoji": "🍲"
     },
     {
       "id": "imoni-yamagata-001",
@@ -319,8 +566,16 @@
         "is_endangered": false
       },
       "category": "汁物",
-      "tags": ["里芋", "牛肉", "醤油", "芋煮会", "秋の行事"],
-      "season": ["秋"],
+      "tags": [
+        "里芋",
+        "牛肉",
+        "醤油",
+        "芋煮会",
+        "秋の行事"
+      ],
+      "season": [
+        "秋"
+      ],
       "servings": 6,
       "prep_time_minutes": 20,
       "cook_time_minutes": 40,
@@ -330,22 +585,77 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "里芋", "amount": 600, "unit": "g", "note": "皮をむいて大きいものは半分に" },
-            { "name": "牛肉（薄切り）", "amount": 300, "unit": "g", "note": null },
-            { "name": "こんにゃく", "amount": 1, "unit": "枚", "note": "手でちぎる" },
-            { "name": "長ねぎ", "amount": 3, "unit": "本", "note": "斜め切り" },
-            { "name": "舞茸", "amount": 100, "unit": "g", "note": "食べやすくほぐす" }
+            {
+              "name": "里芋",
+              "amount": 600,
+              "unit": "g",
+              "note": "皮をむいて大きいものは半分に"
+            },
+            {
+              "name": "牛肉（薄切り）",
+              "amount": 300,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "こんにゃく",
+              "amount": 1,
+              "unit": "枚",
+              "note": "手でちぎる"
+            },
+            {
+              "name": "長ねぎ",
+              "amount": 3,
+              "unit": "本",
+              "note": "斜め切り"
+            },
+            {
+              "name": "舞茸",
+              "amount": 100,
+              "unit": "g",
+              "note": "食べやすくほぐす"
+            }
           ]
         },
         {
           "group": "だし・調味料",
           "items": [
-            { "name": "水", "amount": 1200, "unit": "ml", "note": null },
-            { "name": "醤油", "amount": 80, "unit": "ml", "note": "山形産のもの" },
-            { "name": "みりん", "amount": 50, "unit": "ml", "note": null },
-            { "name": "酒", "amount": 50, "unit": "ml", "note": null },
-            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
-            { "name": "昆布だし", "amount": 800, "unit": "ml", "note": null }
+            {
+              "name": "水",
+              "amount": 1200,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "醤油",
+              "amount": 80,
+              "unit": "ml",
+              "note": "山形産のもの"
+            },
+            {
+              "name": "みりん",
+              "amount": 50,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "酒",
+              "amount": 50,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "砂糖",
+              "amount": 20,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "昆布だし",
+              "amount": 800,
+              "unit": "ml",
+              "note": null
+            }
           ]
         }
       ],
@@ -382,14 +692,24 @@
       ],
       "cultural_background": {
         "history": "江戸中期から最上川の舟運で栄えた中山町付近を発祥とし、現在は山形市中央公園で毎年約3万食を作る「日本一の芋煮会」が開催される。",
-        "local_ingredients": ["山形産里芋（土垂）", "最上川沿いのこんにゃく芋"],
-        "similar_dishes": ["けの汁（青森）", "のっぺ（新潟）"]
+        "local_ingredients": [
+          "山形産里芋（土垂）",
+          "最上川沿いのこんにゃく芋"
+        ],
+        "similar_dishes": [
+          "けの汁（青森）",
+          "のっぺ（新潟）"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["ke-no-shiru-aomori-001", "dashi-yamagata-002"]
+      "related_recipe_ids": [
+        "ke-no-shiru-aomori-001",
+        "dashi-yamagata-002"
+      ],
+      "thumbnail_emoji": "🫕"
     },
     {
       "id": "dashi-yamagata-002",
@@ -413,8 +733,16 @@
         "is_endangered": false
       },
       "category": "副菜",
-      "tags": ["なす", "きゅうり", "薬味", "夏野菜", "ご飯のお供"],
-      "season": ["夏"],
+      "tags": [
+        "なす",
+        "きゅうり",
+        "薬味",
+        "夏野菜",
+        "ご飯のお供"
+      ],
+      "season": [
+        "夏"
+      ],
       "servings": 4,
       "prep_time_minutes": 20,
       "cook_time_minutes": 0,
@@ -424,20 +752,65 @@
         {
           "group": "野菜",
           "items": [
-            { "name": "きゅうり", "amount": 2, "unit": "本", "note": "細かいみじん切り" },
-            { "name": "なす", "amount": 2, "unit": "本", "note": "細かいみじん切り、水にさらす" },
-            { "name": "オクラ", "amount": 8, "unit": "本", "note": "薄い小口切り" },
-            { "name": "みょうが", "amount": 4, "unit": "個", "note": "薄い小口切り" },
-            { "name": "大葉", "amount": 10, "unit": "枚", "note": "せん切り" }
+            {
+              "name": "きゅうり",
+              "amount": 2,
+              "unit": "本",
+              "note": "細かいみじん切り"
+            },
+            {
+              "name": "なす",
+              "amount": 2,
+              "unit": "本",
+              "note": "細かいみじん切り、水にさらす"
+            },
+            {
+              "name": "オクラ",
+              "amount": 8,
+              "unit": "本",
+              "note": "薄い小口切り"
+            },
+            {
+              "name": "みょうが",
+              "amount": 4,
+              "unit": "個",
+              "note": "薄い小口切り"
+            },
+            {
+              "name": "大葉",
+              "amount": 10,
+              "unit": "枚",
+              "note": "せん切り"
+            }
           ]
         },
         {
           "group": "薬味・調味料",
           "items": [
-            { "name": "生姜", "amount": 20, "unit": "g", "note": "みじん切り" },
-            { "name": "納豆昆布（ねばり昆布）", "amount": 10, "unit": "g", "note": "水で戻す" },
-            { "name": "醤油", "amount": 40, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 15, "unit": "ml", "note": "煮切ったもの" }
+            {
+              "name": "生姜",
+              "amount": 20,
+              "unit": "g",
+              "note": "みじん切り"
+            },
+            {
+              "name": "納豆昆布（ねばり昆布）",
+              "amount": 10,
+              "unit": "g",
+              "note": "水で戻す"
+            },
+            {
+              "name": "醤油",
+              "amount": 40,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 15,
+              "unit": "ml",
+              "note": "煮切ったもの"
+            }
           ]
         }
       ],
@@ -467,14 +840,24 @@
       ],
       "cultural_background": {
         "history": "山形市周辺を中心に発展した夏の定番料理。農家の食卓から生まれた「畑の恵みをそのまま食べる」シンプルな発想が原点。",
-        "local_ingredients": ["山形産なす", "山形産きゅうり", "ねばり昆布（がごめ昆布）"],
-        "similar_dishes": ["もろみきゅうり", "たたきごぼう"]
+        "local_ingredients": [
+          "山形産なす",
+          "山形産きゅうり",
+          "ねばり昆布（がごめ昆布）"
+        ],
+        "similar_dishes": [
+          "もろみきゅうり",
+          "たたきごぼう"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["imoni-yamagata-001"]
+      "related_recipe_ids": [
+        "imoni-yamagata-001"
+      ],
+      "thumbnail_emoji": "🥬"
     },
     {
       "id": "soboro-natto-ibaraki-001",
@@ -498,8 +881,16 @@
         "is_endangered": false
       },
       "category": "副菜",
-      "tags": ["納豆", "切り干し大根", "発酵", "水戸", "保存食"],
-      "season": ["通年"],
+      "tags": [
+        "納豆",
+        "切り干し大根",
+        "発酵",
+        "水戸",
+        "保存食"
+      ],
+      "season": [
+        "通年"
+      ],
       "servings": 4,
       "prep_time_minutes": 20,
       "cook_time_minutes": 0,
@@ -509,17 +900,47 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "水戸納豆（小粒）", "amount": 200, "unit": "g", "note": null },
-            { "name": "切り干し大根", "amount": 60, "unit": "g", "note": "水で戻して固く絞る" }
+            {
+              "name": "水戸納豆（小粒）",
+              "amount": 200,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "切り干し大根",
+              "amount": 60,
+              "unit": "g",
+              "note": "水で戻して固く絞る"
+            }
           ]
         },
         {
           "group": "調味料",
           "items": [
-            { "name": "醤油", "amount": 40, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 20, "unit": "ml", "note": "煮切る" },
-            { "name": "酒", "amount": 20, "unit": "ml", "note": "煮切る" },
-            { "name": "砂糖", "amount": 5, "unit": "g", "note": null }
+            {
+              "name": "醤油",
+              "amount": 40,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 20,
+              "unit": "ml",
+              "note": "煮切る"
+            },
+            {
+              "name": "酒",
+              "amount": 20,
+              "unit": "ml",
+              "note": "煮切る"
+            },
+            {
+              "name": "砂糖",
+              "amount": 5,
+              "unit": "g",
+              "note": null
+            }
           ]
         }
       ],
@@ -549,14 +970,21 @@
       ],
       "cultural_background": {
         "history": "江戸時代から水戸藩内で納豆の生産が盛んで、農家が自家製納豆と大根を組み合わせた保存食として発展した。",
-        "local_ingredients": ["水戸産大粒・小粒納豆", "茨城産大根（切り干し）"],
-        "similar_dishes": ["納豆の辛子和え", "大根の醤油漬け"]
+        "local_ingredients": [
+          "水戸産大粒・小粒納豆",
+          "茨城産大根（切り干し）"
+        ],
+        "similar_dishes": [
+          "納豆の辛子和え",
+          "大根の醤油漬け"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": []
+      "related_recipe_ids": [],
+      "thumbnail_emoji": "🫘"
     },
     {
       "id": "jibu-ni-ishikawa-001",
@@ -580,8 +1008,16 @@
         "is_endangered": false
       },
       "category": "主菜",
-      "tags": ["鴨肉", "加賀料理", "金沢", "わさび", "冬"],
-      "season": ["冬"],
+      "tags": [
+        "鴨肉",
+        "加賀料理",
+        "金沢",
+        "わさび",
+        "冬"
+      ],
+      "season": [
+        "冬"
+      ],
       "servings": 4,
       "prep_time_minutes": 20,
       "cook_time_minutes": 20,
@@ -591,22 +1027,77 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "鴨肉（または鶏胸肉）", "amount": 300, "unit": "g", "note": "薄いそぎ切り" },
-            { "name": "小麦粉", "amount": 30, "unit": "g", "note": "打ち粉用" },
-            { "name": "すだれ麩", "amount": 8, "unit": "枚", "note": "水で戻す" },
-            { "name": "百合根", "amount": 80, "unit": "g", "note": "鱗片をひとつずつはがす" },
-            { "name": "三つ葉", "amount": 1, "unit": "束", "note": null },
-            { "name": "わさび", "amount": 20, "unit": "g", "note": "添える" }
+            {
+              "name": "鴨肉（または鶏胸肉）",
+              "amount": 300,
+              "unit": "g",
+              "note": "薄いそぎ切り"
+            },
+            {
+              "name": "小麦粉",
+              "amount": 30,
+              "unit": "g",
+              "note": "打ち粉用"
+            },
+            {
+              "name": "すだれ麩",
+              "amount": 8,
+              "unit": "枚",
+              "note": "水で戻す"
+            },
+            {
+              "name": "百合根",
+              "amount": 80,
+              "unit": "g",
+              "note": "鱗片をひとつずつはがす"
+            },
+            {
+              "name": "三つ葉",
+              "amount": 1,
+              "unit": "束",
+              "note": null
+            },
+            {
+              "name": "わさび",
+              "amount": 20,
+              "unit": "g",
+              "note": "添える"
+            }
           ]
         },
         {
           "group": "だし・調味料",
           "items": [
-            { "name": "一番だし（昆布+鰹節）", "amount": 600, "unit": "ml", "note": null },
-            { "name": "醤油", "amount": 50, "unit": "ml", "note": "うす口醤油" },
-            { "name": "みりん", "amount": 40, "unit": "ml", "note": null },
-            { "name": "酒", "amount": 30, "unit": "ml", "note": null },
-            { "name": "砂糖", "amount": 10, "unit": "g", "note": null }
+            {
+              "name": "一番だし（昆布+鰹節）",
+              "amount": 600,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "醤油",
+              "amount": 50,
+              "unit": "ml",
+              "note": "うす口醤油"
+            },
+            {
+              "name": "みりん",
+              "amount": 40,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "酒",
+              "amount": 30,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "砂糖",
+              "amount": 10,
+              "unit": "g",
+              "note": null
+            }
           ]
         }
       ],
@@ -643,14 +1134,24 @@
       ],
       "cultural_background": {
         "history": "加賀百万石の武家文化・茶道文化の中で洗練された金沢の代表的郷土料理。懐石料理の影響を受けた上品な仕立てが特徴。",
-        "local_ingredients": ["石川産百合根", "加賀麩（すだれ麩）", "石川産わさび"],
-        "similar_dishes": ["かぶら寿し", "のっぺ汁"]
+        "local_ingredients": [
+          "石川産百合根",
+          "加賀麩（すだれ麩）",
+          "石川産わさび"
+        ],
+        "similar_dishes": [
+          "かぶら寿し",
+          "のっぺ汁"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["kabura-zushi-ishikawa-002"]
+      "related_recipe_ids": [
+        "kabura-zushi-ishikawa-002"
+      ],
+      "thumbnail_emoji": "🫕"
     },
     {
       "id": "kabura-zushi-ishikawa-002",
@@ -674,8 +1175,17 @@
         "is_endangered": true
       },
       "category": "漬物",
-      "tags": ["かぶ", "ぶり", "麹", "発酵", "冬", "正月料理"],
-      "season": ["冬"],
+      "tags": [
+        "かぶ",
+        "ぶり",
+        "麹",
+        "発酵",
+        "冬",
+        "正月料理"
+      ],
+      "season": [
+        "冬"
+      ],
       "servings": 10,
       "prep_time_minutes": 60,
       "cook_time_minutes": 0,
@@ -685,19 +1195,59 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "かぶら（大）", "amount": 3, "unit": "個", "note": "直径10cm以上のもの" },
-            { "name": "ぶり（刺身用さく）", "amount": 200, "unit": "g", "note": "薄く削ぎ切り" },
-            { "name": "塩", "amount": 100, "unit": "g", "note": "下漬け用" }
+            {
+              "name": "かぶら（大）",
+              "amount": 3,
+              "unit": "個",
+              "note": "直径10cm以上のもの"
+            },
+            {
+              "name": "ぶり（刺身用さく）",
+              "amount": 200,
+              "unit": "g",
+              "note": "薄く削ぎ切り"
+            },
+            {
+              "name": "塩",
+              "amount": 100,
+              "unit": "g",
+              "note": "下漬け用"
+            }
           ]
         },
         {
           "group": "麹床",
           "items": [
-            { "name": "米麹", "amount": 200, "unit": "g", "note": null },
-            { "name": "砂糖", "amount": 100, "unit": "g", "note": null },
-            { "name": "みりん", "amount": 50, "unit": "ml", "note": null },
-            { "name": "ゆずの皮", "amount": 1, "unit": "個分", "note": "せん切り" },
-            { "name": "人参", "amount": 30, "unit": "g", "note": "せん切り・色付け用" }
+            {
+              "name": "米麹",
+              "amount": 200,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "砂糖",
+              "amount": 100,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 50,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "ゆずの皮",
+              "amount": 1,
+              "unit": "個分",
+              "note": "せん切り"
+            },
+            {
+              "name": "人参",
+              "amount": 30,
+              "unit": "g",
+              "note": "せん切り・色付け用"
+            }
           ]
         }
       ],
@@ -734,14 +1284,25 @@
       ],
       "cultural_background": {
         "history": "江戸時代から金沢の冬の保存食・正月料理として根付き、各家庭で独自のレシピが伝承されてきた。現在は職人が作る高級食品としても知られる。",
-        "local_ingredients": ["加賀かぶら", "能登産ぶり", "加賀ゆず", "石川産米麹"],
-        "similar_dishes": ["大根寿し", "いずし（北海道）"]
+        "local_ingredients": [
+          "加賀かぶら",
+          "能登産ぶり",
+          "加賀ゆず",
+          "石川産米麹"
+        ],
+        "similar_dishes": [
+          "大根寿し",
+          "いずし（北海道）"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["jibu-ni-ishikawa-001"]
+      "related_recipe_ids": [
+        "jibu-ni-ishikawa-001"
+      ],
+      "thumbnail_emoji": "🥒"
     },
     {
       "id": "obanzai-kyoto-001",
@@ -765,8 +1326,16 @@
         "is_endangered": false
       },
       "category": "副菜",
-      "tags": ["おばんざい", "炊き合わせ", "京都", "だし", "加賀野菜"],
-      "season": ["通年"],
+      "tags": [
+        "おばんざい",
+        "炊き合わせ",
+        "京都",
+        "だし",
+        "加賀野菜"
+      ],
+      "season": [
+        "通年"
+      ],
       "servings": 4,
       "prep_time_minutes": 30,
       "cook_time_minutes": 40,
@@ -776,29 +1345,94 @@
         {
           "group": "海老芋",
           "items": [
-            { "name": "海老芋", "amount": 4, "unit": "個", "note": "六方むきにする" },
-            { "name": "だし", "amount": 300, "unit": "ml", "note": null },
-            { "name": "うす口醤油", "amount": 15, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 20, "unit": "ml", "note": null }
+            {
+              "name": "海老芋",
+              "amount": 4,
+              "unit": "個",
+              "note": "六方むきにする"
+            },
+            {
+              "name": "だし",
+              "amount": 300,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "うす口醤油",
+              "amount": 15,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 20,
+              "unit": "ml",
+              "note": null
+            }
           ]
         },
         {
           "group": "南瓜",
           "items": [
-            { "name": "南瓜", "amount": 300, "unit": "g", "note": "面取りする" },
-            { "name": "だし", "amount": 200, "unit": "ml", "note": null },
-            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
-            { "name": "うす口醤油", "amount": 10, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 15, "unit": "ml", "note": null }
+            {
+              "name": "南瓜",
+              "amount": 300,
+              "unit": "g",
+              "note": "面取りする"
+            },
+            {
+              "name": "だし",
+              "amount": 200,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "砂糖",
+              "amount": 20,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "うす口醤油",
+              "amount": 10,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 15,
+              "unit": "ml",
+              "note": null
+            }
           ]
         },
         {
           "group": "高野豆腐・ふ",
           "items": [
-            { "name": "高野豆腐", "amount": 2, "unit": "枚", "note": "水で戻す" },
-            { "name": "だし", "amount": 200, "unit": "ml", "note": null },
-            { "name": "うす口醤油", "amount": 15, "unit": "ml", "note": null },
-            { "name": "みりん", "amount": 15, "unit": "ml", "note": null }
+            {
+              "name": "高野豆腐",
+              "amount": 2,
+              "unit": "枚",
+              "note": "水で戻す"
+            },
+            {
+              "name": "だし",
+              "amount": 200,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "うす口醤油",
+              "amount": 15,
+              "unit": "ml",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 15,
+              "unit": "ml",
+              "note": null
+            }
           ]
         }
       ],
@@ -835,14 +1469,22 @@
       ],
       "cultural_background": {
         "history": "御所文化や寺院料理の影響を受けて発展した京都の家庭料理。「おばんざい」文化の中核をなす技法で、素材本来の味を引き出すだし文化と不可分。",
-        "local_ingredients": ["京都産海老芋", "加茂なす", "堀川ごぼう"],
-        "similar_dishes": ["精進料理の炊き合わせ", "会席料理の煮物椀"]
+        "local_ingredients": [
+          "京都産海老芋",
+          "加茂なす",
+          "堀川ごぼう"
+        ],
+        "similar_dishes": [
+          "精進料理の炊き合わせ",
+          "会席料理の煮物椀"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": []
+      "related_recipe_ids": [],
+      "thumbnail_emoji": "🥬"
     },
     {
       "id": "ikinaridango-kumamoto-001",
@@ -866,8 +1508,17 @@
         "is_endangered": false
       },
       "category": "おやつ",
-      "tags": ["さつまいも", "小豆", "蒸し菓子", "熊本", "郷土菓子"],
-      "season": ["秋", "冬"],
+      "tags": [
+        "さつまいも",
+        "小豆",
+        "蒸し菓子",
+        "熊本",
+        "郷土菓子"
+      ],
+      "season": [
+        "秋",
+        "冬"
+      ],
       "servings": 8,
       "prep_time_minutes": 40,
       "cook_time_minutes": 20,
@@ -877,16 +1528,41 @@
         {
           "group": "生地",
           "items": [
-            { "name": "薄力粉", "amount": 200, "unit": "g", "note": null },
-            { "name": "水", "amount": 100, "unit": "ml", "note": "少しずつ加える" },
-            { "name": "塩", "amount": 2, "unit": "g", "note": null }
+            {
+              "name": "薄力粉",
+              "amount": 200,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "水",
+              "amount": 100,
+              "unit": "ml",
+              "note": "少しずつ加える"
+            },
+            {
+              "name": "塩",
+              "amount": 2,
+              "unit": "g",
+              "note": null
+            }
           ]
         },
         {
           "group": "中身",
           "items": [
-            { "name": "さつまいも", "amount": 400, "unit": "g", "note": "1cm輪切り" },
-            { "name": "粒あん", "amount": 200, "unit": "g", "note": null }
+            {
+              "name": "さつまいも",
+              "amount": 400,
+              "unit": "g",
+              "note": "1cm輪切り"
+            },
+            {
+              "name": "粒あん",
+              "amount": 200,
+              "unit": "g",
+              "note": null
+            }
           ]
         }
       ],
@@ -923,14 +1599,23 @@
       ],
       "cultural_background": {
         "history": "熊本の農村部で農繁期のおやつとして発展。いもを生のまま包んで蒸す合理的な作り方は農家の知恵そのもの。現在は熊本の代表的な土産物としても知られる。",
-        "local_ingredients": ["熊本産さつまいも（赤土栽培）", "熊本産小豆"],
-        "similar_dishes": ["からし蓮根", "野菜まんじゅう"]
+        "local_ingredients": [
+          "熊本産さつまいも（赤土栽培）",
+          "熊本産小豆"
+        ],
+        "similar_dishes": [
+          "からし蓮根",
+          "野菜まんじゅう"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["karashi-renkon-kumamoto-002"]
+      "related_recipe_ids": [
+        "karashi-renkon-kumamoto-002"
+      ],
+      "thumbnail_emoji": "🍡"
     },
     {
       "id": "karashi-renkon-kumamoto-002",
@@ -954,8 +1639,17 @@
         "is_endangered": false
       },
       "category": "副菜",
-      "tags": ["蓮根", "からし", "味噌", "熊本", "揚げ物", "郷土料理"],
-      "season": ["通年"],
+      "tags": [
+        "蓮根",
+        "からし",
+        "味噌",
+        "熊本",
+        "揚げ物",
+        "郷土料理"
+      ],
+      "season": [
+        "通年"
+      ],
       "servings": 6,
       "prep_time_minutes": 30,
       "cook_time_minutes": 15,
@@ -965,26 +1659,76 @@
         {
           "group": "主材料",
           "items": [
-            { "name": "蓮根（太め）", "amount": 2, "unit": "節", "note": "穴が大きく均一なもの" },
-            { "name": "揚げ油", "amount": 500, "unit": "ml", "note": null }
+            {
+              "name": "蓮根（太め）",
+              "amount": 2,
+              "unit": "節",
+              "note": "穴が大きく均一なもの"
+            },
+            {
+              "name": "揚げ油",
+              "amount": 500,
+              "unit": "ml",
+              "note": null
+            }
           ]
         },
         {
           "group": "からし味噌",
           "items": [
-            { "name": "麦味噌", "amount": 100, "unit": "g", "note": "熊本産" },
-            { "name": "練りからし", "amount": 30, "unit": "g", "note": "粉からしを練ったもの" },
-            { "name": "砂糖", "amount": 20, "unit": "g", "note": null },
-            { "name": "みりん", "amount": 20, "unit": "ml", "note": null }
+            {
+              "name": "麦味噌",
+              "amount": 100,
+              "unit": "g",
+              "note": "熊本産"
+            },
+            {
+              "name": "練りからし",
+              "amount": 30,
+              "unit": "g",
+              "note": "粉からしを練ったもの"
+            },
+            {
+              "name": "砂糖",
+              "amount": 20,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "みりん",
+              "amount": 20,
+              "unit": "ml",
+              "note": null
+            }
           ]
         },
         {
           "group": "衣",
           "items": [
-            { "name": "卵", "amount": 2, "unit": "個", "note": null },
-            { "name": "薄力粉", "amount": 100, "unit": "g", "note": null },
-            { "name": "ターメリック", "amount": 2, "unit": "g", "note": "黄色い色付け用" },
-            { "name": "水", "amount": 50, "unit": "ml", "note": null }
+            {
+              "name": "卵",
+              "amount": 2,
+              "unit": "個",
+              "note": null
+            },
+            {
+              "name": "薄力粉",
+              "amount": 100,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "ターメリック",
+              "amount": 2,
+              "unit": "g",
+              "note": "黄色い色付け用"
+            },
+            {
+              "name": "水",
+              "amount": 50,
+              "unit": "ml",
+              "note": null
+            }
           ]
         }
       ],
@@ -1021,14 +1765,24 @@
       ],
       "cultural_background": {
         "history": "江戸初期に細川忠利の滋養食として考案され、藩の機密料理として扱われた。肥後の家紋に似た断面が誇りとされ、現在は熊本を代表する郷土料理・土産物として全国に知られる。",
-        "local_ingredients": ["熊本産蓮根（大節）", "熊本産麦味噌", "九州産粉からし"],
-        "similar_dishes": ["いきなり団子", "蓮根の天ぷら"]
+        "local_ingredients": [
+          "熊本産蓮根（大節）",
+          "熊本産麦味噌",
+          "九州産粉からし"
+        ],
+        "similar_dishes": [
+          "いきなり団子",
+          "蓮根の天ぷら"
+        ]
       },
       "photos": {
-        "main": "assets/images/recipes/placeholder.jpg",
-        "thumbnail": "assets/images/recipes/placeholder.jpg"
+        "main": "",
+        "thumbnail": ""
       },
-      "related_recipe_ids": ["ikinaridango-kumamoto-001"]
+      "related_recipe_ids": [
+        "ikinaridango-kumamoto-001"
+      ],
+      "thumbnail_emoji": "🥬"
     }
   ]
 }
