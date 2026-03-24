@@ -2,14 +2,14 @@
  * メインエントリポイント
  */
 import Router from './utils/router.js';
-import renderHome from './pages/home.js?v=20260322';
+import renderHome from './pages/home.js?v=20260324';
 import renderList from './pages/list.js';
 import renderDetail from './pages/detail.js';
 import renderRegion from './pages/region.js';
 import renderSearch from './pages/search.js';
-import renderArticles from './pages/articles.js?v=20260322';
-import renderArticleDetail from './pages/article-detail.js?v=20260322';
-import renderHeader from './components/header.js';
+import renderArticles from './pages/articles.js?v=20260324';
+import renderArticleDetail from './pages/article-detail.js?v=20260324';
+import renderHeader, { initMobileMenu } from './components/header.js?v=20260324';
 import renderFooter from './components/footer.js';
 
 const app = document.getElementById('app');
@@ -51,26 +51,7 @@ export function setPage(html) {
   }
 
   // モバイルメニューのイベントを再付与
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (menuBtn && mobileNav) {
-    menuBtn.addEventListener('click', () => {
-      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!expanded));
-      mobileNav.setAttribute('aria-hidden', String(expanded));
-      mobileNav.classList.toggle('header__mobile-nav--open', !expanded);
-    });
-  }
-
-  // モバイル検索フォームのイベントを再付与
-  const mobileSearchForm = document.getElementById('mobile-search-form');
-  if (mobileSearchForm) {
-    mobileSearchForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const q = document.getElementById('mobile-search-input').value.trim();
-      if (q) router.navigate(`#/search?q=${encodeURIComponent(q)}`);
-    });
-  }
+  initMobileMenu(router);
 }
 
 // ルーター開始

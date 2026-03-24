@@ -2468,3 +2468,227 @@ input, textarea, select {
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
+
+
+/* ============================================================
+   モバイルメニュー（ハンバーガー）
+   PC版では非表示
+   ============================================================ */
+
+/* ハンバーガーボタン — PC版では非表示 */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
+}
+.mobile-menu-btn__line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.mobile-menu-btn.is-open .mobile-menu-btn__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-btn.is-open .mobile-menu-btn__line:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-btn.is-open .mobile-menu-btn__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* モバイルメニュー本体 — PC版では非表示 */
+.mobile-menu {
+  display: none;
+}
+
+/* ============================================================
+   モバイル対応メディアクエリ（768px以下）
+   PC版のスタイルは一切変更しない
+   ============================================================ */
+@media (max-width: 768px) {
+  /* --- ハンバーガーボタン表示 --- */
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* --- ヘッダー検索をPC版で非表示 --- */
+  .site-header__search {
+    display: none;
+  }
+
+  /* --- ヘッダーロゴ縮小 --- */
+  .site-header__logo {
+    font-size: 1.15rem;
+  }
+
+  /* --- モバイルメニュー --- */
+  .mobile-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color-bg-card);
+    border-top: 1px solid var(--color-divider);
+    transition: max-height 0.35s ease;
+  }
+  .mobile-menu.is-open {
+    max-height: 400px;
+  }
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md) var(--space-lg);
+  }
+  .mobile-menu__nav a {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid var(--color-divider);
+    text-decoration: none;
+  }
+  .mobile-menu__nav a:last-child {
+    border-bottom: none;
+  }
+  .mobile-menu__nav a.is-active {
+    color: var(--color-accent-red);
+    font-weight: 700;
+  }
+  .mobile-menu__search {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg) var(--space-lg);
+  }
+  .mobile-menu__search-input {
+    flex: 1;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    background: var(--color-bg-base);
+    outline: none;
+  }
+  .mobile-menu__search-input:focus {
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+  }
+  .mobile-menu__search-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-accent-red);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* --- β版バー簡略化 --- */
+  .beta-bar__text {
+    display: none;
+  }
+  .beta-bar {
+    font-size: 0.75rem;
+    padding: 6px var(--space-md);
+  }
+
+  /* --- ヒーロー調整 --- */
+  .hero__search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__search-input {
+    width: 100% !important;
+  }
+
+  /* --- セクションタイトル --- */
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .section-subtitle {
+    font-size: 0.8rem;
+  }
+
+  /* --- フッター調整 --- */
+  .site-footer {
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+
+  /* --- レシピ詳細ページ --- */
+  .recipe-detail {
+    padding: 0 var(--space-md);
+  }
+  .detail__title {
+    font-size: 1.5rem;
+  }
+  .detail__grandmother {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .detail__meta {
+    gap: var(--space-md);
+  }
+
+  /* --- 記事詳細ページ --- */
+  .container--narrow {
+    padding: 0 var(--space-md);
+  }
+  .article-header__title {
+    font-size: 1.3rem;
+  }
+  .article-content__heading {
+    font-size: 1.15rem;
+  }
+}
+
+/* ============================================================
+   小型スマホ対応（480px以下）
+   ============================================================ */
+@media (max-width: 480px) {
+  /* --- ヒーロー --- */
+  .hero {
+    min-height: 50vh;
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+  .hero__title {
+    font-size: 1.8rem;
+  }
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* --- レシピカード画像 --- */
+  .recipe-card__image {
+    height: 160px;
+  }
+
+  /* --- フッター1列化 --- */
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- 募集セクション --- */
+  .recruit-block__channels {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .recruit-channel {
+    min-width: auto;
+  }
+
+  /* --- 記事カード --- */
+  .article-card__body h3 {
+    font-size: 1rem;
+  }
+}
