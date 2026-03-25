@@ -99,7 +99,8 @@
               "name": "昆布",
               "amount": 20,
               "unit": "g",
-              "note": "利尻昆布がおすすめ"
+              "note": "利尻昆布がおすすめ",
+              "grandma_amount": "手のひらくらいの大きさ"
             },
             {
               "name": "水",
@@ -111,31 +112,36 @@
               "name": "白味噌",
               "amount": 60,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "お玉に軽く1杯くらい"
             },
             {
               "name": "信州味噌",
               "amount": 30,
               "unit": "g",
-              "note": "白味噌と合わせる"
+              "note": "白味噌と合わせる",
+              "grandma_amount": "お玉に半分くらい"
             },
             {
               "name": "酒",
               "amount": 50,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "みりん",
               "amount": 20,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "バター",
               "amount": 10,
               "unit": "g",
-              "note": "仕上げに加える"
+              "note": "仕上げに加える",
+              "grandma_amount": "ひとかけ"
             }
           ]
         }
@@ -286,19 +292,22 @@
               "name": "昆布",
               "amount": 10,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "手のひら半分くらい"
             },
             {
               "name": "塩",
               "amount": 2,
               "unit": "g",
-              "note": "鮭の塩加減を見て調整"
+              "note": "鮭の塩加減を見て調整",
+              "grandma_amount": "ひとつまみ"
             },
             {
               "name": "酒",
               "amount": 30,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             }
           ]
         }
@@ -475,19 +484,22 @@
               "name": "煮干し",
               "amount": 30,
               "unit": "g",
-              "note": "頭と腸を取る"
+              "note": "頭と腸を取る",
+              "grandma_amount": "ひとつかみ"
             },
             {
               "name": "味噌",
               "amount": 80,
               "unit": "g",
-              "note": "津軽味噌（辛口）"
+              "note": "津軽味噌（辛口）",
+              "grandma_amount": "お玉にたっぷり1杯"
             },
             {
               "name": "醤油",
               "amount": 20,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             }
           ]
         }
@@ -630,25 +642,29 @@
               "name": "醤油",
               "amount": 80,
               "unit": "ml",
-              "note": "山形産のもの"
+              "note": "山形産のもの",
+              "grandma_amount": "どぼどぼっと多めに"
             },
             {
               "name": "みりん",
               "amount": 50,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "酒",
               "amount": 50,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "砂糖",
               "amount": 20,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "大さじ山盛り1杯くらい"
             },
             {
               "name": "昆布だし",
@@ -791,7 +807,8 @@
               "name": "生姜",
               "amount": 20,
               "unit": "g",
-              "note": "みじん切り"
+              "note": "みじん切り",
+              "grandma_amount": "親指の先くらい"
             },
             {
               "name": "納豆昆布（ねばり昆布）",
@@ -803,13 +820,15 @@
               "name": "醤油",
               "amount": 40,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "みりん",
               "amount": 15,
               "unit": "ml",
-              "note": "煮切ったもの"
+              "note": "煮切ったもの",
+              "grandma_amount": "ちょろっと"
             }
           ]
         }
@@ -921,25 +940,29 @@
               "name": "醤油",
               "amount": 40,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "みりん",
               "amount": 20,
               "unit": "ml",
-              "note": "煮切る"
+              "note": "煮切る",
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "酒",
               "amount": 20,
               "unit": "ml",
-              "note": "煮切る"
+              "note": "煮切る",
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "砂糖",
               "amount": 5,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひとつまみ"
             }
           ]
         }
@@ -1037,7 +1060,8 @@
               "name": "小麦粉",
               "amount": 30,
               "unit": "g",
-              "note": "打ち粉用"
+              "note": "打ち粉用",
+              "grandma_amount": "まぶす程度"
             },
             {
               "name": "すだれ麩",
@@ -1078,25 +1102,29 @@
               "name": "醤油",
               "amount": 50,
               "unit": "ml",
-              "note": "うす口醤油"
+              "note": "うす口醤油",
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "みりん",
               "amount": 40,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し弱"
             },
             {
               "name": "酒",
               "amount": 30,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "砂糖",
               "amount": 10,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひとつまみ"
             }
           ]
         }
@@ -1211,7 +1239,8 @@
               "name": "塩",
               "amount": 100,
               "unit": "g",
-              "note": "下漬け用"
+              "note": "下漬け用",
+              "grandma_amount": "たっぷり"
             }
           ]
         },
@@ -1228,13 +1257,15 @@
               "name": "砂糖",
               "amount": 100,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "どさっと"
             },
             {
               "name": "みりん",
               "amount": 50,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひと回し"
             },
             {
               "name": "ゆずの皮",
@@ -1361,13 +1392,15 @@
               "name": "うす口醤油",
               "amount": 15,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "みりん",
               "amount": 20,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             }
           ]
         },
@@ -1390,19 +1423,22 @@
               "name": "砂糖",
               "amount": 20,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひとつまみ"
             },
             {
               "name": "うす口醤油",
               "amount": 10,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "みりん",
               "amount": 15,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             }
           ]
         },
@@ -1425,13 +1461,15 @@
               "name": "うす口醤油",
               "amount": 15,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             },
             {
               "name": "みりん",
               "amount": 15,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             }
           ]
         }
@@ -1544,7 +1582,8 @@
               "name": "塩",
               "amount": 2,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひとつまみ"
             }
           ]
         },
@@ -1686,19 +1725,22 @@
               "name": "練りからし",
               "amount": 30,
               "unit": "g",
-              "note": "粉からしを練ったもの"
+              "note": "粉からしを練ったもの",
+              "grandma_amount": "好きなだけ"
             },
             {
               "name": "砂糖",
               "amount": 20,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "ひとつまみ"
             },
             {
               "name": "みりん",
               "amount": 20,
               "unit": "ml",
-              "note": null
+              "note": null,
+              "grandma_amount": "ちょろっと"
             }
           ]
         },

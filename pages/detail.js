@@ -35,7 +35,6 @@ export default async function renderDetail({ params = {} } = {}, router) {
   const imageUrl = recipe.photos?.main ?? recipe.photos?.thumbnail ?? '';
   const areaCode = region.area ?? recipe.area_code ?? '';
   const prefecture = grandmother.prefecture ?? region.prefecture ?? '';
-  const story = recipe.story ?? '';
   const ingredients = recipe.ingredients ?? [];
   const steps = recipe.steps ?? [];
   const grandmaNotes = recipe.grandma_notes ?? (recipe.grandmother_memo ? [recipe.grandmother_memo] : []);
@@ -72,10 +71,18 @@ export default async function renderDetail({ params = {} } = {}, router) {
       ? `<tr class="ingredient-group-header"><td colspan="2" class="ingredient__group">${escapeHtml(group.group)}</td></tr>` : '';
     const items = (group.items ?? [group]).map((ing) => {
       const baseAmount = ing.amount ?? '';
+      const hasGrandma = !!ing.grandma_amount;
       return `<tr class="ingredient-row" data-base-amount="${escapeHtml(String(baseAmount))}" data-unit="${escapeHtml(ing.unit ?? '')}">
         <td class="ingredient__name">${escapeHtml(ing.name ?? '')}</td>
         <td class="ingredient__amount">
-          <span class="ingredient__qty">${escapeHtml(String(baseAmount))}</span>${escapeHtml(ing.unit ?? '')}
+          ${hasGrandma ? `
+            <span class="ingredient__grandma">${escapeHtml(ing.grandma_amount)}</span>
+            <span class="ingredient__precise" style="display:none">
+              <span class="ingredient__qty">${escapeHtml(String(baseAmount))}</span>${escapeHtml(ing.unit ?? '')}
+            </span>
+          ` : `
+            <span class="ingredient__precise-always"><span class="ingredient__qty">${escapeHtml(String(baseAmount))}</span>${escapeHtml(ing.unit ?? '')}</span>
+          `}
           ${ing.note ? `<small class="ingredient__note">（${escapeHtml(ing.note)}）</small>` : ''}
         </td>
       </tr>`;
@@ -169,15 +176,6 @@ export default async function renderDetail({ params = {} } = {}, router) {
       <div class="detail__tags">${tagChips}</div>
     </section>
 
-    ${story ? `
-    <section class="detail__story">
-      <h2 class="detail__section-title">🌿 伝承ストーリー</h2>
-      <div class="story-block">
-        <p class="story-block__text">${escapeHtml(story)}</p>
-      </div>
-    </section>
-    ` : ''}
-
     <section class="detail__ingredients">
       <div class="detail__ingredients-header">
         <h2 class="detail__section-title">🧂 材料</h2>
@@ -186,6 +184,14 @@ export default async function renderDetail({ params = {} } = {}, router) {
           <span class="servings-display"><output id="servings-output">${servings}</output>人分</span>
           <button class="servings-btn" id="servings-plus">＋</button>
         </div>
+      </div>
+      <div class="measure-toggle">
+        <button class="measure-toggle__btn measure-toggle__btn--active" data-mode="grandma">
+          👵 おばあちゃん流
+        </button>
+        <button class="measure-toggle__btn" data-mode="precise">
+          ⚖️ きっちり計量
+        </button>
       </div>
       <table class="ingredient-table">
         <tbody id="ingredient-tbody">${ingredientRows}</tbody>
@@ -234,4 +240,24 @@ export default async function renderDetail({ params = {} } = {}, router) {
   const plusBtn = document.getElementById('servings-plus');
   if (minusBtn) minusBtn.addEventListener('click', () => updateServings(currentServings - 1));
   if (plusBtn) plusBtn.addEventListener('click', () => updateServings(currentServings + 1));
+
+  // おばあちゃん流 / きっちり計量 トグル
+  const toggleBtns = document.querySelectorAll('.measure-toggle__btn');
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach((b) => b.classList.remove('measure-toggle__btn--active'));
+      btn.classList.add('measure-toggle__btn--active');
+      const mode = btn.dataset.mode;
+      if (!tbody) return;
+      const grandmaEls = tbody.querySelectorAll('.ingredient__grandma');
+      const preciseEls = tbody.querySelectorAll('.ingredient__precise');
+      if (mode === 'grandma') {
+        grandmaEls.forEach((el) => { if (el.textContent.trim()) el.style.display = ''; });
+        preciseEls.forEach((el) => { el.style.display = 'none'; });
+      } else {
+        grandmaEls.forEach((el) => { el.style.display = 'none'; });
+        preciseEls.forEach((el) => { el.style.display = ''; });
+      }
+    });
+  });
 }

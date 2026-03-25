@@ -3001,6 +3001,86 @@ input, textarea, select {
 }
 
 /* ============================================================
+   おばあちゃん流 / きっちり計量 トグル
+   ============================================================ */
+.measure-toggle {
+  display: flex;
+  gap: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid var(--color-border);
+  margin-bottom: var(--space-md);
+}
+.measure-toggle__btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: transparent;
+  font-family: var(--font-round, var(--font-sans));
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+}
+.measure-toggle__btn--active {
+  background: var(--color-accent-red);
+  color: #fff;
+}
+.measure-toggle__btn:hover:not(.measure-toggle__btn--active) {
+  background: var(--color-bg-warm);
+}
+
+.ingredient__grandma {
+  font-family: var(--font-hand, var(--font-serif));
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.ingredient__precise-always {
+  display: inline;
+}
+
+/* ============================================================
+   日本地図 SVG
+   ============================================================ */
+.japan-map-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto var(--space-xl);
+}
+
+.japan-map {
+  width: 100%;
+  height: auto;
+}
+
+.japan-map__region path {
+  fill: var(--color-bg-warm);
+  stroke: var(--color-border);
+  stroke-width: 1.5;
+  transition: fill 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.japan-map__region:hover path {
+  fill: var(--color-accent-gold);
+}
+
+.japan-map__region text {
+  font-size: 24px;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.japan-map__label {
+  font-size: 11px !important;
+  font-family: var(--font-serif);
+  fill: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ============================================================
    小型スマホ対応（480px以下）
    ============================================================ */
 @media (max-width: 480px) {
