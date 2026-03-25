@@ -204,56 +204,10 @@ export default async function renderHome(router) {
         <p class="section-subtitle">あなたのふるさとの味、探してみませんか</p>
       </div>
       <div class="japan-map-container">
-        <svg class="japan-map" viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
-          <!-- 北海道 -->
-          <a href="#/region/hokkaido" class="japan-map__region" data-region="hokkaido">
-            <path d="M350,50 L420,30 L450,60 L440,100 L420,130 L380,120 L350,100 L340,70 Z" />
-            <text x="390" y="80">🦀</text>
-            <text x="380" y="100" class="japan-map__label">北海道</text>
-          </a>
-          <!-- 東北 -->
-          <a href="#/region/tohoku" class="japan-map__region" data-region="tohoku">
-            <path d="M340,140 L380,130 L400,160 L390,220 L370,250 L340,240 L330,200 L320,160 Z" />
-            <text x="355" y="185">🍎</text>
-            <text x="345" y="205" class="japan-map__label">東北</text>
-          </a>
-          <!-- 関東 -->
-          <a href="#/region/kanto" class="japan-map__region" data-region="kanto">
-            <path d="M330,255 L370,250 L385,270 L380,310 L350,320 L320,300 L315,270 Z" />
-            <text x="345" y="280">🍜</text>
-            <text x="335" y="300" class="japan-map__label">関東</text>
-          </a>
-          <!-- 中部 -->
-          <a href="#/region/chubu" class="japan-map__region" data-region="chubu">
-            <path d="M280,250 L325,255 L320,300 L310,330 L270,340 L250,310 L260,270 Z" />
-            <text x="285" y="290">⛰️</text>
-            <text x="275" y="310" class="japan-map__label">中部</text>
-          </a>
-          <!-- 近畿 -->
-          <a href="#/region/kinki" class="japan-map__region" data-region="kinki">
-            <path d="M250,310 L280,340 L290,380 L270,400 L240,390 L220,360 L230,330 Z" />
-            <text x="252" y="355">🦌</text>
-            <text x="240" y="375" class="japan-map__label">近畿</text>
-          </a>
-          <!-- 中国 -->
-          <a href="#/region/chugoku" class="japan-map__region" data-region="chugoku">
-            <path d="M150,340 L220,350 L230,380 L210,410 L170,400 L140,380 L130,360 Z" />
-            <text x="180" y="370">🐙</text>
-            <text x="168" y="390" class="japan-map__label">中国</text>
-          </a>
-          <!-- 四国 -->
-          <a href="#/region/shikoku" class="japan-map__region" data-region="shikoku">
-            <path d="M180,420 L240,415 L250,440 L230,460 L190,455 L170,440 Z" />
-            <text x="208" y="435">🍊</text>
-            <text x="198" y="453" class="japan-map__label">四国</text>
-          </a>
-          <!-- 九州 -->
-          <a href="#/region/kyushu" class="japan-map__region" data-region="kyushu">
-            <path d="M80,400 L140,390 L160,420 L150,470 L130,500 L100,510 L70,480 L60,440 Z" />
-            <text x="108" y="445">🌋</text>
-            <text x="95" y="465" class="japan-map__label">九州</text>
-          </a>
-        </svg>
+        <div class="japan-map-wrapper" id="japan-map-wrapper">
+          <!-- SVG will be loaded here via fetch -->
+        </div>
+        <div class="japan-map-tooltip" id="map-tooltip" style="display:none"></div>
       </div>
       <div class="region-map">
         ${regionMapItems}
@@ -324,6 +278,109 @@ export default async function renderHome(router) {
 `;
 
   setPage(html);
+
+  // 地図SVGを読み込んで動的に色付け
+  const mapWrapper = document.getElementById('japan-map-wrapper');
+  const mapTooltip = document.getElementById('map-tooltip');
+  if (mapWrapper) {
+    const classToRegion = {
+      'hokkaido': 'hokkaido',
+      'tohoku': 'tohoku',
+      'kanto': 'kanto',
+      'chubu': 'chubu',
+      'kinki': 'kinki',
+      'chugoku': 'chugoku',
+      'shikoku': 'shikoku',
+      'kyushu': 'kyushu',
+      'kyushu-okinawa': 'kyushu',
+    };
+    const regionNames = {
+      hokkaido: '北海道',
+      tohoku: '東北',
+      kanto: '関東',
+      chubu: '中部',
+      kinki: '近畿',
+      chugoku: '中国',
+      shikoku: '四国',
+      kyushu: '九州・沖縄',
+    };
+
+    // 地域ごとのレシピ数を集計
+    const regionRecipeCount = {};
+    for (const r of regions) {
+      regionRecipeCount[r.code] = r.recipe_count ?? 0;
+    }
+
+    // レシピ数に応じた色を返す
+    function getColorForCount(count) {
+      if (count === 0) return '#E8DCC8';
+      if (count <= 2) return '#D4B896';
+      if (count <= 5) return '#C49A6C';
+      if (count <= 10) return '#A0703C';
+      return '#7D4E1E';
+    }
+
+    try {
+      const res = await fetch('assets/japan-map.svg');
+      const svgText = await res.text();
+      mapWrapper.innerHTML = svgText;
+
+      const svgEl = mapWrapper.querySelector('svg');
+      if (svgEl) {
+        // 全ての都道府県グループを処理
+        const prefGroups = svgEl.querySelectorAll('.prefecture');
+        for (const g of prefGroups) {
+          const classes = g.className.baseVal || g.getAttribute('class') || '';
+          let regionCode = null;
+
+          // クラス名から地域コードを特定
+          for (const [cls, code] of Object.entries(classToRegion)) {
+            if (classes.split(/\s+/).includes(cls)) {
+              regionCode = code;
+              break;
+            }
+          }
+          if (!regionCode) continue;
+
+          const count = regionRecipeCount[regionCode] ?? 0;
+          const color = getColorForCount(count);
+
+          // fill と stroke を上書き
+          g.setAttribute('fill', color);
+          g.setAttribute('stroke', '#fff');
+          g.setAttribute('stroke-width', '0.8');
+          const shapes = g.querySelectorAll('polygon, path');
+          for (const s of shapes) {
+            s.setAttribute('fill', color);
+            s.setAttribute('stroke', '#fff');
+            s.setAttribute('stroke-width', '0.8');
+          }
+
+          // ツールチップ表示
+          g.addEventListener('mouseenter', (e) => {
+            const name = regionNames[regionCode] ?? regionCode;
+            mapTooltip.innerHTML = `<strong>${name}</strong>${count}件のレシピ`;
+            mapTooltip.style.display = 'block';
+          });
+          g.addEventListener('mousemove', (e) => {
+            mapTooltip.style.left = (e.clientX + 12) + 'px';
+            mapTooltip.style.top = (e.clientY + 12) + 'px';
+          });
+          g.addEventListener('mouseleave', () => {
+            mapTooltip.style.display = 'none';
+          });
+
+          // クリックで地域ページへ遷移
+          g.style.cursor = 'pointer';
+          g.addEventListener('click', () => {
+            router.navigate(`#/region/${regionCode}`);
+          });
+        }
+      }
+    } catch (err) {
+      console.warn('Japan map SVG の読み込みに失敗しました:', err);
+    }
+  }
 
   // スクロールアニメーション（IntersectionObserver）
   const animatedEls = document.querySelectorAll('.animate-on-scroll');

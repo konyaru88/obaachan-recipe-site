@@ -3046,38 +3046,54 @@ input, textarea, select {
    ============================================================ */
 .japan-map-container {
   position: relative;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto var(--space-xl);
 }
 
-.japan-map {
+.japan-map-wrapper {
+  width: 100%;
+}
+
+.japan-map-wrapper svg {
   width: 100%;
   height: auto;
+  max-height: 500px;
 }
 
-.japan-map__region path {
-  fill: var(--color-bg-warm);
-  stroke: var(--color-border);
-  stroke-width: 1.5;
-  transition: fill 0.3s ease, transform 0.2s ease;
+.japan-map-wrapper .prefecture {
   cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
-.japan-map__region:hover path {
-  fill: var(--color-accent-gold);
+.japan-map-wrapper .prefecture:hover {
+  opacity: 0.8;
 }
 
-.japan-map__region text {
-  font-size: 24px;
-  pointer-events: none;
-  text-anchor: middle;
+.japan-map-wrapper .prefecture polygon,
+.japan-map-wrapper .prefecture path {
+  stroke: #fff;
+  stroke-width: 0.8;
+  transition: fill 0.3s ease;
 }
 
-.japan-map__label {
-  font-size: 11px !important;
+.japan-map-tooltip {
+  position: fixed;
+  background: var(--color-bg-dark, #3A2416);
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--radius-sm, 6px);
+  font-size: 0.85rem;
   font-family: var(--font-serif);
-  fill: var(--color-text-primary);
-  font-weight: 600;
+  pointer-events: none;
+  z-index: 100;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}
+
+.japan-map-tooltip strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 2px;
 }
 
 /* ============================================================
