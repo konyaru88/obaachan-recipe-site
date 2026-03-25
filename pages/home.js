@@ -47,33 +47,15 @@ export default async function renderHome(router) {
     .sort((a, b) => (b.id ?? 0) - (a.id ?? 0))
     .slice(0, 6);
 
-  // おばあちゃんデータを集約（名前でグループ化）
-  const grandmaMap = new Map();
-  for (const r of allRecipes) {
-    const g = r.grandmother;
-    if (!g || !g.name) continue;
-    if (!grandmaMap.has(g.name)) {
-      grandmaMap.set(g.name, {
-        name: g.name,
-        prefecture: g.prefecture ?? '',
-        city: g.city ?? '',
-        count: 0,
-      });
-    }
-    grandmaMap.get(g.name).count++;
-  }
-  const grandmas = [...grandmaMap.values()].slice(0, 3);
+  // おばあちゃんハッシュタグ
+  const grandmaTags = [
+    '関西風おばあちゃん', '甘党おばあちゃん', '孫大好きおばあちゃん',
+    '漬物名人', '味噌づくり40年', '朝4時起きおばあちゃん',
+    '畑のおばあちゃん', '海の幸おばあちゃん', '節約の達人',
+  ];
 
-  // おばあちゃんカード HTML
-  const grandmaCards = grandmas.map((g) => `
-    <a href="#/recipes" class="grandma-card">
-      <div class="grandma-card__avatar">👵</div>
-      <div class="grandma-card__info">
-        <span class="grandma-card__name">${escapeHtml(g.name)}</span>
-        <span class="grandma-card__place">${escapeHtml(g.prefecture)}・${escapeHtml(g.city)}</span>
-        <span class="grandma-card__count">${g.count}件のレシピ</span>
-      </div>
-    </a>
+  const hashtagButtons = grandmaTags.map((tag) => `
+    <a href="#/recipes?tag=${encodeURIComponent(tag)}" class="hashtag-btn">${escapeHtml(tag)}</a>
   `).join('');
 
   // カテゴリボタン HTML
@@ -174,21 +156,26 @@ export default async function renderHome(router) {
   <!-- おばあちゃんから探す / レシピから探す -->
   <section class="home__explore" aria-labelledby="explore-heading">
     <div class="container">
-      <div class="explore-grid">
-        <div class="explore-col">
-          <h2 class="section-title animate-on-scroll" id="explore-heading">おばあちゃんから探す</h2>
-          <p class="section-subtitle animate-on-scroll">レシピを伝えてくれた人たち</p>
-          <div class="grandma-list">
-            ${grandmaCards}
-          </div>
-          <a href="#/recipes" class="btn btn--outline">もっと見る</a>
+      <div class="explore-tabs">
+        <button class="explore-tab explore-tab--active" data-tab="grandma">
+          👵 おばあちゃんから探す
+        </button>
+        <button class="explore-tab" data-tab="recipe">
+          🍽 レシピから探す
+        </button>
+      </div>
+
+      <div class="explore-panel" id="panel-grandma">
+        <p class="explore-panel__lead">おばあちゃんのタイプで選んでみよう</p>
+        <div class="hashtag-cloud">
+          ${hashtagButtons}
         </div>
-        <div class="explore-col">
-          <h2 class="section-title animate-on-scroll">レシピから探す</h2>
-          <p class="section-subtitle animate-on-scroll">料理のジャンルで選ぶ</p>
-          <div class="category-grid">
-            ${categoryButtons}
-          </div>
+      </div>
+
+      <div class="explore-panel" id="panel-recipe" style="display:none">
+        <p class="explore-panel__lead">料理のジャンルで選ぶ</p>
+        <div class="category-grid">
+          ${categoryButtons}
         </div>
       </div>
     </div>
@@ -278,6 +265,17 @@ export default async function renderHome(router) {
 `;
 
   setPage(html);
+
+  // タブ切り替え
+  document.querySelectorAll('.explore-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.explore-tab').forEach(t => t.classList.remove('explore-tab--active'));
+      tab.classList.add('explore-tab--active');
+      const target = tab.dataset.tab;
+      document.getElementById('panel-grandma').style.display = target === 'grandma' ? '' : 'none';
+      document.getElementById('panel-recipe').style.display = target === 'recipe' ? '' : 'none';
+    });
+  });
 
   // 地図SVGを読み込んで動的に色付け
   const mapWrapper = document.getElementById('japan-map-wrapper');
