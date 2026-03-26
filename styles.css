@@ -1335,6 +1335,8 @@ input, textarea, select {
   width: 200px;
   height: 200px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 .about-block__title {
