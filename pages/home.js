@@ -21,14 +21,14 @@ const regionEmoji = {
   kyushu: '🌋',
 };
 
-/** カテゴリごとの絵文字 */
+/** カテゴリごとのイラスト */
 const categories = [
-  { emoji: '🍲', label: '汁物' },
-  { emoji: '🐟', label: '主菜' },
-  { emoji: '🥬', label: '副菜' },
-  { emoji: '🥒', label: '漬物' },
-  { emoji: '🍚', label: 'ごはんもの' },
-  { emoji: '🍡', label: 'おやつ' },
+  { img: 'assets/images/categories/shirumono.png', label: '汁物' },
+  { img: 'assets/images/categories/shusai.png', label: '主菜' },
+  { img: 'assets/images/categories/fukusai.png', label: '副菜' },
+  { img: 'assets/images/categories/tsukemono.png', label: '漬物' },
+  { img: 'assets/images/categories/gohanmono.png', label: 'ごはんもの' },
+  { img: 'assets/images/categories/oyatsu.png', label: 'おやつ' },
 ];
 
 /**
@@ -61,7 +61,7 @@ export default async function renderHome(router) {
   // カテゴリボタン HTML
   const categoryButtons = categories.map((c) => `
     <a href="#/recipes?category=${encodeURIComponent(c.label)}" class="category-btn animate-on-scroll">
-      <span class="category-btn__emoji">${c.emoji}</span>
+      <img class="category-btn__img" src="${c.img}" alt="${escapeHtml(c.label)}" loading="lazy" />
       <span class="category-btn__label">${escapeHtml(c.label)}</span>
     </a>
   `).join('');
@@ -240,7 +240,7 @@ export default async function renderHome(router) {
   <section class="home__about" aria-labelledby="about-heading">
     <div class="container">
       <div class="about-block animate-on-scroll">
-        <div class="about-block__deco" aria-hidden="true">👵</div>
+        <div class="about-block__deco" aria-hidden="true"><img src="assets/images/grandma-icon.png" alt="" class="about-block__deco-img" /></div>
         <h2 id="about-heading" class="about-block__title">このサービスについて</h2>
         <p class="about-block__text">
           日本各地には、おばあちゃんの台所にしか残っていないレシピがあります。<br>

@@ -194,6 +194,14 @@ input, textarea, select {
   opacity: 0.85;
 }
 
+.site-header__logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .site-header__nav {
   display: flex;
   align-items: center;
@@ -1318,6 +1326,12 @@ input, textarea, select {
 .about-block__deco {
   font-size: 3rem;
   margin-bottom: var(--space-md);
+}
+
+.about-block__deco-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .about-block__title {
@@ -2645,6 +2659,12 @@ input, textarea, select {
 
 .category-btn__emoji {
   font-size: 1.8rem;
+}
+
+.category-btn__img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .category-btn__label {

@@ -24,7 +24,7 @@ export default function renderHeader(router) {
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="site-header__logo" href="#/">
-      <span aria-hidden="true">🍱</span>
+      <img src="assets/images/grandma-icon.png" alt="" class="site-header__logo-img" aria-hidden="true" />
       おばあちゃんのレシピ
     </a>
 
