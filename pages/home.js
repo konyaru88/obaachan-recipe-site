@@ -113,11 +113,10 @@ export default async function renderHome(router) {
   <section class="hero" aria-label="キャッチコピーと検索">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__content">
-      <p class="hero__subtitle">全国のおばあちゃんの味を、次の世代へ。</p>
-      <h1 class="hero__title">消えゆく味を、<br>あなたの台所へ。</h1>
+      <p class="hero__subtitle">全国のおばあちゃんの手料理が集まるメディア</p>
+      <h1 class="hero__title">80年後も、<br>食べられ続ける味がある</h1>
       <p class="hero__lead">
-        日本各地のおばあちゃんが守り続けてきた、<br>
-        手仕事の味・郷土の知恵が、ここに集まっています。
+        おばあちゃんの台所を、あなたの食卓へ。
       </p>
       <form class="hero__search" id="hero-search-form" role="search" aria-label="レシピを検索">
         <input
