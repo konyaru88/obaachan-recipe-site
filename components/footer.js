@@ -12,10 +12,10 @@ export default function renderFooter() {
   <div class="container site-footer__grid">
     <div>
       <a class="site-footer__logo" href="#/">
-        <span>🍱</span>
+        <img src="assets/images/grandma-icon.png" alt="" class="site-footer__logo-img" />
         おばあちゃんのレシピ
       </a>
-      <p class="site-footer__tagline">古き良き味を、未来へつなぐ</p>
+      <p class="site-footer__tagline">おばあちゃんの台所を、あなたの食卓へ。</p>
     </div>
 
     <nav aria-label="フッターナビゲーション">
@@ -33,6 +33,7 @@ export default function renderFooter() {
       <ul class="site-footer__links">
         <li><a href="https://www.instagram.com/obaachan_recipe" target="_blank" rel="noopener noreferrer">Instagram</a></li>
         <li><a href="https://www.threads.net/@obaachan_recipe" target="_blank" rel="noopener noreferrer">Threads</a></li>
+        <li><a href="https://note.com/obaachan_recipe" target="_blank" rel="noopener noreferrer">note</a></li>
       </ul>
     </div>
   </div>

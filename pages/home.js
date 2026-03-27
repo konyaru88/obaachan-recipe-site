@@ -242,15 +242,24 @@ export default async function renderHome(router) {
         <div class="about-block__deco" aria-hidden="true"><img src="assets/images/grandma-icon.png" alt="" class="about-block__deco-img" /></div>
         <h2 id="about-heading" class="about-block__title">このサービスについて</h2>
         <p class="about-block__text">
-          日本各地には、おばあちゃんの台所にしか残っていないレシピがあります。<br>
-          計量カップも使わず、「だいたいこのくらい」と手のひらで量り、<br>
-          「昔からこうやって作ってきた」と語る、その言葉の中に<br>
-          長い年月をかけて磨かれた知恵と愛情が宿っています。
+          日本各地にある、おばあちゃんの手料理を残したい。<br>
+          「おばあちゃんのレシピ」は、「あの味」を記録し、次の世代へつなぐためのアーカイブです。
         </p>
         <p class="about-block__text">
-          「おばあちゃんのレシピ」は、そんな失われゆく郷土の味を記録し、<br>
-          次の世代へとつなぐためのアーカイブです。<br>
-          レシピだけでなく、料理にまつわる物語や食文化の背景も大切に伝えていきます。
+          計量カップは使わず、「だいたいこのくらい」と手のひらで量る。<br>
+          「昔からこうやって作ってきた」と語られるその言葉の中には、<br>
+          長い時間をかけて積み重なった知恵や経験が詰まっています。
+        </p>
+        <p class="about-block__text">
+          ここで大切にしているのは、レシピを正確に記録することだけではありません。<br>
+          当時の会話やエピソード、歴史や食文化とあわせて伝え続けていくこと。
+        </p>
+        <p class="about-block__text">
+          語られ、作られ、誰かの生活の中で使われ続けていくこと。<br>
+          その循環があってはじめて、文化として残っていくと私たちは考えています。
+        </p>
+        <p class="about-block__text">
+          何十年先の食卓でも、変わらず食べられ続ける「あの味」があることを目指して。
         </p>
         <div class="about-block__cta">
           <a href="#/recipes" class="btn btn--primary">レシピを探す</a>
