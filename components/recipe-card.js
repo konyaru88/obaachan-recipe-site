@@ -62,7 +62,6 @@ export default function renderRecipeCard(recipe) {
     </div>
     <div class="recipe-card__body">
       <h3 class="recipe-card__title">${safeTitle}</h3>
-      ${grandName ? `<p class="recipe-card__grandmother">👵 ${grandName}${grandAge}</p>` : ''}
       <div class="recipe-card__tags">${tagItems}</div>
       <ul class="recipe-card__meta">
         <li class="recipe-card__meta-item">⏱ ${timeStr}</li>

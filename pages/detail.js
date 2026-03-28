@@ -104,15 +104,7 @@ export default async function renderDetail({ params = {} } = {}, router) {
     </li>`;
   }).join('');
 
-  // おばあちゃんのメモ（配列）
-  const memoSection = grandmaNotes.length > 0 ? `
-    <section class="detail__memo" aria-labelledby="memo-heading">
-      <h2 id="memo-heading" class="detail__section-title">📝 おばあちゃんのメモ</h2>
-      <div class="memo-box">
-        ${grandmaNotes.map((note) => `<p class="memo-box__text">「${escapeHtml(note)}」</p>`).join('')}
-      </div>
-    </section>
-  ` : '';
+  const memoSection = '';
 
   // 食文化背景
   const bgHistory = culturalBg.history ?? '';
@@ -155,16 +147,6 @@ export default async function renderDetail({ params = {} } = {}, router) {
       <div class="detail__badges">${endangeredBadge}${regionBadge}${seasonBadge}</div>
       <h1 class="detail__title">${escapeHtml(title)}</h1>
 
-      ${grandmother.name ? `
-      <div class="detail__grandmother">
-        <div class="grandmother-icon">👵</div>
-        <div class="grandmother-info">
-          <p class="grandmother-info__name">${escapeHtml(grandmother.name)}${grandmother.age ? `（${grandmother.age}歳）` : ''}</p>
-          ${grandmother.city ? `<p class="grandmother-info__place">${escapeHtml(grandmother.city)}${grandmother.village ? ` ${escapeHtml(grandmother.village)}` : ''}</p>` : ''}
-          ${grandmother.message ? `<p class="grandmother-info__message">"${escapeHtml(truncate(grandmother.message, 80))}"</p>` : ''}
-        </div>
-      </div>
-      ` : ''}
 
       <ul class="detail__meta">
         ${prepTime ? `<li class="detail__meta-item"><span class="detail__meta-label">下準備</span><span class="detail__meta-value">${formatTime(prepTime)}</span></li>` : ''}
