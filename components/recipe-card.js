@@ -31,15 +31,17 @@ export default function renderRecipeCard(recipe) {
   };
   const emoji = recipe.thumbnail_emoji || categoryEmoji[recipe.category] || '🍱';
 
+  const placeholderImg = `<img class="recipe-card__image recipe-card__image--placeholder" src="/assets/images/sample-placeholder.png.jpg" alt="準備中" loading="lazy" />`;
+
   const imgTag = imageUrl
     ? `<img
          class="recipe-card__image"
          src="${escapeHtml(imageUrl)}"
          alt="${safeTitle}"
          loading="lazy"
-         onerror="this.onerror=null;this.style.display='none';this.parentNode.classList.add('recipe-card__image-placeholder');var s=document.createElement('span');s.className='recipe-card__emoji-placeholder';s.setAttribute('aria-hidden','true');s.textContent='${emoji}';this.parentNode.appendChild(s);"
+         onerror="this.onerror=null;this.outerHTML='${placeholderImg.replace(/'/g, "\\'")}'"
        />`
-    : `<span class="recipe-card__emoji-placeholder" aria-hidden="true">${emoji}</span>`;
+    : placeholderImg;
 
   const endangeredBadge = isEndangered
     ? `<span class="badge badge--endangered">消えゆくレシピ</span>`
