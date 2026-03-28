@@ -39,6 +39,9 @@ export default async function renderDetail({ params = {} } = {}, router) {
   const steps = recipe.steps ?? [];
   const grandmaNotes = recipe.grandma_notes ?? (recipe.grandmother_memo ? [recipe.grandmother_memo] : []);
   const culturalBg = recipe.cultural_background ?? {};
+  const episode = recipe.episode ?? '';
+  const source = recipe.source ?? null;
+  const story = recipe.story ?? '';
   const seasonArr = Array.isArray(recipe.season) ? recipe.season : (recipe.season ? [recipe.season] : []);
 
   // 関連レシピ（同地方の他レシピ最大4件）
@@ -106,13 +109,30 @@ export default async function renderDetail({ params = {} } = {}, router) {
 
   const memoSection = '';
 
+  // 思い出・エピソードセクション
+  const episodeSection = episode ? `
+    <section class="detail__episode" aria-labelledby="episode-heading">
+      <h2 id="episode-heading" class="detail__section-title">📖 思い出・エピソード</h2>
+      <div class="episode-block">
+        <p class="episode-block__text">${escapeHtml(episode)}</p>
+        ${source ? `
+          <div class="episode-block__source">
+            <span class="episode-block__source-label">情報源：</span>
+            ${(source.types ?? []).map(t => `<span class="episode-block__source-tag">${escapeHtml(t)}</span>`).join('')}
+            ${source.contributor ? `<span class="episode-block__contributor">（投稿者：${escapeHtml(source.contributor)}さん）</span>` : ''}
+          </div>
+        ` : ''}
+      </div>
+    </section>
+  ` : '';
+
   // 食文化背景
-  const bgHistory = culturalBg.history ?? '';
+  const bgHistory = typeof culturalBg === 'string' ? culturalBg : (culturalBg.history ?? story ?? '');
   const bgIngredients = (culturalBg.local_ingredients ?? []).join('、');
   const bgSimilar = (culturalBg.similar_dishes ?? []).join('、');
   const backgroundSection = (bgHistory || bgIngredients) ? `
     <section class="detail__background" aria-labelledby="background-heading">
-      <h2 id="background-heading" class="detail__section-title">📖 食文化の背景</h2>
+      <h2 id="background-heading" class="detail__section-title">🍽 食文化の背景</h2>
       <div class="background-block">
         ${bgHistory ? `<p class="background-block__text">${escapeHtml(bgHistory)}</p>` : ''}
         ${bgIngredients ? `<p class="background-block__text"><strong>この地域の特産食材：</strong>${escapeHtml(bgIngredients)}</p>` : ''}
@@ -186,6 +206,7 @@ export default async function renderDetail({ params = {} } = {}, router) {
     </section>
 
     ${memoSection}
+    ${episodeSection}
     ${backgroundSection}
 
   </div>
