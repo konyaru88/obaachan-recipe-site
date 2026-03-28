@@ -1840,6 +1840,160 @@
         "ikinaridango-kumamoto-001"
       ],
       "thumbnail_emoji": "🥬"
+    },
+    {
+      "id": "shoga-tsukudani-nagano-001",
+      "title": "新生姜の佃煮",
+      "grandmother": {
+        "name": null,
+        "age": null,
+        "prefecture": "長野県",
+        "city": null,
+        "village": null,
+        "message": null
+      },
+      "region": {
+        "area": "chubu",
+        "prefecture_code": "20",
+        "prefecture": "長野県"
+      },
+      "meta": {
+        "created_at": "2026-03-28",
+        "is_featured": false,
+        "is_endangered": false
+      },
+      "category": "佃煮・常備菜",
+      "tags": [
+        "生姜",
+        "佃煮",
+        "保存食",
+        "長野県",
+        "常備菜",
+        "日持ち"
+      ],
+      "season": [
+        "夏",
+        "秋"
+      ],
+      "servings": 4,
+      "prep_time_minutes": 30,
+      "cook_time_minutes": 40,
+      "difficulty": 2,
+      "story": "新生姜が店頭に並び始める頃、毎年必ずこの佃煮を作り、作った分がなくなるまで食卓に並んでいた。このレシピを教えてくれた方のおばあちゃんは、地元のスーパー「ツルヤ」まで往復15kmの道のりをリュックサックを背負って歩いて生姜を買いに行っていたという。「ツルヤの生姜じゃないとおいしい佃煮はできない」と言い切るこだわりが、この一品の味を支えていた。三年前に亡くなってしまったが、本人が書き残したメモが今も大切に保管されている。",
+      "ingredients": [
+        {
+          "group": "主材料",
+          "items": [
+            {
+              "name": "新生姜",
+              "amount": 1000,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "酢（下ゆで用）",
+              "amount": 100,
+              "unit": "cc",
+              "note": "水に加えて下ゆでに使う"
+            }
+          ]
+        },
+        {
+          "group": "煮汁",
+          "items": [
+            {
+              "name": "みりん",
+              "amount": 100,
+              "unit": "cc",
+              "note": null
+            },
+            {
+              "name": "砂糖",
+              "amount": 250,
+              "unit": "g",
+              "note": null
+            },
+            {
+              "name": "しょうゆ",
+              "amount": 200,
+              "unit": "cc",
+              "note": null
+            },
+            {
+              "name": "酒",
+              "amount": 200,
+              "unit": "cc",
+              "note": null
+            },
+            {
+              "name": "ほんだし",
+              "amount": null,
+              "unit": "少々",
+              "note": null
+            },
+            {
+              "name": "酢",
+              "amount": 100,
+              "unit": "cc",
+              "note": null
+            }
+          ]
+        },
+        {
+          "group": "仕上げ",
+          "items": [
+            {
+              "name": "ふじっ子（昆布の佃煮）",
+              "amount": 1,
+              "unit": "袋",
+              "note": null
+            },
+            {
+              "name": "白ゴマ",
+              "amount": null,
+              "unit": "適量",
+              "note": null
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "text": "新生姜を薄く切る。",
+          "tip": null
+        },
+        {
+          "step": 2,
+          "text": "酢100ccを入れた水に生姜をひたひたにして下ゆでする。",
+          "tip": "アクを抜き、辛みをやわらげる工程"
+        },
+        {
+          "step": 3,
+          "text": "ゆでた生姜を水にさらし、水を切る。",
+          "tip": null
+        },
+        {
+          "step": 4,
+          "text": "煮汁の材料（みりん・砂糖・しょうゆ・酒・ほんだし・酢）を合わせ、生姜を煮込む。",
+          "tip": null
+        },
+        {
+          "step": 5,
+          "text": "汁が少なくなったら、ふじっ子を入れてかき混ぜる。",
+          "tip": null
+        },
+        {
+          "step": 6,
+          "text": "最後に白ゴマを加えて完成。",
+          "tip": "冷蔵で1週間ほど保存可能"
+        }
+      ],
+      "grandma_notes": null,
+      "cultural_background": "信州・長野は寒冷な気候から保存食文化が発達した地域。佃煮は常備菜として通年食卓に並ぶことが多く、新生姜の季節に大量に作り置きするのが慣わしだった。ふじっ子（昆布の佃煮）を加えることで旨みと粘りが出る、この地域ならではの知恵が光る一品。",
+      "photos": [],
+      "related_recipe_ids": [],
+      "thumbnail_emoji": "🫚"
     }
   ]
 }
