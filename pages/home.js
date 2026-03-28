@@ -236,7 +236,7 @@ export default async function renderHome(router) {
   </section>
 
   <!-- 応援してください -->
-  <section class="home__support" aria-labelledby="support-heading">
+  <section id="support" class="home__support" aria-labelledby="support-heading">
     <div class="container">
       <div class="support-block animate-on-scroll">
         <div class="support-block__deco" aria-hidden="true">🍙</div>
@@ -291,6 +291,7 @@ export default async function renderHome(router) {
         <div class="about-block__cta">
           <a href="/recipes" class="btn btn--primary">レシピを探す</a>
           <a href="/regions" class="btn btn--outline">地域から探す</a>
+          <button type="button" class="btn btn--support-scroll" id="scroll-to-support">活動を応援する</button>
         </div>
       </div>
     </div>
@@ -439,6 +440,14 @@ export default async function renderHome(router) {
     setTimeout(() => {
       document.getElementById('recruit')?.scrollIntoView({ behavior: 'smooth' });
     }, 300);
+  }
+
+  // 「活動を応援する」ボタン → 応援セクションへスクロール
+  const scrollBtn = document.getElementById('scroll-to-support');
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => {
+      document.getElementById('support')?.scrollIntoView({ behavior: 'smooth' });
+    });
   }
 
   // ヒーロー検索フォームのイベント
