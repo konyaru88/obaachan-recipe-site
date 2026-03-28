@@ -3386,3 +3386,113 @@ input, textarea, select {
   background: var(--color-accent-gold);
   color: #fff;
 }
+
+/* ============================================================
+   活動応援ページ（/support）
+   ============================================================ */
+.support-page__hero {
+  background: linear-gradient(135deg, #FFF8EE 0%, #F5ECD8 100%);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-md) var(--space-2xl);
+}
+
+.support-page__deco {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.support-page__title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: var(--space-lg);
+}
+
+.support-page__lead {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+}
+
+.support-page__body {
+  max-width: 680px;
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.support-page__section {
+  margin-bottom: var(--space-2xl);
+}
+
+.support-page__section-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  border-left: 3px solid var(--color-accent-red);
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.support-page__section p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.support-page__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.support-page__list li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+}
+
+.support-page__cta {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+.support-page__cta-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  line-height: 1.8;
+}
+
+.support-page__btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: #FFDD00;
+  color: #1F150A;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255, 200, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.support-page__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 200, 0, 0.55);
+}
+
+.support-page__cta-note {
+  margin-top: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}

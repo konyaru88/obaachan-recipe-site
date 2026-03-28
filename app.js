@@ -10,6 +10,7 @@ import renderSearch from './pages/search.js';
 import renderArticles from './pages/articles.js?v=20260324';
 import renderArticleDetail from './pages/article-detail.js?v=20260324';
 import renderPrivacy from './pages/privacy.js';
+import renderSupport from './pages/support.js';
 import renderHeader, { initMobileMenu } from './components/header.js?v=20260324';
 import renderFooter from './components/footer.js';
 
@@ -27,6 +28,7 @@ router.add('/search', (ctx) => renderSearch(ctx, router));
 router.add('/articles', (ctx) => renderArticles(ctx));
 router.add('/article/:id', (ctx) => renderArticleDetail(ctx, router));
 router.add('/privacy', () => renderPrivacy());
+router.add('/support', () => renderSupport());
 
 /**
  * ページのHTMLをヘッダー・フッターと共にセットする

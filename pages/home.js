@@ -235,33 +235,6 @@ export default async function renderHome(router) {
     </div>
   </section>
 
-  <!-- 応援してください -->
-  <section id="support" class="home__support" aria-labelledby="support-heading">
-    <div class="container">
-      <div class="support-block animate-on-scroll">
-        <div class="support-block__deco" aria-hidden="true">🍙</div>
-        <h2 id="support-heading" class="support-block__title">おばあちゃんの味を、<br>一緒に残しませんか</h2>
-        <p class="support-block__text">
-          このサイトは、消えゆく郷土料理を記録するために<br>
-          広告なしで運営している個人メディアです。
-        </p>
-        <p class="support-block__text">
-          ご支援いただいた費用は、全国のおばあちゃんを訪ねる取材費や<br>
-          レシピの記録・サイト運営のために、大切に使わせていただきます。
-        </p>
-        <a
-          href="https://buymeacoffee.com/obaachanrev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="support-block__btn"
-        >
-          🍙 このサイトを応援する
-        </a>
-        <p class="support-block__note">100円から支援できます。クレジットカード・PayPal対応。</p>
-      </div>
-    </div>
-  </section>
-
   <!-- サービスの想い -->
   <section class="home__about" aria-labelledby="about-heading">
     <div class="container">
@@ -289,9 +262,9 @@ export default async function renderHome(router) {
           何十年先の食卓でも、変わらず食べられ続ける「あの味」があることを目指して。
         </p>
         <div class="about-block__cta">
-          <a href="/recipes" class="btn btn--primary">レシピを探す</a>
+          <a href="/support" class="btn btn--primary">活動を応援する</a>
+          <a href="/recipes" class="btn btn--outline">レシピを探す</a>
           <a href="/regions" class="btn btn--outline">地域から探す</a>
-          <button type="button" class="btn btn--support-scroll" id="scroll-to-support">活動を応援する</button>
         </div>
       </div>
     </div>
@@ -440,14 +413,6 @@ export default async function renderHome(router) {
     setTimeout(() => {
       document.getElementById('recruit')?.scrollIntoView({ behavior: 'smooth' });
     }, 300);
-  }
-
-  // 「活動を応援する」ボタン → 応援セクションへスクロール
-  const scrollBtn = document.getElementById('scroll-to-support');
-  if (scrollBtn) {
-    scrollBtn.addEventListener('click', () => {
-      document.getElementById('support')?.scrollIntoView({ behavior: 'smooth' });
-    });
   }
 
   // ヒーロー検索フォームのイベント
