@@ -43,7 +43,7 @@ export default function renderSupport() {
         rel="noopener noreferrer"
         class="support-page__btn"
       >
-        🍙 このサイトを応援する
+        🍙 この活動を応援する
       </a>
       <p class="support-page__cta-note">
         支援はBuy Me a Coffeeというサービスを通じて行われます。<br>
