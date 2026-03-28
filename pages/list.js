@@ -47,8 +47,12 @@ export default async function renderList({ params = {}, query = {} } = {}, route
   if (sort === 'popular') {
     recipes = [...recipes].sort((a, b) => (b.view_count ?? 0) - (a.view_count ?? 0));
   } else {
-    // デフォルト: 新着順（IDの降順）
-    recipes = [...recipes].sort((a, b) => (b.id ?? 0) - (a.id ?? 0));
+    // デフォルト: 新着順（created_atの降順）
+    recipes = [...recipes].sort((a, b) => {
+      const dateA = new Date(a.meta?.created_at ?? 0);
+      const dateB = new Date(b.meta?.created_at ?? 0);
+      return dateB - dateA;
+    });
   }
 
   // ページタイトル
@@ -109,18 +113,20 @@ export default async function renderList({ params = {}, query = {} } = {}, route
           ${regionButtons}
         </div>
       </div>
-      <div class="filter-bar__section">
-        <p class="filter-bar__label">タグで絞り込む</p>
-        <div class="filter-bar__buttons">
-          ${tagButtons}
+      <div class="filter-bar__row">
+        <div class="filter-bar__section">
+          <p class="filter-bar__label">タグで絞り込む</p>
+          <div class="filter-bar__buttons">
+            ${tagButtons}
+          </div>
         </div>
-      </div>
-      <div class="filter-bar__footer">
         <div class="filter-bar__sort">
           <span class="filter-bar__label">並び替え:</span>
           <a href="/recipes${sortNewestQuery}" class="filter-btn filter-btn--sort${sort !== 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort !== 'popular'}">新着順</a>
           <a href="/recipes${sortPopularQuery}" class="filter-btn filter-btn--sort${sort === 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort === 'popular'}">人気順</a>
         </div>
+      </div>
+      <div class="filter-bar__footer">
         ${resetLink}
       </div>
     </aside>

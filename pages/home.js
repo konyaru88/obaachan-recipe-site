@@ -42,9 +42,9 @@ export default async function renderHome(router) {
     fetchRegions(),
   ]);
 
-  // 新着レシピ（最大6件 - IDの降順）
+  // 新着レシピ（最大6件 - created_atの降順）
   const latest = [...allRecipes]
-    .sort((a, b) => (b.id ?? 0) - (a.id ?? 0))
+    .sort((a, b) => new Date(b.meta?.created_at ?? 0) - new Date(a.meta?.created_at ?? 0))
     .slice(0, 6);
 
   // おばあちゃんハッシュタグ
@@ -308,10 +308,11 @@ export default async function renderHome(router) {
       kyushu: '九州・沖縄',
     };
 
-    // 地域ごとのレシピ数を集計
+    // 地域ごとのレシピ数をレシピデータから集計
     const regionRecipeCount = {};
-    for (const r of regions) {
-      regionRecipeCount[r.code] = r.recipe_count ?? 0;
+    for (const r of allRecipes) {
+      const area = r.region?.area ?? r.area_code;
+      if (area) regionRecipeCount[area] = (regionRecipeCount[area] ?? 0) + 1;
     }
 
     // レシピ数に応じた色を返す
