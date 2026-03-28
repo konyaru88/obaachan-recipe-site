@@ -3496,3 +3496,23 @@ input, textarea, select {
   color: var(--color-text-muted);
   line-height: 1.7;
 }
+
+/* 活動を応援するボタン（黄色・目立つ） */
+.btn--support {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background: #FFDD00;
+  color: #1F150A;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(255, 200, 0, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn--support:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 200, 0, 0.55);
+}

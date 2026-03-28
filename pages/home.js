@@ -262,9 +262,8 @@ export default async function renderHome(router) {
           何十年先の食卓でも、変わらず食べられ続ける「あの味」があることを目指して。
         </p>
         <div class="about-block__cta">
-          <a href="/support" class="btn btn--primary">活動を応援する</a>
           <a href="/recipes" class="btn btn--outline">レシピを探す</a>
-          <a href="/regions" class="btn btn--outline">地域から探す</a>
+          <a href="/support" class="btn btn--support">活動を応援する</a>
         </div>
       </div>
     </div>
