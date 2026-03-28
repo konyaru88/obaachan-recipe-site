@@ -13,8 +13,9 @@ import { escapeHtml, areaName } from '../utils/helpers.js';
 
 /** 地方コード一覧 */
 const AREA_CODES = [
-  'hokkaido', 'tohoku', 'kanto', 'chubu',
-  'kinki', 'chugoku', 'shikoku', 'kyushu',
+  'hokkaido', 'tohoku', 'kanto', 'hokuriku',
+  'koshinetsu', 'tokai', 'kinki', 'chugoku',
+  'shikoku', 'kyushu',
 ];
 
 /** 代表的なタグ一覧 */
