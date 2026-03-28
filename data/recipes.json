@@ -1888,13 +1888,15 @@
               "name": "新生姜",
               "amount": 1000,
               "unit": "g",
-              "note": null
+              "note": null,
+              "grandma_amount": "たっぷり1袋分（鍋にいっぱい）"
             },
             {
               "name": "酢（下ゆで用）",
               "amount": 100,
               "unit": "cc",
-              "note": "水に加えて下ゆでに使う"
+              "note": "水に加えて下ゆでに使う",
+              "grandma_amount": "ひたひたの水にちょっと入れるくらい"
             }
           ]
         },
@@ -1929,7 +1931,8 @@
               "name": "ほんだし",
               "amount": null,
               "unit": "少々",
-              "note": null
+              "note": null,
+              "grandma_amount": "少々"
             },
             {
               "name": "酢",
@@ -1946,13 +1949,15 @@
               "name": "ふじっ子（昆布の佃煮）",
               "amount": 1,
               "unit": "袋",
-              "note": null
+              "note": null,
+              "grandma_amount": "1袋まるごと"
             },
             {
               "name": "白ゴマ",
               "amount": null,
               "unit": "適量",
-              "note": null
+              "note": null,
+              "grandma_amount": "適量（ひとふり）"
             }
           ]
         }
