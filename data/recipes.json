@@ -1028,7 +1028,7 @@
         "message": "鴨に打ち粉をするのが金沢流。汁がとろりとして冷めにくくなるんだよ。"
       },
       "region": {
-        "area": "chubu",
+        "area": "hokuriku",
         "prefecture_code": "17",
         "prefecture": "石川県"
       },
@@ -1201,7 +1201,7 @@
         "message": "12月に漬け始めて、正月に食べる。一年で一番手間のかかる料理だけど、やめられないね。"
       },
       "region": {
-        "area": "chubu",
+        "area": "hokuriku",
         "prefecture_code": "17",
         "prefecture": "石川県"
       },
@@ -1853,7 +1853,7 @@
         "message": null
       },
       "region": {
-        "area": "chubu",
+        "area": "koshinetsu",
         "prefecture_code": "20",
         "prefecture": "長野県"
       },

@@ -2106,6 +2106,11 @@ input, textarea, select {
   font-size: 0.875rem;
 }
 
+.region-page--detail .container {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
 /* パンくず */
 .breadcrumb {
   display: flex;
