@@ -40,6 +40,7 @@ export default function renderFooter() {
 
   <div class="site-footer__bottom container">
     <p>&copy; 2026 おばあちゃんのレシピ</p>
+    <a href="/privacy" class="site-footer__privacy">プライバシーポリシー</a>
   </div>
 </footer>
 `;

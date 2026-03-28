@@ -3203,3 +3203,82 @@ input, textarea, select {
     font-size: 1rem;
   }
 }
+
+/* ============================================================
+   プライバシーポリシーページ
+   ============================================================ */
+.privacy-page {
+  padding: var(--space-3xl) var(--space-md);
+}
+
+.privacy-page__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.privacy-page__title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-accent-red);
+}
+
+.privacy-page__updated {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2xl);
+}
+
+.privacy-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.privacy-section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  border-left: 3px solid var(--color-accent-red);
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.privacy-section p,
+.privacy-section li {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.privacy-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.privacy-section a {
+  color: var(--color-accent-red);
+  text-decoration: underline;
+}
+
+/* フッター プライバシーポリシーリンク */
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.site-footer__privacy {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.site-footer__privacy:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
