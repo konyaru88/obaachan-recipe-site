@@ -210,12 +210,17 @@ export default async function renderHome(router) {
     <div class="container">
       <div class="recruit-block animate-on-scroll">
         <div class="recruit-block__deco" aria-hidden="true">📮</div>
-        <div class="recruit-block__beta-badge">β版公開中</div>
-        <h2 id="recruit-heading" class="recruit-block__title">あなたのおばあちゃんのレシピを<br>教えてください</h2>
+        <h2 id="recruit-heading" class="recruit-block__title">おばあちゃんの「あの味」<br>募集しています</h2>
         <p class="recruit-block__text">
-          料理名だけでもOKです。<br>
-          「うちの祖母がよく作っていた」という記憶が、<br>
-          日本の食文化を守る大切な一歩になります。
+          「おばあちゃんのレシピ」は、みんなの記憶やレシピでできています。
+        </p>
+        <p class="recruit-block__text">「うちの祖母がよく作ってた」<br>「これよく食べてたな」</p>
+        <p class="recruit-block__text">
+          そんな思い出の手料理を、ぜひ教えてください。
+        </p>
+        <p class="recruit-block__text">
+          知っている方、いま聞ける方へ。<br>
+          残さないと消えていくものを、みんなで少しずつ残していけたら嬉しいです。
         </p>
         <div class="recruit-block__channels">
           <a href="https://www.instagram.com/obaachan_recipe" target="_blank" rel="noopener noreferrer" class="recruit-channel recruit-channel--instagram">
@@ -229,7 +234,7 @@ export default async function renderHome(router) {
             <span class="recruit-channel__handle">@obaachan_recipe</span>
           </a>
         </div>
-        <p class="recruit-block__note">DMでもコメントでも、どちらでも大歓迎です 🙏</p>
+        <p class="recruit-block__note">DMで「おばあちゃんのレシピ募集を見た」と送ってください。</p>
       </div>
     </div>
   </section>
