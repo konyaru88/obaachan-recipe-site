@@ -43,9 +43,7 @@ export default function renderRecipeCard(recipe) {
        />`
     : placeholderImg;
 
-  const endangeredBadge = isEndangered
-    ? `<span class="badge badge--endangered">消えゆくレシピ</span>`
-    : '';
+  const endangeredBadge = '';
 
   // 現在はすべてサンプルデータ
   const sampleBadge = `<span class="badge badge--sample">サンプル</span>`;
