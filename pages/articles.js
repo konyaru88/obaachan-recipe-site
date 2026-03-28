@@ -38,7 +38,7 @@ export default async function renderArticles({ query = {} } = {}) {
     { slug: 'column', label: '食文化コラム' },
   ].map(tab => {
     const isActive = category === tab.slug;
-    const href = tab.slug ? `#/articles?category=${tab.slug}` : '#/articles';
+    const href = tab.slug ? `/articles?category=${tab.slug}` : '/articles';
     return `<a href="${href}" class="article-tab${isActive ? ' article-tab--active' : ''}" aria-pressed="${isActive}">${escapeHtml(tab.label)}</a>`;
   }).join('');
 
@@ -47,7 +47,7 @@ export default async function renderArticles({ query = {} } = {}) {
     ? articles.map(article => {
         const date = article.published_at.replace(/-/g, '.').slice(2); // 26.03.15
         return `
-        <a href="#/article/${escapeHtml(article.id)}" class="article-card">
+        <a href="/article/${escapeHtml(article.id)}" class="article-card">
           <div class="article-card__thumb" aria-hidden="true">${escapeHtml(article.thumbnail_emoji)}</div>
           <div class="article-card__body">
             <div class="article-card__header-row">

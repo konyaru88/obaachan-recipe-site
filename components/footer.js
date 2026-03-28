@@ -11,7 +11,7 @@ export default function renderFooter() {
 <footer class="site-footer">
   <div class="container site-footer__grid">
     <div>
-      <a class="site-footer__logo" href="#/">
+      <a class="site-footer__logo" href="/">
         <img src="assets/images/grandma-icon.png" alt="" class="site-footer__logo-img" />
         おばあちゃんのレシピ
       </a>
@@ -21,10 +21,10 @@ export default function renderFooter() {
     <nav aria-label="フッターナビゲーション">
       <p class="site-footer__heading">MENU</p>
       <ul class="site-footer__links">
-        <li><a href="#/">ホーム</a></li>
-        <li><a href="#/recipes">レシピ一覧</a></li>
-        <li><a href="#/regions">地域で探す</a></li>
-        <li><a href="#/articles">読み物</a></li>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/recipes">レシピ一覧</a></li>
+        <li><a href="/regions">地域で探す</a></li>
+        <li><a href="/articles">読み物</a></li>
       </ul>
     </nav>
 

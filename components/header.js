@@ -3,12 +3,11 @@
  */
 
 export default function renderHeader(router) {
-  const hash = window.location.hash || '#/';
+  const pathname = window.location.pathname || '/';
 
   const isActive = (path) => {
-    const current = hash.split('?')[0];
-    if (path === '#/') return current === '#/' || current === '#' || hash === '';
-    return current.startsWith(path);
+    if (path === '/') return pathname === '/';
+    return pathname.startsWith(path);
   };
 
   const navClass = (path) => isActive(path) ? 'nav__link nav__link--active is-active' : 'nav__link';
@@ -18,21 +17,21 @@ export default function renderHeader(router) {
 <div class="beta-bar" role="banner" aria-label="お知らせ">
   <span class="beta-bar__badge">β版公開中</span>
   <span class="beta-bar__text">現在β版公開中・レシピ募集中 ── あなたのおばあちゃんの味を教えてください</span>
-  <a href="#/" class="beta-bar__link" onclick="sessionStorage.setItem('scrollTo','recruit')">詳しくはこちら</a>
+  <a href="/" class="beta-bar__link" onclick="sessionStorage.setItem('scrollTo','recruit')">詳しくはこちら</a>
 </div>
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="site-header__logo" href="#/">
+    <a class="site-header__logo" href="/">
       <img src="assets/images/grandma-icon.png" alt="" class="site-header__logo-img" aria-hidden="true" />
       おばあちゃんのレシピ
     </a>
 
     <nav class="site-header__nav" aria-label="メインナビゲーション">
-      <a href="#/" class="${navClass('#/')}">ホーム</a>
-      <a href="#/recipes" class="${navClass('#/recipes')}">レシピ一覧</a>
-      <a href="#/regions" class="${navClass('#/regions')}">地域で探す</a>
-      <a href="#/articles" class="${navClass('#/articles')}">読み物</a>
+      <a href="/" class="${navClass('/')}">ホーム</a>
+      <a href="/recipes" class="${navClass('/recipes')}">レシピ一覧</a>
+      <a href="/regions" class="${navClass('/regions')}">地域で探す</a>
+      <a href="/articles" class="${navClass('/articles')}">読み物</a>
     </nav>
 
     <form class="site-header__search" id="search-form" role="search" aria-label="レシピ検索">
@@ -57,10 +56,10 @@ export default function renderHeader(router) {
   <!-- モバイルメニュー -->
   <div class="mobile-menu" aria-hidden="true">
     <nav class="mobile-menu__nav" aria-label="モバイルナビゲーション">
-      <a href="#/" class="${navClass('#/')}">ホーム</a>
-      <a href="#/recipes" class="${navClass('#/recipes')}">レシピ一覧</a>
-      <a href="#/regions" class="${navClass('#/regions')}">地域で探す</a>
-      <a href="#/articles" class="${navClass('#/articles')}">読み物</a>
+      <a href="/" class="${navClass('/')}">ホーム</a>
+      <a href="/recipes" class="${navClass('/recipes')}">レシピ一覧</a>
+      <a href="/regions" class="${navClass('/regions')}">地域で探す</a>
+      <a href="/articles" class="${navClass('/articles')}">読み物</a>
     </nav>
     <form class="mobile-menu__search" id="mobile-search-form" role="search" aria-label="レシピ検索">
       <input
@@ -111,7 +110,7 @@ export function initMobileMenu(router) {
       if (q) {
         menu.classList.remove('is-open');
         btn.classList.remove('is-open');
-        router.navigate(`#/search?q=${encodeURIComponent(q)}`);
+        router.navigate(`/search?q=${encodeURIComponent(q)}`);
       }
     });
   }

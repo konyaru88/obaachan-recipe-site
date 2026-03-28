@@ -43,7 +43,7 @@ export default async function renderSearch({ params = {}, query = {} } = {}, rou
   } else if (recipes.length === 0) {
     // 0件
     const suggestions = SUGGESTION_KEYWORDS.slice(0, 8)
-      .map((kw) => `<a href="#/search?q=${encodeURIComponent(kw)}" class="suggestion-chip">${escapeHtml(kw)}</a>`)
+      .map((kw) => `<a href="/search?q=${encodeURIComponent(kw)}" class="suggestion-chip">${escapeHtml(kw)}</a>`)
       .join('');
 
     contentHtml = `
@@ -54,7 +54,7 @@ export default async function renderSearch({ params = {}, query = {} } = {}, rou
         <div class="suggestion-chips" aria-label="キーワード提案">
           ${suggestions}
         </div>
-        <a href="#/recipes" class="btn btn--outline" style="margin-top:1.5rem;">すべてのレシピを見る</a>
+        <a href="/recipes" class="btn btn--outline" style="margin-top:1.5rem;">すべてのレシピを見る</a>
       </div>
     `;
   } else {
@@ -107,7 +107,7 @@ export default async function renderSearch({ params = {}, query = {} } = {}, rou
       e.preventDefault();
       const val = document.getElementById('inline-search-input').value.trim();
       if (val) {
-        router.navigate(`#/search?q=${encodeURIComponent(val)}`);
+        router.navigate(`/search?q=${encodeURIComponent(val)}`);
       }
     });
   }

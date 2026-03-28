@@ -1,12 +1,12 @@
 /**
- * ハッシュベースのクライアントサイドルーター
+ * History API ベースのクライアントサイドルーター
  */
 export default class Router {
   constructor() {
     this.routes = [];
     this._currentParams = {};
     this._currentQuery = {};
-    window.addEventListener('hashchange', () => this._resolve());
+    window.addEventListener('popstate', () => this._resolve());
   }
 
   /**
@@ -23,15 +23,16 @@ export default class Router {
   }
 
   /**
-   * 指定したハッシュへ遷移する
-   * @param {string} hash - 例: '#/recipe/123'
+   * 指定したパスへ遷移する
+   * @param {string} path - 例: '/recipe/123'
    */
-  navigate(hash) {
-    window.location.hash = hash;
+  navigate(path) {
+    history.pushState({}, '', path);
+    this._resolve();
   }
 
   /**
-   * 現在のハッシュを解決してルーティングを開始する
+   * 現在のパスを解決してルーティングを開始する
    */
   start() {
     this._resolve();
@@ -52,11 +53,11 @@ export default class Router {
   }
 
   /**
-   * 現在の window.location.hash を解析してマッチするルートを実行する
+   * 現在の pathname を解析してマッチするルートを実行する
    */
   _resolve() {
-    const raw = window.location.hash.slice(1) || '/';
-    const [path, qs] = raw.split('?');
+    const path = window.location.pathname || '/';
+    const qs = window.location.search.slice(1);
     const query = Object.fromEntries(new URLSearchParams(qs || ''));
 
     for (const route of this.routes) {
@@ -73,6 +74,6 @@ export default class Router {
     }
 
     // マッチなし → ホームへ
-    this.navigate('#/');
+    this.navigate('/');
   }
 }

@@ -54,7 +54,7 @@ export default function renderRecipeCard(recipe) {
 
   return `
 <article class="recipe-card">
-  <a href="#/recipe/${escapeHtml(String(id))}" class="recipe-card__link" aria-label="${safeTitle}のレシピを見る">
+  <a href="/recipe/${escapeHtml(String(id))}" class="recipe-card__link" aria-label="${safeTitle}のレシピを見る">
     <div class="recipe-card__thumb${imageUrl ? '' : ' recipe-card__image-placeholder'}">
       ${imgTag}
       <div class="recipe-card__badges">${endangeredBadge}${sampleBadge}</div>

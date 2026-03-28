@@ -55,12 +55,12 @@ export default async function renderHome(router) {
   ];
 
   const hashtagButtons = grandmaTags.map((tag) => `
-    <a href="#/recipes?tag=${encodeURIComponent(tag)}" class="hashtag-btn">${escapeHtml(tag)}</a>
+    <a href="/recipes?tag=${encodeURIComponent(tag)}" class="hashtag-btn">${escapeHtml(tag)}</a>
   `).join('');
 
   // カテゴリボタン HTML
   const categoryButtons = categories.map((c) => `
-    <a href="#/recipes?category=${encodeURIComponent(c.label)}" class="category-btn animate-on-scroll">
+    <a href="/recipes?category=${encodeURIComponent(c.label)}" class="category-btn animate-on-scroll">
       <img class="category-btn__img" src="${c.img}" alt="${escapeHtml(c.label)}" loading="lazy" />
       <span class="category-btn__label">${escapeHtml(c.label)}</span>
     </a>
@@ -69,7 +69,7 @@ export default async function renderHome(router) {
   // 地域マップアイテム HTML
   const regionMapItems = regions.length > 0
     ? regions.map((r) => `
-        <a href="#/region/${escapeHtml(r.code)}" class="region-map-item animate-on-scroll"
+        <a href="/region/${escapeHtml(r.code)}" class="region-map-item animate-on-scroll"
            data-region="${escapeHtml(r.code)}"
            style="--region-color:${escapeHtml(r.color ?? '#8B4513')}">
           <span class="region-map-item__emoji" aria-hidden="true">${regionEmoji[r.code] ?? '🗾'}</span>
@@ -78,7 +78,7 @@ export default async function renderHome(router) {
         </a>
       `).join('')
     : Object.keys(regionEmoji).map((code) => `
-        <a href="#/region/${code}" class="region-map-item animate-on-scroll" data-region="${code}">
+        <a href="/region/${code}" class="region-map-item animate-on-scroll" data-region="${code}">
           <span class="region-map-item__emoji" aria-hidden="true">${regionEmoji[code]}</span>
           <span class="region-map-item__name">${escapeHtml(areaName(code))}</span>
         </a>
@@ -145,7 +145,7 @@ export default async function renderHome(router) {
         ${latest.map(renderRecipeCard).join('')}
       </div>
       <div class="section-footer">
-        <a href="#/recipes" class="btn btn--outline">すべてのレシピを見る</a>
+        <a href="/recipes" class="btn btn--outline">すべてのレシピを見る</a>
       </div>
     </div>
   </section>
@@ -199,7 +199,7 @@ export default async function renderHome(router) {
         ${regionMapItems}
       </div>
       <div class="section-footer">
-        <a href="#/regions" class="btn btn--outline">地域一覧をすべて見る</a>
+        <a href="/regions" class="btn btn--outline">地域一覧をすべて見る</a>
       </div>
     </div>
   </section>
@@ -262,8 +262,8 @@ export default async function renderHome(router) {
           何十年先の食卓でも、変わらず食べられ続ける「あの味」があることを目指して。
         </p>
         <div class="about-block__cta">
-          <a href="#/recipes" class="btn btn--primary">レシピを探す</a>
-          <a href="#/regions" class="btn btn--outline">地域から探す</a>
+          <a href="/recipes" class="btn btn--primary">レシピを探す</a>
+          <a href="/regions" class="btn btn--outline">地域から探す</a>
         </div>
       </div>
     </div>
@@ -379,7 +379,7 @@ export default async function renderHome(router) {
           // クリックで地域ページへ遷移
           g.style.cursor = 'pointer';
           g.addEventListener('click', () => {
-            router.navigate(`#/region/${regionCode}`);
+            router.navigate(`/region/${regionCode}`);
           });
         }
       }
@@ -420,7 +420,7 @@ export default async function renderHome(router) {
     heroForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const q = document.getElementById('hero-search-input').value.trim();
-      if (q) router.navigate(`#/search?q=${encodeURIComponent(q)}`);
+      if (q) router.navigate(`/search?q=${encodeURIComponent(q)}`);
     });
   }
 }

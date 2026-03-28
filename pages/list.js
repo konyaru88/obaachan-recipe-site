@@ -61,7 +61,7 @@ export default async function renderList({ params = {}, query = {} } = {}, route
   const regionButtons = AREA_CODES.map((code) => {
     const isActive = region === code;
     const newQuery = buildQuery({ region: isActive ? '' : code, tag, sort });
-    return `<a href="#/recipes${newQuery}" class="filter-btn${isActive ? ' filter-btn--active' : ''}" aria-pressed="${isActive}">
+    return `<a href="/recipes${newQuery}" class="filter-btn${isActive ? ' filter-btn--active' : ''}" aria-pressed="${isActive}">
       ${escapeHtml(areaName(code))}
     </a>`;
   }).join('');
@@ -70,7 +70,7 @@ export default async function renderList({ params = {}, query = {} } = {}, route
   const tagButtons = COMMON_TAGS.map((t) => {
     const isActive = tag === t;
     const newQuery = buildQuery({ region, tag: isActive ? '' : t, sort });
-    return `<a href="#/recipes${newQuery}" class="filter-btn filter-btn--tag${isActive ? ' filter-btn--active' : ''}" aria-pressed="${isActive}">
+    return `<a href="/recipes${newQuery}" class="filter-btn filter-btn--tag${isActive ? ' filter-btn--active' : ''}" aria-pressed="${isActive}">
       ${escapeHtml(t)}
     </a>`;
   }).join('');
@@ -82,7 +82,7 @@ export default async function renderList({ params = {}, query = {} } = {}, route
   // リセットリンク
   const hasFilter = region || tag || filter;
   const resetLink = hasFilter
-    ? `<a href="#/recipes" class="filter-reset">フィルターをリセット ×</a>`
+    ? `<a href="/recipes" class="filter-reset">フィルターをリセット ×</a>`
     : '';
 
   // レシピグリッド
@@ -91,7 +91,7 @@ export default async function renderList({ params = {}, query = {} } = {}, route
     : `<div class="empty-state">
         <p class="empty-state__icon" aria-hidden="true">🍳</p>
         <p class="empty-state__msg">該当するレシピが見つかりませんでした。</p>
-        <a href="#/recipes" class="btn btn--outline">すべてのレシピを見る</a>
+        <a href="/recipes" class="btn btn--outline">すべてのレシピを見る</a>
       </div>`;
 
   const html = `
@@ -118,8 +118,8 @@ export default async function renderList({ params = {}, query = {} } = {}, route
       <div class="filter-bar__footer">
         <div class="filter-bar__sort">
           <span class="filter-bar__label">並び替え:</span>
-          <a href="#/recipes${sortNewestQuery}" class="filter-btn filter-btn--sort${sort !== 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort !== 'popular'}">新着順</a>
-          <a href="#/recipes${sortPopularQuery}" class="filter-btn filter-btn--sort${sort === 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort === 'popular'}">人気順</a>
+          <a href="/recipes${sortNewestQuery}" class="filter-btn filter-btn--sort${sort !== 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort !== 'popular'}">新着順</a>
+          <a href="/recipes${sortPopularQuery}" class="filter-btn filter-btn--sort${sort === 'popular' ? ' filter-btn--active' : ''}" aria-pressed="${sort === 'popular'}">人気順</a>
         </div>
         ${resetLink}
       </div>

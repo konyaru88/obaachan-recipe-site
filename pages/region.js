@@ -57,7 +57,7 @@ async function renderRegionIndex(router) {
     const color = r.color ?? '#8B4513';
     const catchCopy = r.catch ?? r.catchcopy ?? '';
     return `
-      <a href="#/region/${escapeHtml(r.code)}" class="region-card" style="--region-color:${escapeHtml(color)};">
+      <a href="/region/${escapeHtml(r.code)}" class="region-card" style="--region-color:${escapeHtml(color)};">
         <div class="region-card__header">
           <span class="region-card__icon" aria-hidden="true">${escapeHtml(r.icon ?? '🗾')}</span>
           <h2 class="region-card__name">${escapeHtml(r.name ?? areaName(r.code))}</h2>
@@ -109,14 +109,14 @@ async function renderRegionDetail(code, router) {
     : `<div class="empty-state">
         <p class="empty-state__icon" aria-hidden="true">🍳</p>
         <p class="empty-state__msg">この地域のレシピはまだ登録されていません。</p>
-        <a href="#/regions" class="btn btn--outline">地域一覧へ戻る</a>
+        <a href="/regions" class="btn btn--outline">地域一覧へ戻る</a>
       </div>`;
 
   // 他の地方へのナビゲーション
   const regions8 = (regionsData.length > 0 ? regionsData : DEFAULT_REGIONS);
   const otherRegionLinks = regions8
     .filter((r) => r.code !== code)
-    .map((r) => `<a href="#/region/${escapeHtml(r.code)}" class="region-nav-link">${escapeHtml(r.icon ?? '')} ${escapeHtml(r.name ?? areaName(r.code))}</a>`)
+    .map((r) => `<a href="/region/${escapeHtml(r.code)}" class="region-nav-link">${escapeHtml(r.icon ?? '')} ${escapeHtml(r.name ?? areaName(r.code))}</a>`)
     .join('');
 
   const html = `
@@ -128,9 +128,9 @@ async function renderRegionDetail(code, router) {
       <span class="region-hero__icon" aria-hidden="true">${escapeHtml(icon)}</span>
       <div class="region-hero__text">
         <nav class="breadcrumb" aria-label="パンくず">
-          <a href="#/" class="breadcrumb__link">ホーム</a>
+          <a href="/" class="breadcrumb__link">ホーム</a>
           <span class="breadcrumb__sep" aria-hidden="true">›</span>
-          <a href="#/regions" class="breadcrumb__link">地域で探す</a>
+          <a href="/regions" class="breadcrumb__link">地域で探す</a>
           <span class="breadcrumb__sep" aria-hidden="true">›</span>
           <span class="breadcrumb__current" aria-current="page">${escapeHtml(name)}</span>
         </nav>

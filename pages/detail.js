@@ -14,7 +14,7 @@ export default async function renderDetail({ params = {} } = {}, router) {
       <main class="container" style="padding:4rem 0;text-align:center;">
         <p style="font-size:3rem;">😢</p>
         <p>レシピが見つかりませんでした。</p>
-        <a href="#/recipes" class="btn btn--outline" style="margin-top:1rem;display:inline-block;">レシピ一覧へ戻る</a>
+        <a href="/recipes" class="btn btn--outline" style="margin-top:1rem;display:inline-block;">レシピ一覧へ戻る</a>
       </main>
     `);
     return;
@@ -62,7 +62,7 @@ export default async function renderDetail({ params = {} } = {}, router) {
 
   // タグ
   const tagChips = tags.map(
-    (t) => `<a href="#/recipes?tag=${encodeURIComponent(t)}" class="tag-chip">${escapeHtml(t)}</a>`
+    (t) => `<a href="/recipes?tag=${encodeURIComponent(t)}" class="tag-chip">${escapeHtml(t)}</a>`
   ).join('');
 
   // 材料（グループ構造対応）

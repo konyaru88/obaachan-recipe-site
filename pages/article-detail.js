@@ -15,7 +15,7 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
       <main id="main" class="container" style="padding:4rem 1rem;text-align:center">
         <p style="font-size:3rem">📭</p>
         <h1>記事が見つかりませんでした</h1>
-        <a href="#/articles" class="btn btn--outline" style="margin-top:1.5rem;display:inline-block">読み物一覧へ戻る</a>
+        <a href="/articles" class="btn btn--outline" style="margin-top:1.5rem;display:inline-block">読み物一覧へ戻る</a>
       </main>
     `);
     return;
@@ -27,7 +27,7 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
   const formatInline = (text) => {
     let result = text;
     result = result.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    result = result.replace(/\{\{recruit:(.+?)\}\}/g, '<a href="#/" class="article-recruit-link" data-recruit>$1</a>');
+    result = result.replace(/\{\{recruit:(.+?)\}\}/g, '<a href="/" class="article-recruit-link" data-recruit>$1</a>');
     return result;
   };
 
@@ -69,13 +69,13 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
   const relatedHtml = article.related_recipe_id
     ? `<div class="article-related">
         <p class="article-related__label">📌 関連レシピ</p>
-        <a href="#/recipe/${escapeHtml(article.related_recipe_id)}" class="btn btn--primary">このレシピを見る →</a>
+        <a href="/recipe/${escapeHtml(article.related_recipe_id)}" class="btn btn--primary">このレシピを見る →</a>
       </div>`
     : '';
 
   // タグ
   const tagsHtml = article.tags.map(tag =>
-    `<a href="#/articles" class="article-tag">${escapeHtml(tag)}</a>`
+    `<a href="/articles" class="article-tag">${escapeHtml(tag)}</a>`
   ).join('');
 
   const html = `
@@ -84,9 +84,9 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
 
     <!-- パンくず -->
     <nav class="breadcrumb" aria-label="パンくずリスト">
-      <a href="#/">ホーム</a>
+      <a href="/">ホーム</a>
       <span aria-hidden="true"> › </span>
-      <a href="#/articles">読み物</a>
+      <a href="/articles">読み物</a>
       <span aria-hidden="true"> › </span>
       <span aria-current="page">${escapeHtml(article.title)}</span>
     </nav>
@@ -122,7 +122,7 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
 
     <!-- 戻るリンク -->
     <div style="text-align:center; margin: var(--space-2xl) 0">
-      <a href="#/articles" class="btn btn--outline">← 読み物一覧へ戻る</a>
+      <a href="/articles" class="btn btn--outline">← 読み物一覧へ戻る</a>
     </div>
 
   </div>
@@ -136,7 +136,7 @@ export default async function renderArticleDetail({ params = {} } = {}, router) 
     link.addEventListener('click', (e) => {
       e.preventDefault();
       sessionStorage.setItem('scrollTo', 'recruit');
-      window.location.hash = '#/';
+      router.navigate('/');
     });
   });
 }
