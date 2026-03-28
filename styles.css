@@ -3528,3 +3528,11 @@ input, textarea, select {
   color: var(--color-text-primary);
   margin-bottom: 0.2rem;
 }
+
+/* 猫プレースホルダー画像：白背景をカード色に馴染ませる */
+.recipe-card__image--placeholder {
+  mix-blend-mode: multiply;
+  object-fit: contain;
+  padding: 0.5rem;
+  background: transparent;
+}
