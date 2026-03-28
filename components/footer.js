@@ -31,7 +31,7 @@ export default function renderFooter() {
     <div>
       <p class="site-footer__heading">SUPPORT</p>
       <a href="https://buymeacoffee.com/obaachanrev" target="_blank" rel="noopener noreferrer" class="site-footer__support-btn">
-        ☕ このサイトを応援する
+        🍙 このサイトを応援する
       </a>
       <p class="site-footer__support-note">いただいた支援は取材・記録活動に使わせていただきます</p>
     </div>

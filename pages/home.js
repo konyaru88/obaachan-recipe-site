@@ -239,15 +239,15 @@ export default async function renderHome(router) {
   <section class="home__support" aria-labelledby="support-heading">
     <div class="container">
       <div class="support-block animate-on-scroll">
-        <div class="support-block__deco" aria-hidden="true">☕</div>
-        <h2 id="support-heading" class="support-block__title">このサイトを応援してください</h2>
+        <div class="support-block__deco" aria-hidden="true">🍙</div>
+        <h2 id="support-heading" class="support-block__title">おばあちゃんの味を、<br>一緒に残しませんか</h2>
         <p class="support-block__text">
-          「おばあちゃんのレシピ」は、広告収入に頼らず<br>
-          手作りで運営している個人メディアです。
+          このサイトは、消えゆく郷土料理を記録するために<br>
+          広告なしで運営している個人メディアです。
         </p>
         <p class="support-block__text">
-          いただいたご支援は、全国のおばあちゃんを訪ねる取材費・<br>
-          レシピの記録・サイトの維持・運営のために大切に使わせていただきます。
+          ご支援いただいた費用は、全国のおばあちゃんを訪ねる取材費や<br>
+          レシピの記録・サイト運営のために、大切に使わせていただきます。
         </p>
         <a
           href="https://buymeacoffee.com/obaachanrev"
@@ -255,9 +255,9 @@ export default async function renderHome(router) {
           rel="noopener noreferrer"
           class="support-block__btn"
         >
-          ☕ Buy Me a Coffee で応援する
+          🍙 このサイトを応援する
         </a>
-        <p class="support-block__note">100円から支援できます。PayPal・クレジットカード対応。</p>
+        <p class="support-block__note">100円から支援できます。クレジットカード・PayPal対応。</p>
       </div>
     </div>
   </section>
