@@ -1826,8 +1826,8 @@ input, textarea, select {
 
 /* 思い出・エピソードセクション */
 .detail__episode {
-  margin-bottom: var(--space-2xl);
-  padding-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  padding-top: var(--space-md);
 }
 
 .episode-block {
