@@ -114,7 +114,7 @@ export default async function renderDetail({ params = {} } = {}, router) {
     <section class="detail__episode" aria-labelledby="episode-heading">
       <h2 id="episode-heading" class="detail__section-title">📖 思い出・エピソード</h2>
       <div class="episode-block">
-        <p class="episode-block__text">${escapeHtml(episode)}</p>
+        <p class="episode-block__text">${episode}</p>
         ${source ? `
           <div class="episode-block__source">
             <span class="episode-block__source-label">情報源：</span>
