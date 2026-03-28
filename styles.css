@@ -3516,3 +3516,10 @@ input, textarea, select {
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(255, 200, 0, 0.55);
 }
+
+/* 支援ページ・今後の活動リスト（複数行対応） */
+.support-page__list li strong {
+  display: block;
+  color: var(--color-text-primary);
+  margin-bottom: 0.2rem;
+}
