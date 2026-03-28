@@ -8,7 +8,7 @@ let articlesCache = null;
 
 async function fetchArticles() {
   if (articlesCache) return articlesCache;
-  const res = await fetch('./data/articles.json');
+  const res = await fetch('/data/articles.json');
   articlesCache = await res.json();
   return articlesCache;
 }

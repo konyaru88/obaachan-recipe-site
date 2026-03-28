@@ -12,7 +12,7 @@ let _regionsCache = null;
 export async function fetchRecipes() {
   if (_recipesCache) return _recipesCache;
   try {
-    const res = await fetch('./data/recipes.json');
+    const res = await fetch('/data/recipes.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     _recipesCache = data.recipes ?? data;
@@ -104,7 +104,7 @@ export async function getEndangeredRecipes() {
 export async function fetchRegions() {
   if (_regionsCache) return _regionsCache;
   try {
-    const res = await fetch('./data/regions.json');
+    const res = await fetch('/data/regions.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     _regionsCache = data.areas ?? data;

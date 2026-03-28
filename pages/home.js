@@ -327,7 +327,7 @@ export default async function renderHome(router) {
     }
 
     try {
-      const res = await fetch('assets/japan-map.svg');
+      const res = await fetch('/assets/japan-map.svg');
       const svgText = await res.text();
       mapWrapper.innerHTML = svgText;
 
