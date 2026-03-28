@@ -29,6 +29,14 @@ export default function renderFooter() {
     </nav>
 
     <div>
+      <p class="site-footer__heading">SUPPORT</p>
+      <a href="https://buymeacoffee.com/obaachanrev" target="_blank" rel="noopener noreferrer" class="site-footer__support-btn">
+        ☕ このサイトを応援する
+      </a>
+      <p class="site-footer__support-note">いただいた支援は取材・記録活動に使わせていただきます</p>
+    </div>
+
+    <div>
       <p class="site-footer__heading">SNS</p>
       <ul class="site-footer__links">
         <li><a href="https://www.instagram.com/obaachan_recipe" target="_blank" rel="noopener noreferrer">Instagram</a></li>

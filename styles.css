@@ -3282,3 +3282,87 @@ input, textarea, select {
   opacity: 1;
   text-decoration: underline;
 }
+
+/* ============================================================
+   応援セクション（Buy Me a Coffee）
+   ============================================================ */
+.home__support {
+  background: linear-gradient(135deg, #FFF8EE 0%, #F5ECD8 100%);
+  padding: var(--space-3xl) var(--space-md);
+  text-align: center;
+}
+
+.support-block {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.support-block__deco {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.support-block__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.support-block__text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.support-block__btn {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  padding: 0.9rem 2.2rem;
+  background: #FFDD00;
+  color: #1F150A;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 200, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.support-block__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 200, 0, 0.5);
+}
+
+.support-block__note {
+  margin-top: var(--space-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* フッター 応援ボタン */
+.site-footer__support-btn {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.5rem 1.1rem;
+  background: #FFDD00;
+  color: #1F150A;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.site-footer__support-btn:hover {
+  opacity: 0.85;
+}
+
+.site-footer__support-note {
+  margin-top: var(--space-sm);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
