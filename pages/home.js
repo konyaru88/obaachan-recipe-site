@@ -195,6 +195,9 @@ export default async function renderHome(router) {
         </div>
         <div class="japan-map-tooltip" id="map-tooltip" style="display:none"></div>
       </div>
+      <div class="region-map">
+        ${regionMapItems}
+      </div>
       <div class="section-footer">
         <a href="/regions" class="btn btn--outline">地域一覧をすべて見る</a>
       </div>
