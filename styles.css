@@ -994,6 +994,12 @@ input, textarea, select {
   animation: loadingPulse 1.6s ease-in-out infinite;
 }
 
+.loading__icon img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
 #loading p {
   font-family: var(--font-serif);
   color: var(--color-text-secondary);
